@@ -71,16 +71,28 @@ namespace TestHarness.Extensions
                         switch (currentAttribute.ParentPropertyName)
                         {
                             case "pp":
-                                object ppToSplit = parentProperty.GetValue(parent);
-                                //Her bliver pp splittet ved mellemrummet i property value. 
-                                MySplitter ppArray = new MySplitter((string)ppToSplit);
-                                //object testcase = parentProperty.GetValue(parent);
-                                //string[] testsubs = testcase.ToString().Split(' ');
-                                //Derefter skal de 2 koordinater deles mellem StartX og StartY. Type på CADint class er "string" og "long" i capture class/dsn Hvilket betyder at value skal castes til "long".
-                                var ppX = ppArray.NamedPartX;
-                                var ppY = ppArray.NamedPartY;
-                                //Både X og Y skal gemmes til startX og startY. but how??
-
+                                if (parentProperty.Name == currentAttribute.ParentPropertyName)
+                                {
+                                    //Tjek om PropertyType er ens.
+                                    if (parentProperty.PropertyType == childProperty.PropertyType)
+                                    {
+                                        //hvis både Name og PropertyType er ens skal value tilføjes til parentPropertyValue som bruges til SetValue udenfor Loop.
+                                        parentPropertyValue = parentProperty.GetValue(parent);
+                                        //Her bliver pp splittet ved mellemrummet i property value. 
+                                        MySplitter ppArray = new MySplitter((string)parentPropertyValue);
+                                        //Derefter skal de 2 koordinater deles mellem StartX og StartY. Type på CADint class er "string" og "long" i capture class/dsn Hvilket betyder at value skal castes til "long".
+                                        var ppX = ppArray.NamedPartX;
+                                        var ppY = ppArray.NamedPartY;
+                                        //Både X og Y skal gemmes til startX og startY. but how??
+                                    }
+                                }
+                                else
+                                {
+                                    //parentPropertyValue indeholder value fra parentProperty. Skal bruges til MatchPropertiesFrom.
+                                    parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                    //MatchPropertiesFrom companyParent til orginstance.
+                                    self.MatchPropertiesFrom(parentPropertyValue);
+                                }
                                 break;
                             case "dxy":
                                 object dxyToSplit = parentProperty.GetValue(parent);
@@ -186,15 +198,6 @@ namespace TestHarness.Extensions
                             Console.WriteLine("-------------------------------------");
                         }
                     }
-
-
-
-                    //foreach (var parentProperty in parentProperties)
-                    //{
-                    //    var parentProp = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                    //    childInstance.MatchPropertiesFrom(parentProp);
-                    //    break;
-                    //}
                 }
             }
         }
@@ -279,63 +282,6 @@ namespace TestHarness.Extensions
                 return typeof(object);
             return null;
         }
-
-        public static Object GetPropValue(object src, string propName)
-        {
-            return src.GetType().GetProperty(propName).GetValue(src, null);
-        }
-
-        public static Object GetPropValue2(this Object obj, String name)
-        {
-            foreach (String part in name.Split('.'))
-            {
-                if (obj == null) { return null; }
-
-                Type type = obj.GetType();
-                PropertyInfo info = type.GetProperty(part);
-                if (info == null) { return null; }
-
-                obj = info.GetValue(obj, null);
-            }
-            return obj;
-        }
-
-        public static T GetPropValue3<T>(this Object obj, String name)
-        {
-            Object retval = GetPropValue(obj, name);
-            if (retval == null) { return default(T); }
-
-            // throws InvalidCastException if types are incompatible
-            return (T)retval;
-        }
-
-        //public static object GetPropertyValue(object obj, string propertyName)
-        //{
-        //    foreach (var prop in propertyName.Split('.').Select(s => obj.GetType().GetProperty(s)))
-        //        obj = prop.GetValue(obj, null);
-
-        //    return obj;
-        //}
-
-
-        //Forsøg dette
-        public static object GetPropertyValue(object src, string propName)
-        {
-            if (src == null) throw new ArgumentException("Value cannot be null.", "src");
-            if (propName == null) throw new ArgumentException("Value cannot be null.", "propName");
-
-            if (propName.Contains("."))//complex type nested
-            {
-                var temp = propName.Split(new char[] { '.' }, 2);
-                return GetPropertyValue(GetPropertyValue(src, temp[0]), temp[1]);
-            }
-            else
-            {
-                var prop = src.GetType().GetProperty(propName);
-                return prop != null ? prop.GetValue(src, null) : null;
-            }
-        }
-
     }
 
 }
