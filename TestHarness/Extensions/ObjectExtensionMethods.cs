@@ -86,13 +86,6 @@ namespace TestHarness.Extensions
                                         //Både X og Y skal gemmes til startX og startY. but how??
                                     }
                                 }
-                                else
-                                {
-                                    //parentPropertyValue indeholder value fra parentProperty. Skal bruges til MatchPropertiesFrom.
-                                    parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                    //MatchPropertiesFrom companyParent til orginstance.
-                                    self.MatchPropertiesFrom(parentPropertyValue);
-                                }
                                 break;
                             case "dxy":
                                 object dxyToSplit = parentProperty.GetValue(parent);
