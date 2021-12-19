@@ -64,13 +64,12 @@ namespace TestHarness.Extensions
                     //parentPropertyValue bruges til SetValue udenfor loop.
                     object parentPropertyValue = null;
 
-                    //Få fat i hver enkelt Property fra parentProperties.
-                    foreach (var parentProperty in parentProperties)
-                    {
-
-                        switch (currentAttribute.ParentPropertyName)
-                        {
-                            case "pp":
+                   switch (currentAttribute.ParentPropertyName)
+                   {
+                        case "pp":
+                            foreach (var parentProperty in parentProperties)
+	                        {
+                                //Hvis navne og propertytypes er ens skal pp dele op ved mellemrum og derefter fordeles på 2 variabler på parent(CADint input)
                                 if (parentProperty.Name == currentAttribute.ParentPropertyName)
                                 {
                                     //Tjek om PropertyType er ens.
@@ -86,21 +85,46 @@ namespace TestHarness.Extensions
                                         //Både X og Y skal gemmes til startX og startY. but how??
                                     }
                                 }
-                                break;
-                            case "dxy":
-                                object dxyToSplit = parentProperty.GetValue(parent);
-                                //Her bliver dxy splittet ved mellemrummet i property value. dxy er deltaX og deltaY. Den skal os deles ud over 2 properties.
-                                MySplitter dxyArray = new MySplitter((string)dxyToSplit);
-                                //object testcase2 = parentProperty.GetValue(parent);
-                                //string[] testsubs2 = testcase2.ToString().Split(' ');
-                                var deltaX = dxyArray.NamedPartX;
-                                var deltaY = dxyArray.NamedPartY;
-                                //Både X og Y skal gemmes på child/self. (Dsn object)
-                                break;
-                        }
+                                else
+                                {
+                                    if (IsList(parentProperty.PropertyType))
+	                                {
+                                        object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                        foreach (var parentPropertyP in (IEnumerable)parentPropertyInstance)
+	                                    {
+                                            object parentPropertyPInstance = parent.GetType().GetProperty(parentPropertyP.GetType().FullName).GetValue(parent, null);
+                                            foreach (var parentPropertyPP in (IEnumerable)parentPropertyPInstance)
+	                                        {
 
-                        //Tjek om parentProperty.Name stemmer overens med currentAttibute.ParentPropertyName. Så hvis parentProperty.Name stemmer overens med det navn der er sat i vores CustomAttibute skal der laves tjek på PropertyType.
-                        if (parentProperty.Name == currentAttribute.ParentPropertyName)
+	                                        }
+	                                    }
+
+	                                }
+                                    //else
+                                    //{
+                                    //    foreach (var propertyOfParent in (IEnumerable)parentProperty)
+	                                //    {
+                                            //instance af parentproperty som skal bruges til matchpropertiesfrom i et forsøg på at søge efter en property med "pp" som custom attribute
+                                      //      var parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                            //opret instance af childproperty for at den kan bruges i matchpropertiesfrom
+                                        //    Object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
+
+                                          //  childPropertyInstance.MatchPropertiesFrom(parentPropertyInstance);
+	                                    //}   
+                                        
+                                    //}
+                                }
+
+	                        }
+                            break;
+                   }
+
+                    //Denne foreach er fra den simple version af koden. Dvs før Switchen blev lavet til at tage sig af specifikke properties.
+                    foreach (var parentProperty in parentProperties)
+	                {
+                    //Tjek om parentProperty.Name stemmer overens med currentAttibute.ParentPropertyName. Så hvis parentProperty.Name stemmer overens med det navn der er sat i vores CustomAttibute skal der laves tjek på PropertyType.
+
+                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
                         {
                             //Tjek om PropertyType er ens.
                             if (parentProperty.PropertyType == childProperty.PropertyType)
@@ -111,29 +135,29 @@ namespace TestHarness.Extensions
                             //Tjekker om det er en liste vi har med at gøre.
                             else if (IsList(parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null).GetType()))
                             {
-                                //companyParent bruges til at holde listen som kommer fra parent.
-                                object companyParent = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                //orgInstance bruges til at indeholde listen fra child/self.
-                                Object orgInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
+                                //parentPropertyInstance bruges til at holde listen som kommer fra parent.
+                                object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                //childPropertyInstance bruges til at indeholde listen fra child/self.
+                                Object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
 
                                 //Her laves der en instance af child/self listen.
-                                Object instance = Activator.CreateInstance(orgInstance.GetType());
+                                Object childListInstance = Activator.CreateInstance(childPropertyInstance.GetType());
                                 //Oprettelse af liste som bruges til at tilføje Instances til, samt gemmes til i SetValue, efter tilføjelse til parentPropertyValue.
-                                IList list = (IList)instance;
+                                IList list = (IList)childListInstance;
 
                                 //foreach over companyParent for at få fat i hver genstand på listen. Hold øje med hvorvidt IList er optimal for det enlige projekt.
-                                foreach (var compparentItem in (IEnumerable)companyParent)
+                                foreach (var parentPropertyItem in (IEnumerable)parentPropertyInstance)
                                 {
                                     //Dette giver en liste af "type". Hvilket skal findes for at kunne oprette en instance af list item.
-                                    var TFromList = orgInstance.GetType().GetGenericArguments();
+                                    var TFromList = childPropertyInstance.GetType().GetGenericArguments();
                                     //Oprette en instance af hvad der er på listen.
-                                    Object orgChildInstance = Activator.CreateInstance(TFromList[0]);
+                                    Object ChildTFromListInstance = Activator.CreateInstance(TFromList[0]);
 
                                     //Kør MatchPropertiesFrom med compparentItem som er en instance af en genstand på parent listen.
                                     //orgChildInstance er en instance af child/self list item. Hvilket betyder at det er her list items bliver matched.
-                                    orgChildInstance.MatchPropertiesFrom(compparentItem);
+                                    ChildTFromListInstance.MatchPropertiesFrom(parentPropertyItem);
                                     //Tilføjelse af det matched orgChildInstance til list(instance af child/self list)
-                                    list.Add(orgChildInstance);
+                                    list.Add(ChildTFromListInstance);
                                 }
                                 //Tilføjelse til parentPropertyValue som bruges til setvalue udenfor loop.
                                 parentPropertyValue = list;
@@ -151,7 +175,8 @@ namespace TestHarness.Extensions
                                 break;
                             }
                         }
-                    }
+
+	                }
                     try
                     {
                         //Tilføj value af parentPropertyValue til self.
