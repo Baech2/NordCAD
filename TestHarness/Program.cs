@@ -21,10 +21,12 @@ namespace TestHarness
 
             //Deserialization, Serialization, XmlDocument Create & Save
             #region
-            //Console input
+
+            //Console input. FileName og newFileName
             #region
             Console.WriteLine("Enter full filename(located in bin/debug/):");
-            string filename = Console.ReadLine();//The filename
+            //string filename = Console.ReadLine();//The filename
+            string filename = "CADintTestSch.schxml";
             if (File.Exists(Directory.GetCurrentDirectory() + @"\" + filename))
             {
                 Console.WriteLine("File exists.");
@@ -37,7 +39,8 @@ namespace TestHarness
             }
 
             Console.WriteLine("Enter the new full filename:");
-            string newFilename = Console.ReadLine();//The new filename
+            //string newFileName = Console.ReadLine();//The new filename
+            string newFileName = "Test.xml";
             #endregion
 
             //Tjek om dokumentet kan deserialize.
@@ -63,8 +66,8 @@ namespace TestHarness
                 captureMaster.MatchPropertiesFrom(model);
 
                 //Serialze model fra det overstående. Samme type som før.
-                xmlOutputData = ser.Serialize<CADintMaster.CADintMaster.schDesign>(model); //Serialize the instance of dsn.Design / CADintMaster.
-                //xmlOutputData = ser.Serialize<Xsd2.dsn.Design>(model);
+                xmlOutputData = ser.Serialize<CADintMaster.CADintMaster.schDesign>(model); //Serialize the instance of  CADintMaster. Dette giver en CADint xml fil
+                //xmlOutputData = ser.Serialize<Xsd2.dsn.Design>(model); //Dette skulle gerne give en OrCad/Capture fil.
 
 
                 #region
@@ -80,7 +83,7 @@ namespace TestHarness
                 //Denne setting gør blot sådan at det hele ikke bliver smidt ind på en enkelt linje(xml dokumentet).
                 settings.Indent = true;
                 //Anvendelse af XmlWriter. Create(path, settings).
-                using (XmlWriter w = XmlWriter.Create(Directory.GetCurrentDirectory() + @"\" + newFilename, settings))
+                using (XmlWriter w = XmlWriter.Create(Directory.GetCurrentDirectory() + @"\" + newFileName, settings))
                 {
                     try
                     {

@@ -1789,6 +1789,7 @@ namespace Xsd2
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.ComponentModel.DesignerCategoryAttribute("code")]
         [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+
         public partial class DesignCacheBookMarkSymbolCommentText
         {
 
@@ -2431,6 +2432,7 @@ namespace Xsd2
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.ComponentModel.DesignerCategoryAttribute("code")]
         [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+
         public partial class DesignCacheBookMarkSymbolLine
         {
 
@@ -2462,9 +2464,9 @@ namespace Xsd2
             private long lineStyleField;
 
             private long lineWidthField;
-
+            
             private long x1Field;
-
+            
             private long x2Field;
 
             private long y1Field;
@@ -2501,6 +2503,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
+            [MatchParentAttibute("pp")]
             public long x1
             {
                 get
@@ -2515,6 +2518,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
+            [MatchParentAttibute("dxy")]
             public long x2
             {
                 get
