@@ -36,22 +36,22 @@ namespace TestHarness.Extensions
             foreach (var childProperty in childProperties)
             {
                 //Få fat i CustomAttribute af type MatchParentAttribute. Hvilket vil sige at den får fat på den customAttribute som vi har lavet.
-                var attributesForProperty = childProperty.GetCustomAttributes(typeof(MatchParentAttibute), true);
+                var attributesForProperty = childProperty.GetCustomAttributes(typeof(MatchParentAttribute), true);
                 // Boolean som bruges til tjek/if senere.
                 var isOfTypeMatchParentAttribute = false;
 
                 //instance af MatchParentAttribute som skal bruges til tjek/if, når der skal sammenlignes navne på properties.
-                MatchParentAttibute currentAttribute = null;
+                MatchParentAttribute currentAttribute = null;
                 //foreach på attributesForProperty for at finde hver enkel attibute.
                 foreach (var attribute in attributesForProperty)
                 {
                     //Tjek om attribute type er MatchParentAttribute.
-                    if (attribute.GetType() == typeof(MatchParentAttibute))
+                    if (attribute.GetType() == typeof(MatchParentAttribute))
                     {
-                        //Hvis attribute type er MatchParentAttibute skal isOfTypeMatchParentAttrbute sættes til true.
+                        //Hvis attribute type er MatchParentAttribute skal isOfTypeMatchParentAttrbute sættes til true.
                         isOfTypeMatchParentAttribute = true;
                         //currentAttribute indeholder den nu værende attribute.
-                        currentAttribute = (MatchParentAttibute)attribute;
+                        currentAttribute = (MatchParentAttribute)attribute;
                         //Hvis koden når her til skal dette foreach loop brudes.
                         break;
                     }
@@ -65,330 +65,301 @@ namespace TestHarness.Extensions
                     object parentPropertyValue = null;
                     //parentPropertyValue2 er lavet for at tage højde for koordinator som er placeret i samme property som f.eks pp og dxy.
                     object parentPropertyValue2 = null;
-
                     //switch til at håndterer når currenAttribute.ParentPropertyName stemmer over ens med en af disse cases.
                     switch (currentAttribute.ParentPropertyName)
                     {
-                        case "pp":
-                            SplitStringValueFromCurrentAttribute1(parentProperties, currentAttribute);
-                            //Det nedenunder skal kommenteres ud.
+                        //Gamle cases er at finde i codesnippets.
+                        //Denne case bliver brugt til at komme ind i strukturen af parent for så at matchpropertiesfrom childpropertyInstance som er en instance af childproperty
+                        case "schDesignSymbolBodyRect":
                             foreach (var parentProperty in parentProperties)
-	                        {
-                                //Hvis navne og propertytypes er ens skal pp dele op ved mellemrum og derefter fordeles på 2 variabler på parent(CADint input)
-                                if (parentProperty.Name == currentAttribute.ParentPropertyName)
-                                {
-                                    //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
-                                    string[] results = parentProperty.ToString().Split(' ');
-                                    //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
-                                    long NamedPartX;
-                                    long NamedPartY;
-
-                                    NamedPartX = long.Parse(results[0]);
-                                    NamedPartY = long.Parse(results[1]);
-                                                                   
-                                    parentPropertyValue = NamedPartX;
-                                    //Her opstår et problem da den value som kommer fra CADint er .25 hvilket ikke er et korrekt format for long.
-                                    //Hvordan skal det løses? type skal være long og kan derfor ikke tage imod decimal tal.
-                                    parentPropertyValue2 = NamedPartY;                                
-                                }
-                                else
-                                {
-                                    if (IsList(parentProperty.PropertyType))
-	                                {
-                                        //En Instance af parentProperty. Som i dette tilfælde er en liste efter overstående if. Kører derefter en foreach over denne liste for at komme dybere ind i strukturen.
-                                        //Instance er det samme som value eftersom den benytter sig af getvalue.
-                                        object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                        //parentPProperty == parent Property Property etc.
-                                        foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
-	                                    {
-                                            //Finder properties for parentPProperty, hvilket er en liste som bliver lavet foreach over, for igen at komme dybere ind i strukturen.
-                                            var parentPPProperties = parentPProperty.GetType().GetProperties();
-                                            foreach (var parentPPProperty in parentPPProperties)
-	                                        {
-                                                //Find value for parentPPProperty for at få adgang til body fra schDesignSymbol eftersom det indeholder "items" som er hvad jeg er ude efter at lave foreach over for at nå helt ind til "pp".
-                                                object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
-                                                if (parentPPPropertyValue != null)
-                                                {
-                                                    //Find properties for parentPPPProperty, som i dette tilfælde er et object array af "items".
-                                                    var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
-                                                    foreach(var parentPPPProperty in parentPPPProperties)
-                                                    {
-                                                        //Få fat på value af object item array
-                                                        object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
-                                                        //foreach over hvert item i object array.
-                                                        foreach(var objItem in (IEnumerable)parentPPPPInstance)
-                                                        {
-                                                            //Find properties for objItem.
-                                                            var objItemProperties = objItem.GetType().GetProperties();
-
-                                                            foreach(var objItemProperty in objItemProperties)
-                                                            {
-                                                                //Hvis objItemProperty.Name er == "pp".
-                                                                if (objItemProperty.Name == currentAttribute.ParentPropertyName)
-                                                                {
-                                                                    //Få fat i Value af item(pp)
-                                                                    object objItemPropertyValue = objItem.GetType().GetProperty(objItemProperty.Name).GetValue(objItem, null);
-                                                                    //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
-                                                                    string[] results = objItemPropertyValue.ToString().Split(' ');
-                                                                    //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
-                                                                    long NamedPartX;
-                                                                    long NamedPartY;
-                                                                    //Forsøg at parse string[0] til NamedPartX typeof long.
-                                                                    bool NamedPartXSuccess = Int64.TryParse(results[0], out NamedPartX);
-                                                                    if (NamedPartXSuccess)
-                                                                    {
-                                                                        parentPropertyValue = NamedPartX;
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        if (results[0] == null) results[0] = "";
-                                                                        Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
-                                                                    }
-                                                                    //Forsøg at parse string[1] til NamedPartY typeof long.
-                                                                    bool NamedPartYSuccess = Int64.TryParse(results[1],out NamedPartY);
-                                                                    if (NamedPartYSuccess)
-                                                                    {
-                                                                        parentPropertyValue2 = NamedPartY;
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        if(results[1] == null) results[1] = "";
-                                                                        Console.WriteLine ("Attempted conversion of '{0}'", results[1]);
-                                                                    }
-                                                                    break;
-                                                                }
-                                                                
-                                                            }
-                                                            
-                                                        }
-                                                        
-                                                    }
-                                                    
-                                                }
-                                                
-	                                        }
-                                            //break er sat her for ellers rammer den aldrig dxy. Har brug for input for at forstå hvorfor dette er tilfældet.
-                                            break;
-	                                    }
-                                        
-	                                }
-                                    
-                                }
-                               
-	                        }
-                            break;
-                        case "dxy":
-                            SplitStringValueFromCurrentAttribute2(parentProperties, currentAttribute);
-                            foreach(var parentProperty in parentProperties)
                             {
                                 if (IsList(parentProperty.PropertyType))
-	                            {
-                                    //En Instance af parentProperty. Som i dette tilfælde er en liste efter overstående if. Kører derefter en foreach over denne liste for at komme dybere ind i strukturen.
+                                {
                                     object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                    //parentPProperty == parent property property etc.
-                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance) 
-                                    { 
-                                        //Find properties for parentPProperty, hvilket er en list som bliver lavet foreach over, for igen at komme dybere ind i strukturen.
-                                        var parentPProperties = parentPProperty.GetType().GetProperties();
-                                        foreach (var parentPPProperty in parentPProperties)
+
+                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
+                                    {
+                                        var parentPPProperties = parentPProperty.GetType().GetProperties();
+
+                                        foreach (var parentPPProperty in parentPPProperties)
                                         {
-                                            //Find value for parentPPProperty for at få adgang til body fra schDesignSymbol eftersom det indeholder "items" som er hvad jeg er ude efter at lave en foreach over for at nå helt ind til "dxy".
                                             object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
+
                                             if (parentPPPropertyValue != null)
-	                                        {
-                                                //Find properties for parentPPPProperty, som i dette tilfælde er et object array af "items".
+                                            {
                                                 var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
                                                 foreach (var parentPPPProperty in parentPPPProperties)
                                                 {
-                                                    //Få fat på value af object item array
                                                     object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
-                                                    //foreach over hvert item i object array
+
+                                                    //object testerfyr = parentPPPPInstance.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPPInstance, null);
+
                                                     foreach (var objItem in (IEnumerable)parentPPPPInstance)
                                                     {
-                                                        //Find properties for objItem.
-                                                        var objItemProperties = objItem.GetType().GetRuntimeProperties();
-                                                        foreach (var objItemProperty in objItemProperties)
+                                                        var objItemFullName = objItem.GetType().FullName;
+                                                        string[] splitAtPlus = objItemFullName.ToString().Split('+');
+                                                        string objItemName = splitAtPlus[1];
+                                                        if (currentAttribute.ParentPropertyName.Equals(objItemName) == true)
                                                         {
-                                                            if (objItemProperty.Name == currentAttribute.ParentPropertyName)
-	                                                        {
-                                                                //Få fat i Value af item(pp)
-                                                                object objItemPropertyValue = objItem.GetType().GetProperty(objItemProperty.Name).GetValue(objItem, null);
-                                                                //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
-                                                                string[] results = objItemPropertyValue.ToString().Split(' ');
-                                                                //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
-                                                                long NamedPartX;
-                                                                long NamedPartY;
-
-                                                                bool NamedPartXSuccess = Int64.TryParse(results[0], out NamedPartX);
-                                                                if (NamedPartXSuccess)
-                                                                {
-                                                                    parentPropertyValue = NamedPartX;
-                                                                }
-                                                                else
-                                                                {
-                                                                    if (results[0] == null) results[0] = "";
-                                                                    Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
-                                                                }
-                                                                bool NamedPartYSuccess = Int64.TryParse(results[1],out NamedPartY);
-                                                                if (NamedPartYSuccess)
-                                                                {
-                                                                    parentPropertyValue2 = NamedPartY;
-                                                                }
-                                                                else
-                                                                {
-                                                                    if(results[1] == null) results[1] = "";
-                                                                    Console.WriteLine ("Attempted conversion of '{0}'", results[1]);
-                                                                }
-                                                            break;
-	                                                        }
+                                                            //denne instance skal bruges i matchpropertiesfrom for at få adgang til de underliggende properties. pp, pk, pk1
+                                                            object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
+                                                            childProperty.SetValue(self, childPropertyInstance);
+                                                            childPropertyInstance.MatchPropertiesFrom(objItem);
+                                                            //her skal jeg bruge noget hjælp til at gennemskue hvad det næste skridt er eftersom jeg gerne vil videre ind til pp osv. men det er på nuværende tidspunkt ikke muligt.
+                                                            //childProperties.MatchPropertiesFrom(objItem);
                                                         }
                                                     }
                                                 }
-	                                        }
+                                            }
                                         }
                                     }
-
-	                            }
+                                }
                             }
+                            break;
+                        case "schDesignSymbolBodyArc":
+                            foreach (var parentProperty in parentProperties)
+                            {
+                                if (IsList(parentProperty.PropertyType))
+                                {
+                                    object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+
+                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
+                                    {
+                                        var parentPPProperties = parentPProperty.GetType().GetProperties();
+
+                                        foreach (var parentPPProperty in parentPPProperties)
+                                        {
+                                            object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
+
+                                            if (parentPPPropertyValue != null)
+                                            {
+                                                var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
+                                                foreach (var parentPPPProperty in parentPPPProperties)
+                                                {
+                                                    object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
+
+                                                    //object testerfyr = parentPPPPInstance.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPPInstance, null);
+
+                                                    foreach (var objItem in (IEnumerable)parentPPPPInstance)
+                                                    {
+                                                        var objItemFullName = objItem.GetType().FullName;
+                                                        string[] splitAtPlus = objItemFullName.ToString().Split('+');
+                                                        string objItemName = splitAtPlus[1];
+                                                        if (currentAttribute.ParentPropertyName.Equals(objItemName) == true)
+                                                        {
+                                                            //denne instance skal bruges i matchpropertiesfrom for at få adgang til de underliggende properties. pp, pk, pk1
+                                                            object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
+                                                            childProperty.SetValue(self, childPropertyInstance);
+                                                            childPropertyInstance.MatchPropertiesFrom(objItem);
+                                                            //her skal jeg bruge noget hjælp til at gennemskue hvad det næste skridt er eftersom jeg gerne vil videre ind til pp osv. men det er på nuværende tidspunkt ikke muligt.
+                                                            //childProperties.MatchPropertiesFrom(objItem);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case "schDesignSymbolBodyLine":
+                            foreach (var parentProperty in parentProperties)
+                            {
+                                if (IsList(parentProperty.PropertyType))
+                                {
+                                    object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+
+                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
+                                    {
+                                        var parentPPProperties = parentPProperty.GetType().GetProperties();
+
+                                        foreach (var parentPPProperty in parentPPProperties)
+                                        {
+                                            object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
+
+                                            if (parentPPPropertyValue != null)
+                                            {
+                                                var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
+                                                foreach (var parentPPPProperty in parentPPPProperties)
+                                                {
+                                                    object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
+
+                                                    //object testerfyr = parentPPPPInstance.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPPInstance, null);
+
+                                                    foreach (var objItem in (IEnumerable)parentPPPPInstance)
+                                                    {
+                                                        var objItemFullName = objItem.GetType().FullName;
+                                                        string[] splitAtPlus = objItemFullName.ToString().Split('+');
+                                                        string objItemName = splitAtPlus[1];
+                                                        if (currentAttribute.ParentPropertyName.Equals(objItemName) == true)
+                                                        {
+                                                            //denne instance skal bruges i matchpropertiesfrom for at få adgang til de underliggende properties. pp, pk, pk1
+                                                            object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
+                                                            childProperty.SetValue(self, childPropertyInstance);
+                                                            childPropertyInstance.MatchPropertiesFrom(objItem);
+                                                            //her skal jeg bruge noget hjælp til at gennemskue hvad det næste skridt er eftersom jeg gerne vil videre ind til pp osv. men det er på nuværende tidspunkt ikke muligt.
+                                                            //childProperties.MatchPropertiesFrom(objItem);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case "pp":
+                            parentPropertyValue = null;
+                            parentPropertyValue2 = null;
+                            foreach(var parentProperty in parentProperties)
+                            {
+                            //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
+                                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
+                                    {
+                                        parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                        //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
+                                        string[] results = parentPropertyValue.ToString().Split(' ');
+                                        //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
+                                        long NamedPartX1;
+                                        long NamedPartY1    
+
+                                        bool NamedPartX1Success = Int64.TryParse(results[0], out NamedPartX1);
+                                        if (NamedPartX1Success)
+                                        {
+                                            parentPropertyValue = NamedPartX1;
+                                        }
+                                        else
+                                        {
+                                            if (results[0] == null) results[0] = "";
+                                            Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
+                                        }
+                                        bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
+                                        foreach (var childProperty in childProperties)
+                                        {
+                                            if (childProperty.Name == "y2")
+                                            {
+                                                if (NamedPartY1Success)
+                                                {
+                                                    parentPropertyValue2 = NamedPartY1;
+                                                }
+                                                else
+                                                {
+                                                    if (results[1] == null) results[1] = "";
+                                                    Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
+                                                }
+                                            }
+                                        }
+                                    }
+                            }
+                            break;
+                        case "dxy":
+                            parentPropertyValue = null;
+                            parentPropertyValue2 = null;
+                            foreach(var parentProperty in parentProperties)
+                            {
+                            //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
+                                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
+                                    {
+                                        parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                        //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
+                                        string[] results = parentPropertyValue.ToString().Split(' ');
+                                        //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
+                                        long NamedPartX1;
+                                        long NamedPartY1    
+
+                                        bool NamedPartX1Success = Int64.TryParse(results[0], out NamedPartX1);
+                                        if (NamedPartX1Success)
+                                        {
+                                            parentPropertyValue = NamedPartX1;
+                                        }
+                                        else
+                                        {
+                                            if (results[0] == null) results[0] = "";
+                                            Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
+                                        }
+                                        bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
+                                        foreach (var childProperty in childProperties)                                     {
+                                        {
+                                            if (childProperty.Name == "y1")
+                                            {
+                                                if (NamedPartY1Success)
+                                                {
+                                                    parentPropertyValue2 = NamedPartY1;
+                                                }
+                                                else
+                                                {
+                                                    if (results[1] == null) results[1] = "";
+                                                    Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }  
                             break;
                         case "pk":
+                            parentPropertyValue = null;
+                            parentPropertyValue2 = null;
                             foreach (var parentProperty in parentProperties)
-                            {
-                                if (IsList(parentProperty.PropertyType))
                                 {
-                                    object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-
-                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
+                                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
                                     {
-                                        var parentPProperties = parentProperty.GetType().GetProperties();
-                                        foreach (var parentPPProperty in parentPProperties)
+                                        parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                        string[] results = parentPropertyValue.ToString().Split(' ');
+                                        long NamedPartY2;
+                                        bool NamedPartY2Success = Int64.TryParse(results[1], out NamedPartY2);
+                                        if (NamedPartY2Success)
                                         {
-                                            object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPProperty.Name).GetValue(parentPProperty, null);
-                                            if (parentPPPropertyValue != null)
-                                            {
-                                                var parentPPPProperties = parentPPPropoertyValue.GetType().GetProperties();
-                                                foreach (var parentPPPProperty in parentPPPProperties)
-                                                {
-                                                    object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
-                                                    foreach (var objItem in (IEnumerable)parentPPPPInstance)
-                                                    {
-                                                        var objItemProperties = objItem.GetType().GetProperties();
-                                                        foreach (var objItemProperty in objItemProperties)
-                                                        {
-                                                            if (objItemProperty.Name == currentAttribute.ParentPropertyName)
-                                                            {
-                                                                //Do stuff.
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
+                                            parentPropertyValue = NamedPartY2;
+                                        }
+                                        else
+                                        {
+                                            if(results[1] == null) results[1] = "";
+                                            Console.WriteLine("Attempted conversion of '{1}' failed" );
                                         }
                                     }
                                 }
-                            }
                             break;
                         case "pk1":
+                            parentPropertyValue = null;
+                            parentPropertyValue2 = null;
                             foreach (var parentProperty in parentProperties)
-                            {
-                                if (IsList(parentProperty.PropertyType))
                                 {
-                                    object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-
-                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
+                                //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
+                                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
                                     {
-                                        var parentPProperties = parentProperty.GetType().GetProperties();
-                                        foreach (var parentPPProperty in parentPProperties)
+                                        parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                        //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
+                                        string[] results = parentPropertyValue.ToString().Split(' ');
+                                        //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
+                                        long NamedPartX2;
+
+                                        bool NamedPartX2Success = Int64.TryParse(results[0], out NamedPartX2);
+                                        if (NamedPartX2Success)
                                         {
-                                            object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPProperty.Name).GetValue(parentPProperty, null);
-                                            if (parentPPPropertyValue != null)
-                                            {
-                                                var parentPPPProperties = parentPPPropoertyValue.GetType().GetProperties();
-                                                foreach (var parentPPPProperty in parentPPPProperties)
-                                                {
-                                                    object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
-                                                    foreach (var objItem in (IEnumerable)parentPPPPInstance)
-                                                    {
-                                                        var objItemProperties = objItem.GetType().GetProperties();
-                                                        foreach (var objItemProperty in objItemProperties)
-                                                        {
-                                                            if (objItemProperty.Name == currentAttribute.ParentPropertyName)
-                                                            {
-                                                                //Do stuff.
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
+                                            parentPropertyValue = NamedPartX2;
                                         }
+                                        else
+                                        {
+                                            if (results[0] == null) results[0] = "";
+                                            Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
+                                        }
+
                                     }
                                 }
-                            }
                             break;
                     }
 
                     //Denne foreach er fra den simple version af koden. Dvs før Switchen blev lavet til at tage sig af specifikke properties.
-                    foreach (var parentProperty in parentProperties)
-	                {
-                    
-                        //Tjek om parentProperty.Name stemmer overens med currentAttibute.ParentPropertyName. Så hvis parentProperty.Name stemmer overens med det navn der er sat i vores CustomAttibute skal der laves tjek på PropertyType.
-                        if (parentProperty.Name == currentAttribute.ParentPropertyName)
-                        {
-                            //Tjek om PropertyType er ens.
-                            if (parentProperty.PropertyType == childProperty.PropertyType)
-                            {
-                                //hvis både Name og PropertyType er ens skal value tilføjes til parentPropertyValue som bruges til SetValue udenfor Loop.
-                                parentPropertyValue = parentProperty.GetValue(parent);
-                            }
-                            //Tjekker om det er en liste vi har med at gøre.
-                            else if (IsList(parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null).GetType()))
-                            {
-                                //parentPropertyInstance bruges til at holde listen som kommer fra parent.
-                                object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                //childPropertyInstance bruges til at indeholde listen fra child/self.
-                                Object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
-
-                                //Her laves der en instance af child/self listen.
-                                Object childListInstance = Activator.CreateInstance(childPropertyInstance.GetType());
-                                //Oprettelse af liste som bruges til at tilføje Instances til, samt gemmes til i SetValue, efter tilføjelse til parentPropertyValue.
-                                IList list = (IList)childListInstance;
-
-                                //foreach over companyParent for at få fat i hver genstand på listen. Hold øje med hvorvidt IList er optimal for det enlige projekt.
-                                foreach (var parentPropertyItem in (IEnumerable)parentPropertyInstance)
-                                {
-                                    //Dette giver en liste af "type". Hvilket skal findes for at kunne oprette en instance af list item.
-                                    var TFromList = childPropertyInstance.GetType().GetGenericArguments();
-                                    //Oprette en instance af hvad der er på listen.
-                                    Object ChildTFromListInstance = Activator.CreateInstance(TFromList[0]);
-
-                                    //Kør MatchPropertiesFrom med compparentItem som er en instance af en genstand på parent listen.
-                                    //orgChildInstance er en instance af child/self list item. Hvilket betyder at det er her list items bliver matched.
-                                    ChildTFromListInstance.MatchPropertiesFrom(parentPropertyItem);
-                                    //Tilføjelse af det matched orgChildInstance til list(instance af child/self list)
-                                    list.Add(ChildTFromListInstance);
-                                }
-                                //Tilføjelse til parentPropertyValue som bruges til setvalue udenfor loop.
-                                parentPropertyValue = list;
-                            }
-                            else
-                            {
-                                //companyParent indeholder value fra parentProperty. Skal bruges til MatchPropertiesFrom.
-                                var companyParent = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                //orgInstance er en instance af chdilproperty. Skal bruge til MatchPropertiesFrom.
-                                Object orgInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
-                                //MatchPropertiesFrom companyParent til orginstance.
-                                orgInstance.MatchPropertiesFrom(companyParent);
-                                //parentPropertyValue sættes lige med det "nye" orgInstance. 
-                                parentPropertyValue = orgInstance;
-                                break;
-                            }
-                        }
-
-	                }
+                    //Foreach fjernet herfra og tilføjet til codesnippets
                     //Tilføj value af parentPropertyValue til self.
                     try
                     {
                         childProperty.SetValue(self, parentPropertyValue);
+                        if(parentPropertyValue2 != null)
+                        {
+                            childProperty.SetValue(self, parentPropertyValue2);
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -467,157 +438,6 @@ namespace TestHarness.Extensions
             return false;
         }
         //Disse to metoder bliver brugt til at hente og splitte string af blandt andet pp og dxy.
-        public static void SplitStringValueFromCurrentAttribute1(object parentProperties, object currentAttribute)
-        {
-            foreach (var parentProperty in parentProperties)
-	        {
-                                    if (IsList(parentProperty.PropertyType))
-	                                {
-                                        //En Instance af parentProperty. Som i dette tilfælde er en liste efter overstående if. Kører derefter en foreach over denne liste for at komme dybere ind i strukturen.
-                                        //Instance er det samme som value eftersom den benytter sig af getvalue.
-                                        object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                        //parentPProperty == parent Property Property etc.
-                                        foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
-	                                    {
-                                            //Finder properties for parentPProperty, hvilket er en liste som bliver lavet foreach over, for igen at komme dybere ind i strukturen.
-                                            var parentPPProperties = parentPProperty.GetType().GetProperties();
-                                            foreach (var parentPPProperty in parentPPProperties)
-	                                        {
-                                                //Find value for parentPPProperty for at få adgang til body fra schDesignSymbol eftersom det indeholder "items" som er hvad jeg er ude efter at lave foreach over for at nå helt ind til "pp".
-                                                object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
-                                                if (parentPPPropertyValue != null)
-                                                {
-                                                    //Find properties for parentPPPProperty, som i dette tilfælde er et object array af "items".
-                                                    var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
-                                                    foreach(var parentPPPProperty in parentPPPProperties)
-                                                    {
-                                                        //Få fat på value af object item array
-                                                        object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
-                                                        //foreach over hvert item i object array.
-                                                        foreach(var objItem in (IEnumerable)parentPPPPInstance)
-                                                        {
-                                                            //Find properties for objItem.
-                                                            var objItemProperties = objItem.GetType().GetProperties();
-
-                                                            foreach(var objItemProperty in objItemProperties)
-                                                            {
-                                                                //Hvis objItemProperty.Name er == "pp".
-                                                                if (objItemProperty.Name == currentAttribute.ParentPropertyName)
-                                                                {
-                                                                    //Få fat i Value af item(pp)
-                                                                    object objItemPropertyValue = objItem.GetType().GetProperty(objItemProperty.Name).GetValue(objItem, null);
-                                                                    //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
-                                                                    string[] results = objItemPropertyValue.ToString().Split(' ');
-                                                                    //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
-                                                                    long NamedPartX;
-                                                                    long NamedPartY;
-                                                                    //Forsøg at parse string[0] til NamedPartX typeof long.
-                                                                    bool NamedPartXSuccess = Int64.TryParse(results[0], out NamedPartX);
-                                                                    if (NamedPartXSuccess)
-                                                                    {
-                                                                        parentPropertyValue = NamedPartX;
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        if (results[0] == null) results[0] = "";
-                                                                        Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
-                                                                    }
-                                                                    break;
-                                                                }
-                                                                
-                                                            }
-                                                            
-                                                        }
-                                                        
-                                                    }
-                                                    
-                                                }
-                                                
-	                                        }
-                                            //break er sat her for ellers rammer den aldrig dxy. Har brug for input for at forstå hvorfor dette er tilfældet.
-                                            break;
-	                                    }
-                                        
-	                                }
-                                    
-                                
-                               
-	        }
-        }
-        public static void SplitStringValueFromCurrentAttribute2(object parentProperties, object currentAttribute)
-        {
-            foreach (var parentProperty in parentProperties)
-	        {
-                                    if (IsList(parentProperty.PropertyType))
-	                                {
-                                        //En Instance af parentProperty. Som i dette tilfælde er en liste efter overstående if. Kører derefter en foreach over denne liste for at komme dybere ind i strukturen.
-                                        //Instance er det samme som value eftersom den benytter sig af getvalue.
-                                        object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                        //parentPProperty == parent Property Property etc.
-                                        foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
-	                                    {
-                                            //Finder properties for parentPProperty, hvilket er en liste som bliver lavet foreach over, for igen at komme dybere ind i strukturen.
-                                            var parentPPProperties = parentPProperty.GetType().GetProperties();
-                                            foreach (var parentPPProperty in parentPPProperties)
-	                                        {
-                                                //Find value for parentPPProperty for at få adgang til body fra schDesignSymbol eftersom det indeholder "items" som er hvad jeg er ude efter at lave foreach over for at nå helt ind til "pp".
-                                                object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
-                                                if (parentPPPropertyValue != null)
-                                                {
-                                                    //Find properties for parentPPPProperty, som i dette tilfælde er et object array af "items".
-                                                    var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
-                                                    foreach(var parentPPPProperty in parentPPPProperties)
-                                                    {
-                                                        //Få fat på value af object item array
-                                                        object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
-                                                        //foreach over hvert item i object array.
-                                                        foreach(var objItem in (IEnumerable)parentPPPPInstance)
-                                                        {
-                                                            //Find properties for objItem.
-                                                            var objItemProperties = objItem.GetType().GetProperties();
-
-                                                            foreach(var objItemProperty in objItemProperties)
-                                                            {
-                                                                //Hvis objItemProperty.Name er == "pp".
-                                                                if (objItemProperty.Name == currentAttribute.ParentPropertyName)
-                                                                {
-                                                                    //Få fat i Value af item(pp)
-                                                                    object objItemPropertyValue = objItem.GetType().GetProperty(objItemProperty.Name).GetValue(objItem, null);
-                                                                    //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
-                                                                    string[] results = objItemPropertyValue.ToString().Split(' ');
-                                                                    //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
-                                                                    long NamedPartX;
-                                                                    long NamedPartY;
-                                                                    //Forsøg at parse string[0] til NamedPartX typeof long.
-                                                                    bool NamedPartYSuccess = Int64.TryParse(results[1],out NamedPartY);
-                                                                    if (NamedPartYSuccess)
-                                                                    {
-                                                                        parentPropertyValue2 = NamedPartY;
-                                                                    }
-                                                                    else
-                                                                    {
-                                                                        if(results[1] == null) results[1] = "";
-                                                                        Console.WriteLine ("Attempted conversion of '{0}'", results[1]);
-                                                                    }
-                                                                    break;
-                                                                }
-                                                                
-                                                            }
-                                                            
-                                                        }
-                                                        
-                                                    }
-                                                    
-                                                }
-                                                
-	                                        }
-                                            //break er sat her for ellers rammer den aldrig de andre MatchParentAttribute.
-                                            break;
-	                                    }
-                                        
-	                                }                 
-	        }
-        }
     }
 
 }

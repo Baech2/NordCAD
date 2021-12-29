@@ -1155,6 +1155,7 @@ namespace Xsd2
 
             private DesignCacheBookMarkSymbolArc designCacheBookMarkSymbolArcField;
             [System.Xml.Serialization.XmlElementAttribute("Arc")]
+            //[MatchParentAttribute("schDesignSymbolBodyArc")]
             public DesignCacheBookMarkSymbolArc DesignCacheBookMarkSymbolArc
             {
                 get { return designCacheBookMarkSymbolArcField; }
@@ -1287,6 +1288,7 @@ namespace Xsd2
             private DesignCacheBookMarkSymbolArcDefn defnField;
 
             /// <remarks/>
+            [MatchParentAttribute("schDesignSymbolBodyArc")]
             public DesignCacheBookMarkSymbolArcDefn Defn
             {
                 get
@@ -2439,6 +2441,7 @@ namespace Xsd2
             private DesignCacheBookMarkSymbolLineDefn defnField;
 
             /// <remarks/>
+            [MatchParentAttribute("schDesignSymbolBodyLine")]
             public DesignCacheBookMarkSymbolLineDefn Defn
             {
                 get
@@ -2503,7 +2506,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("pp")]
+            [MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -2518,7 +2521,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("dxy")]
+            [MatchParentAttribute("dxy")]
             public long x2
             {
                 get
@@ -2904,6 +2907,7 @@ namespace Xsd2
             private DesignCacheBookMarkSymbolRectDefn defnField;
 
             /// <remarks/>
+            [MatchParentAttribute("schDesignSymbolBodyRect")]
             public DesignCacheBookMarkSymbolRectDefn Defn
             {
                 get
@@ -2935,7 +2939,7 @@ namespace Xsd2
             private long lineWidthField;
 
             private long x1Field;
-
+            
             private long x2Field;
 
             private long y1Field;
@@ -3000,7 +3004,7 @@ namespace Xsd2
 
             /// I princippet er "pp" en del af disse 4 properties.
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("pp")]
+            [MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -3015,6 +3019,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
+            [MatchParentAttribute("pk1")]
             public long x2
             {
                 get
@@ -3043,6 +3048,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
+            [MatchParentAttribute("pk")]
             public long y2
             {
                 get
@@ -24279,7 +24285,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("pp")]
+            //[MatchParentAttribute("pp")]
             public long startX
             {
                 get
@@ -25620,7 +25626,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("pp")]
+            //[MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -26167,7 +26173,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("pp")]
+            //[MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -29591,7 +29597,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("Key")]
+            //[MatchParentAttribute("Key")]
             public string name
             {
                 get
@@ -29606,7 +29612,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("Value")]
+            //[MatchParentAttribute("Value")]
             public string val
             {
                 get
@@ -39101,7 +39107,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("Key")]
+            //[MatchParentAttribute("Key")]
             public string name
             {
                 get
@@ -39116,7 +39122,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttibute("Value")]
+            //[MatchParentAttribute("Value")]
             public string val
             {
                 get
@@ -43353,7 +43359,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttibute("faceName")]
+            //[MatchParentAttribute("faceName")]
             public string name
             {
                 get
@@ -52013,7 +52019,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttibute("Key")]
+            //[MatchParentAttribute("Key")]
             public string name
             {
                 get
@@ -52028,7 +52034,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttibute("Value")]
+            //[MatchParentAttribute("Value")]
             public string val
             {
                 get

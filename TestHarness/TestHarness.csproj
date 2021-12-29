@@ -84,7 +84,7 @@
     <Compile Include="CADintSch\TutcpuaSch.cs" />
     <Compile Include="dsn.cs" />
     <Compile Include="dsn2.cs" />
-    <Compile Include="Extensions\MatchParentAttibute.cs" />
+    <Compile Include="Extensions\MatchParentAttribute.cs" />
     <Compile Include="Extensions\MySplitter.cs" />
     <Compile Include="Extensions\ObjectExtensionMethods.cs" />
     <Compile Include="Program.cs" />
