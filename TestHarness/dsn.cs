@@ -1417,6 +1417,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
+            [MatchParentAttribute("pp")]
             public long x1
             {
                 get

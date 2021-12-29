@@ -221,7 +221,7 @@ namespace TestHarness.Extensions
                                         string[] results = parentPropertyValue.ToString().Split(' ');
                                         //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
                                         long NamedPartX1;
-                                        long NamedPartY1    
+                                        long NamedPartY1;    
 
                                         bool NamedPartX1Success = Int64.TryParse(results[0], out NamedPartX1);
                                         if (NamedPartX1Success)
@@ -234,8 +234,6 @@ namespace TestHarness.Extensions
                                             Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
                                         }
                                         bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
-                                        foreach (var childProperty in childProperties)
-                                        {
                                             if (childProperty.Name == "y2")
                                             {
                                                 if (NamedPartY1Success)
@@ -248,7 +246,6 @@ namespace TestHarness.Extensions
                                                     Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
                                                 }
                                             }
-                                        }
                                     }
                             }
                             break;
@@ -265,7 +262,7 @@ namespace TestHarness.Extensions
                                         string[] results = parentPropertyValue.ToString().Split(' ');
                                         //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
                                         long NamedPartX1;
-                                        long NamedPartY1    
+                                        long NamedPartY1;    
 
                                         bool NamedPartX1Success = Int64.TryParse(results[0], out NamedPartX1);
                                         if (NamedPartX1Success)
@@ -278,8 +275,6 @@ namespace TestHarness.Extensions
                                             Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
                                         }
                                         bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
-                                        foreach (var childProperty in childProperties)                                     {
-                                        {
                                             if (childProperty.Name == "y1")
                                             {
                                                 if (NamedPartY1Success)
@@ -292,9 +287,7 @@ namespace TestHarness.Extensions
                                                     Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
                                                 }
                                             }
-                                        }
                                     }
-                                }
                             }  
                             break;
                         case "pk":
