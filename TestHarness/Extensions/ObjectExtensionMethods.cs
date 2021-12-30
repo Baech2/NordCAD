@@ -253,7 +253,7 @@ namespace TestHarness.Extensions
                                             Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
                                         }
                                         bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
-                                            if (childProperty.Name == "y2")
+                                            if (childProperty.Name == "y1")
                                             {
                                                 if (NamedPartY1Success)
                                                 {
@@ -295,7 +295,7 @@ namespace TestHarness.Extensions
                                             Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
                                         }
                                         bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
-                                            if (childProperty.Name == "y1")
+                                            if (childProperty.Name == "y2")
                                             {
                                                 if (NamedPartY1Success)
                                                 {

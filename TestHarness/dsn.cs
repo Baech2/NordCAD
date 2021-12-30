@@ -1801,6 +1801,7 @@ namespace Xsd2
             private DesignCacheBookMarkSymbolCommentTextTextFont textFontField;
 
             /// <remarks/>
+            [MatchParentAttribute("schDesignSymbolBodyText")]
             public DesignCacheBookMarkSymbolCommentTextDefn Defn
             {
                 get
@@ -1884,6 +1885,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
+            [MatchParentAttribute("faceNameField")]
             public string name
             {
                 get
@@ -1925,6 +1927,7 @@ namespace Xsd2
             }
 
             /// <remarks/>
+            [MatchParentAttribute("pp")]
             [System.Xml.Serialization.XmlAttributeAttribute()]
             public long x1
             {
