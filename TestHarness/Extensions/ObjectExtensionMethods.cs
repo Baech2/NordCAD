@@ -70,32 +70,40 @@ namespace TestHarness.Extensions
                     {
                         //Gamle cases er at finde i codesnippets.
                         //Denne case bliver brugt til at komme ind i strukturen af parent for så at matchpropertiesfrom childpropertyInstance som er en instance af childproperty
+                        
                         case "schDesignSymbolBodyRect":
                             foreach (var parentProperty in parentProperties)
                             {
                                 if (IsList(parentProperty.PropertyType))
                                 {
-                                    object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                    //Dette object skal bruges til at indeholde en liste af symbol fra CADint
+                                    object parentPropertySymbolList = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
 
-                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
+                                    foreach (var parentPProperty in (IEnumerable)parentPropertySymbolList)
                                     {
-                                        var parentPPProperties = parentPProperty.GetType().GetProperties();
+                                        //Finder properties for parentPProperty, hvilket er en liste som bliver lavet foreach over, for igen at komme dybere ind i strukturen.
+                                        //Denne variabel indeholder properties af parentPropertySymbolList
+                                        var parentPSLProperties = parentPProperty.GetType().GetProperties();
 
-                                        foreach (var parentPPProperty in parentPPProperties)
+                                        foreach (var parentPPProperty in parentPSLProperties)
                                         {
-                                            object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
+                                            //Dette object indeholder value af SymbolBody(schDesignSymbolBody) fra CADint
+                                            object parentPPPropertySymbolBody = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
 
-                                            if (parentPPPropertyValue != null)
+                                            if (parentPPPropertySymbolBody != null)
                                             {
-                                                var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
+                                                //Properties af parentPPPropertyValue som skal bruges i den næste foreach for igen at komme ind i strukturen/"træet".
+                                                //Dette object indeholder value af SymbolBody(schDesignSymbolBody) fra CADint
+                                                var parentPPPProperties = parentPPPropertySymbolBody.GetType().GetProperties();
                                                 foreach (var parentPPPProperty in parentPPPProperties)
                                                 {
-                                                    object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
+                                                    //Dette object indeholde en liste af "Items" fra CADint. Items er Arc, Rect, Line, Text etc.
+                                                    object parentPPPPItemsList = parentPPPropertySymbolBody.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertySymbolBody, null);
 
-                                                    //object testerfyr = parentPPPPInstance.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPPInstance, null);
-
-                                                    foreach (var objItem in (IEnumerable)parentPPPPInstance)
+                                                    //Denne foreach går igennem alle Items og når et Item Name passer med currentAttribute.ParentPropertyName, går den ind i if.
+                                                    foreach (var objItem in (IEnumerable)parentPPPPItemsList)
                                                     {
+                                                        //Finder her det fulde navn (FullName). Dette fulde navn indeholder et "+" hvilket er hvor jeg vælger at dele det eftersom at det så er muligt at checke imod currentAttribute.ParentPropertyName.
                                                         var objItemFullName = objItem.GetType().FullName;
                                                         string[] splitAtPlus = objItemFullName.ToString().Split('+');
                                                         string objItemName = splitAtPlus[1];
@@ -104,9 +112,8 @@ namespace TestHarness.Extensions
                                                             //denne instance skal bruges i matchpropertiesfrom for at få adgang til de underliggende properties. pp, pk, pk1
                                                             object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
                                                             childProperty.SetValue(self, childPropertyInstance);
+                                                            //matchPropertiesFrom ObjItem. Dette gøres så det er muligt at tjekke alle properties på "Arc", om de indeholder min Custom Attribute.
                                                             childPropertyInstance.MatchPropertiesFrom(objItem);
-                                                            //her skal jeg bruge noget hjælp til at gennemskue hvad det næste skridt er eftersom jeg gerne vil videre ind til pp osv. men det er på nuværende tidspunkt ikke muligt.
-                                                            //childProperties.MatchPropertiesFrom(objItem);
                                                         }
                                                     }
                                                 }
@@ -121,26 +128,34 @@ namespace TestHarness.Extensions
                             {
                                 if (IsList(parentProperty.PropertyType))
                                 {
-                                    object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                    //En Instance af parentProperty. Som i dette tilfælde er en liste efter overstående if. Kører derefter en foreach over denne liste for at komme dybere ind i strukturen.
+                                    //Dette object skal bruges til at indeholde en liste af symbol fra CADint
+                                    object parentPropertySymbolList = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
 
-                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
+                                    foreach (var parentPProperty in (IEnumerable)parentPropertySymbolList)
                                     {
-                                        var parentPPProperties = parentPProperty.GetType().GetProperties();
+                                        //Finder properties for parentPProperty, hvilket er en liste som bliver lavet foreach over, for igen at komme dybere ind i strukturen.
+                                        //Denne variabel indeholder properties af parentPropertySymbolList
+                                        var parentPSLProperties = parentPProperty.GetType().GetProperties();
 
-                                        foreach (var parentPPProperty in parentPPProperties)
+                                        foreach (var parentPPProperty in parentPSLProperties)
                                         {
-                                            object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
+                                            //Dette object indeholder value af SymbolBody(schDesignSymbolBody) fra CADint
+                                            object parentPPPropertySymbolBody = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
 
-                                            if (parentPPPropertyValue != null)
+                                            if (parentPPPropertySymbolBody != null)
                                             {
-                                                var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
-                                                foreach (var parentPPPProperty in parentPPPProperties)
+                                                //Properties af parentPPPropertyValue som skal bruges i den næste foreach for igen at komme ind i strukturen/"træet".
+                                                //Dette object indeholder value af SymbolBody(schDesignSymbolBody) fra CADint
+                                                var parentPPPSBProperties = parentPPPropertySymbolBody.GetType().GetProperties();
+                                                
+                                                foreach (var parentPPPProperty in parentPPPSBProperties)
                                                 {
-                                                    object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
+                                                    //Dette object indeholde en liste af "Items" fra CADint. Items er Arc, Rect, Line, Text etc.
+                                                    object parentPPPPItemsList = parentPPPropertySymbolBody.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertySymbolBody, null);
 
-                                                    //object testerfyr = parentPPPPInstance.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPPInstance, null);
-
-                                                    foreach (var objItem in (IEnumerable)parentPPPPInstance)
+                                                    //Denne foreach går igennem alle Items og når et Item Name passer med currentAttribute.ParentPropertyName, går den ind i if.
+                                                    foreach (var objItem in (IEnumerable)parentPPPPItemsList)
                                                     {
                                                         var objItemFullName = objItem.GetType().FullName;
                                                         string[] splitAtPlus = objItemFullName.ToString().Split('+');
@@ -150,9 +165,8 @@ namespace TestHarness.Extensions
                                                             //denne instance skal bruges i matchpropertiesfrom for at få adgang til de underliggende properties. pp, pk, pk1
                                                             object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
                                                             childProperty.SetValue(self, childPropertyInstance);
+                                                            //matchPropertiesFrom ObjItem. Dette gøres så det er muligt at tjekke alle properties på "Arc", om de indeholder min Custom Attribute.
                                                             childPropertyInstance.MatchPropertiesFrom(objItem);
-                                                            //her skal jeg bruge noget hjælp til at gennemskue hvad det næste skridt er eftersom jeg gerne vil videre ind til pp osv. men det er på nuværende tidspunkt ikke muligt.
-                                                            //childProperties.MatchPropertiesFrom(objItem);
                                                         }
                                                     }
                                                 }
@@ -167,26 +181,31 @@ namespace TestHarness.Extensions
                             {
                                 if (IsList(parentProperty.PropertyType))
                                 {
-                                    object parentPropertyInstance = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                    //Dette object skal bruges til at indeholde en liste af symbol fra CADint
+                                    object parentPropertySymbolList = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
 
-                                    foreach (var parentPProperty in (IEnumerable)parentPropertyInstance)
+                                    foreach (var parentPProperty in (IEnumerable)parentPropertySymbolList)
                                     {
-                                        var parentPPProperties = parentPProperty.GetType().GetProperties();
+                                        //Denne variabel indeholder properties af parentPropertySymbolList
+                                        var parentPSLProperties = parentPProperty.GetType().GetProperties();
 
-                                        foreach (var parentPPProperty in parentPPProperties)
+                                        foreach (var parentPPProperty in parentPSLProperties)
                                         {
-                                            object parentPPPropertyValue = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
+                                            //Dette object indeholder value af SymbolBody(schDesignSymbolBody) fra CADint
+                                            object parentPPPropertySymbolBody = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
 
-                                            if (parentPPPropertyValue != null)
+                                            if (parentPPPropertySymbolBody != null)
                                             {
-                                                var parentPPPProperties = parentPPPropertyValue.GetType().GetProperties();
-                                                foreach (var parentPPPProperty in parentPPPProperties)
+                                                //Denne variabel indeholder properties fra parentPPPropertySymbolBody
+                                                var parentPPPSBProperties = parentPPPropertySymbolBody.GetType().GetProperties();
+                                                foreach (var parentPPPProperty in parentPPPSBProperties)
                                                 {
-                                                    object parentPPPPInstance = parentPPPropertyValue.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertyValue, null);
+                                                    //Dette object indeholde en liste af "Items" fra CADint. Items er Arc, Rect, Line, Text etc.
+                                                    object parentPPPPItemsList = parentPPPropertySymbolBody.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPropertySymbolBody, null);
 
                                                     //object testerfyr = parentPPPPInstance.GetType().GetProperty(parentPPPProperty.Name).GetValue(parentPPPPInstance, null);
-
-                                                    foreach (var objItem in (IEnumerable)parentPPPPInstance)
+                                                    //Denne foreach går igennem alle Items og når et Item Name passer med currentAttribute.ParentPropertyName, går den ind i if.
+                                                    foreach (var objItem in (IEnumerable)parentPPPPItemsList)
                                                     {
                                                         var objItemFullName = objItem.GetType().FullName;
                                                         string[] splitAtPlus = objItemFullName.ToString().Split('+');
@@ -196,9 +215,8 @@ namespace TestHarness.Extensions
                                                             //denne instance skal bruges i matchpropertiesfrom for at få adgang til de underliggende properties. pp, pk, pk1
                                                             object childPropertyInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
                                                             childProperty.SetValue(self, childPropertyInstance);
+                                                            //matchPropertiesFrom ObjItem. Dette gøres så det er muligt at tjekke alle properties på "Line", om de indeholder min Custom Attribute.
                                                             childPropertyInstance.MatchPropertiesFrom(objItem);
-                                                            //her skal jeg bruge noget hjælp til at gennemskue hvad det næste skridt er eftersom jeg gerne vil videre ind til pp osv. men det er på nuværende tidspunkt ikke muligt.
-                                                            //childProperties.MatchPropertiesFrom(objItem);
                                                         }
                                                     }
                                                 }
@@ -209,6 +227,7 @@ namespace TestHarness.Extensions
                             }
                             break;
                         case "pp":
+                            //parentPropertyValue(1)/(2) skal bruges senere til at gemme begge koordinatværdier i pp
                             parentPropertyValue = null;
                             parentPropertyValue2 = null;
                             foreach(var parentProperty in parentProperties)
@@ -250,6 +269,7 @@ namespace TestHarness.Extensions
                             }
                             break;
                         case "dxy":
+                            //parentPropertyValue(1)/(2) skal bruges senere til at gemme begge koordinatværdier i pp
                             parentPropertyValue = null;
                             parentPropertyValue2 = null;
                             foreach(var parentProperty in parentProperties)
@@ -343,12 +363,13 @@ namespace TestHarness.Extensions
                             break;
                     }
 
-                    //Denne foreach er fra den simple version af koden. Dvs før Switchen blev lavet til at tage sig af specifikke properties.
                     //Foreach fjernet herfra og tilføjet til codesnippets
+
                     //Tilføj value af parentPropertyValue til self.
                     try
                     {
                         childProperty.SetValue(self, parentPropertyValue);
+                        //Her checker jeg om parentPropertyValue2 er null. Det gør jeg fordi der er nogen values fra CADint som skal fordeles ud over 2 properties i Orcad/capture. hvis den ikke er null så skal værdien gemmes til self. 
                         if(parentPropertyValue2 != null)
                         {
                             childProperty.SetValue(self, parentPropertyValue2);
@@ -415,6 +436,8 @@ namespace TestHarness.Extensions
             return typeInfo.IsPrimitive
               || typeInfo.IsEnum
               || type.Equals(typeof(string))
+              || type.Equals(typeof(long))
+              || type.Equals(typeof(int))
               || type.Equals(typeof(decimal));
         }
         //Metode for at fastslå om en Type er en liste
@@ -430,7 +453,6 @@ namespace TestHarness.Extensions
                     return true;
             return false;
         }
-        //Disse to metoder bliver brugt til at hente og splitte string af blandt andet pp og dxy.
     }
 
 }
