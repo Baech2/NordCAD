@@ -82,11 +82,10 @@ namespace TestHarness.Extensions
                             break;
                         case "pp":
                             //parentPropertyValue(1)/(2) skal bruges senere til at gemme begge koordinatværdier i pp
-                            parentPropertyValue = null;
-                            parentPropertyValue2 = null;
                             foreach(var parentProperty in parentProperties)
                             {
-                            //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
+                            //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops.
+                            //Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
                                     if (parentProperty.Name == currentAttribute.ParentPropertyName)
                                     {
                                         parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
@@ -107,6 +106,8 @@ namespace TestHarness.Extensions
                                             Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
                                         }
                                         bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
+                                        foreach (var property in childProperties)
+                                        {
                                             if (childProperty.Name == "y1")
                                             {
                                                 if (NamedPartY1Success)
@@ -119,13 +120,12 @@ namespace TestHarness.Extensions
                                                     Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
                                                 }
                                             }
+                                        } 
                                     }
                             }
                             break;
                         case "dxy":
                             //parentPropertyValue(1)/(2) skal bruges senere til at gemme begge koordinatværdier i pp
-                            parentPropertyValue = null;
-                            parentPropertyValue2 = null;
                             foreach(var parentProperty in parentProperties)
                             {
                             //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
@@ -165,8 +165,6 @@ namespace TestHarness.Extensions
                             }  
                             break;
                         case "pk":
-                            parentPropertyValue = null;
-                            parentPropertyValue2 = null;
                             foreach (var parentProperty in parentProperties)
                                 {
                                     if (parentProperty.Name == currentAttribute.ParentPropertyName)
@@ -188,8 +186,6 @@ namespace TestHarness.Extensions
                                 }
                             break;
                         case "pk1":
-                            parentPropertyValue = null;
-                            parentPropertyValue2 = null;
                             foreach (var parentProperty in parentProperties)
                                 {
                                 //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
@@ -248,23 +244,19 @@ namespace TestHarness.Extensions
                             if (IsList(childProperty.PropertyType))
                             {
                                 //Lav array instance of childproperty, som udgangspunkt er der 7 pladser i arrayet.
-                                Object childPropertyInstance = Array.CreateInstance(childProperty.PropertyType.GetElementType(), 7);
+                                object childPropertyInstance = Array.CreateInstance(childProperty.PropertyType.GetElementType(), 7);
                                 //Gem det array på self/child objectet.
                                 childProperty.SetValue(self, childPropertyInstance);
-                                //Skriv følgende besked i console.
-                                Console.WriteLine(childProperty.Name + " do not contain a Custom Attribute of the type 'MatchParentAttribute'. " + childProperty.Name + " was created");
                             }
                             //Hvis det er en complex type. (Class)
                             else
                             {
                                 //Lav object instance af childproperty baseret på det fulde navn af propertyType.
-                                Object childInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
+                                object childInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
                                 //Gem dette object på self/child objectet.
                                 childProperty.SetValue(self, childInstance);
                                 //MatchPropertiesFrom parent til childInstance i et forsøg på at få så mange values med som muligt.
                                 childInstance.MatchPropertiesFrom(parent);
-                                //Skriv følgende besked i console.
-                                Console.WriteLine(childProperty.Name + " do not contain a Custom Attribute of the type 'MatchParentAttribute'. " + childProperty.Name + " was created");
                             }
                         }
                         //Hvis der forekommer nogen errors i forsøget på at opbygge strukturen af objectet bliver den error udskrevet i console, så koden kan tilpasses som der er brug for.
@@ -321,9 +313,9 @@ namespace TestHarness.Extensions
                     {
                         //Finder properties for parentPProperty, hvilket er en liste som bliver lavet foreach over, for igen at komme dybere ind i strukturen.
                         //Denne variabel indeholder properties af parentPropertySymbolList
-                        var parentPSLProperties = parentPProperty.GetType().GetProperties();
+                        var parentPSLItemProperties = parentPProperty.GetType().GetProperties();
 
-                        foreach (var parentPPProperty in parentPSLProperties)
+                        foreach (var parentPPProperty in parentPSLItemProperties)
                         {
                             //Dette object indeholder value af SymbolBody(schDesignSymbolBody) fra CADint
                             object parentPPPropertySymbolBody = parentPProperty.GetType().GetProperty(parentPPProperty.Name).GetValue(parentPProperty, null);
@@ -341,7 +333,8 @@ namespace TestHarness.Extensions
                                     //Denne foreach går igennem alle Items og når et Item Name passer med currentAttribute.ParentPropertyName, går den ind i if.
                                     foreach (var objItem in (IEnumerable)parentPPPPItemsList)
                                     {
-                                        //Finder her det fulde navn (FullName). Dette fulde navn indeholder et "+" hvilket er hvor jeg vælger at dele det eftersom at det så er muligt at checke imod currentAttribute.ParentPropertyName.
+                                        //Finder her det fulde navn (FullName). Dette fulde navn indeholder et "+" hvilket er hvor jeg vælger at dele det eftersom
+                                        //at det så er muligt at checke imod currentAttribute.ParentPropertyName.
                                         var objItemFullName = objItem.GetType().FullName;
                                         string[] splitAtPlus = objItemFullName.ToString().Split('+');
                                         string objItemName = splitAtPlus[1];
