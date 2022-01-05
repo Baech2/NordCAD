@@ -85,7 +85,6 @@
     <Compile Include="dsn.cs" />
     <Compile Include="dsn2.cs" />
     <Compile Include="Extensions\MatchParentAttribute.cs" />
-    <Compile Include="Extensions\MySplitter.cs" />
     <Compile Include="Extensions\ObjectExtensionMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

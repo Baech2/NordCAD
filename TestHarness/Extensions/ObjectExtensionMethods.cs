@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -65,12 +66,17 @@ namespace TestHarness.Extensions
                     object parentPropertyValue = null;
                     //parentPropertyValue2 er lavet for at tage højde for koordinator som er placeret i samme property som f.eks pp og dxy.
                     object parentPropertyValue2 = null;
+                    //Format bliver brugt til convert af en string til en double og derefter til en long. Det er ved hjælp af dette at value af long bliver afrundet.
+                    //Her skal jeg læse mere op på hvad NumberFormatInfo benytter sig af for at afrunde den pågældende værdi.
+                    var format = new NumberFormatInfo();
+                    format.NumberDecimalSeparator = ".";
+                    format.NegativeSign = "-";
                     //switch til at håndterer når currenAttribute.ParentPropertyName stemmer over ens med en af disse cases.
                     switch (currentAttribute.ParentPropertyName)
                     {
                         //Gamle cases er at finde i codesnippets.
                         //Denne case bliver brugt til at komme ind i strukturen af parent for så at matchpropertiesfrom childpropertyInstance som er en instance af childproperty
-                        
+
                         case "schDesignSymbolBodyRect":
                             TBA(parentProperties, parent, childProperty, self, currentAttribute);
                             break;
@@ -81,135 +87,60 @@ namespace TestHarness.Extensions
                             TBA(parentProperties, parent, childProperty, self, currentAttribute);
                             break;
                         case "pp":
-                            //parentPropertyValue(1)/(2) skal bruges senere til at gemme begge koordinatværdier i pp
-                            foreach(var parentProperty in parentProperties)
+                            var longValueArrayPP = ConvertToLong(parent, parentProperties, currentAttribute, 2);
+                            parentPropertyValue = longValueArrayPP[0];
+                            foreach (var childPropertyY in childProperties)
                             {
-                            //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops.
-                            //Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
-                                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
-                                    {
-                                        parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                        //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
-                                        string[] results = parentPropertyValue.ToString().Split(' ');
-                                        //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
-                                        long NamedPartX1;
-                                        long NamedPartY1;    
-
-                                        bool NamedPartX1Success = Int64.TryParse(results[0], out NamedPartX1);
-                                        if (NamedPartX1Success)
-                                        {
-                                            parentPropertyValue = NamedPartX1;
-                                        }
-                                        else
-                                        {
-                                            if (results[0] == null) results[0] = "";
-                                            Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
-                                        }
-                                        bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
-                                        foreach (var property in childProperties)
-                                        {
-                                            if (childProperty.Name == "y1")
-                                            {
-                                                if (NamedPartY1Success)
-                                                {
-                                                    parentPropertyValue2 = NamedPartY1;
-                                                }
-                                                else
-                                                {
-                                                    if (results[1] == null) results[1] = "";
-                                                    Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
-                                                }
-                                            }
-                                        } 
-                                    }
+                                if (childPropertyY.Name == "y1")
+                                {
+                                    parentPropertyValue2 = longValueArrayPP[1];
+                                    childPropertyY.SetValue(self, parentPropertyValue2);
+                                    break;
+                                }
                             }
                             break;
                         case "dxy":
-                            //parentPropertyValue(1)/(2) skal bruges senere til at gemme begge koordinatværdier i pp
-                            foreach(var parentProperty in parentProperties)
+                            var longValueArrayDXY = ConvertToLong(parent, parentProperties, currentAttribute, 2);
+                            parentPropertyValue = longValueArrayDXY[0];
+                            foreach (var childPropertyY in childProperties)
                             {
-                            //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
-                                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
-                                    {
-                                        parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                        //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
-                                        string[] results = parentPropertyValue.ToString().Split(' ');
-                                        //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
-                                        long NamedPartX1;
-                                        long NamedPartY1;    
-
-                                        bool NamedPartX1Success = Int64.TryParse(results[0], out NamedPartX1);
-                                        if (NamedPartX1Success)
-                                        {
-                                            parentPropertyValue = NamedPartX1;
-                                        }
-                                        else
-                                        {
-                                            if (results[0] == null) results[0] = "";
-                                            Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
-                                        }
-                                        bool NamedPartY1Success = Int64.TryParse(results[1], out NamedPartY1);
-                                            if (childProperty.Name == "y2")
-                                            {
-                                                if (NamedPartY1Success)
-                                                {
-                                                    parentPropertyValue2 = NamedPartY1;
-                                                }
-                                                else
-                                                {
-                                                    if (results[1] == null) results[1] = "";
-                                                    Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
-                                                }
-                                            }
-                                    }
-                            }  
+                                if (childPropertyY.Name == "y2")
+                                {
+                                    parentPropertyValue2 = longValueArrayDXY[1];
+                                    childPropertyY.SetValue(self, parentPropertyValue2);
+                                    break;
+                                }
+                            }
                             break;
                         case "pk":
-                            foreach (var parentProperty in parentProperties)
-                                {
-                                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
-                                    {
-                                        parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                        string[] results = parentPropertyValue.ToString().Split(' ');
-                                        long NamedPartY2;
-                                        bool NamedPartY2Success = Int64.TryParse(results[1], out NamedPartY2);
-                                        if (NamedPartY2Success)
-                                        {
-                                            parentPropertyValue = NamedPartY2;
-                                        }
-                                        else
-                                        {
-                                            if(results[1] == null) results[1] = "";
-                                            Console.WriteLine("Attempted conversion of '{1}' failed" );
-                                        }
-                                    }
-                                }
+                            //Version 1.
+                            #region
+                            //foreach (var parentProperty in parentProperties)
+                            //{
+                                //if (parentProperty.Name == currentAttribute.ParentPropertyName)
+                                //{
+                                    
+                                    //parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                                    //string[] results = parentPropertyValue.ToString().Split(' ');
+                                    //double parseStringToDoubleY2 = double.Parse(results[1], format);
+                                    //long y2 = Convert.ToInt64(parseStringToDoubleY2, format);
+
+
+                                    //break;
+
+                                 //}
+                            //}   
+                            #endregion
+                            //Version 2.
+                            //ConvertToLongY er en metode som kan findes i bunden af dette dokument. Den håndtere convert fra string til long(først double, så long).
+                            //1 er y i koodinatsættet pk. ALtså y er den som ikke er 0.
+                            var parentPropertyValueY = ConvertToLong(parent, parentProperties, currentAttribute, 1); 
+                            parentPropertyValue = parentPropertyValueY[1];
                             break;
                         case "pk1":
-                            foreach (var parentProperty in parentProperties)
-                                {
-                                //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
-                                    if (parentProperty.Name == currentAttribute.ParentPropertyName)
-                                    {
-                                        parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                                        //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
-                                        string[] results = parentPropertyValue.ToString().Split(' ');
-                                        //X og Y i OrCad/Capture er type long, så derfor skal string results parses til long.
-                                        long NamedPartX2;
-
-                                        bool NamedPartX2Success = Int64.TryParse(results[0], out NamedPartX2);
-                                        if (NamedPartX2Success)
-                                        {
-                                            parentPropertyValue = NamedPartX2;
-                                        }
-                                        else
-                                        {
-                                            if (results[0] == null) results[0] = "";
-                                            Console.WriteLine("Attempted conversion of '{0}' failed", results[0]);
-                                        }
-
-                                    }
-                                }
+                            //0 er x koordinatsættet i pk1. Altså x er den som ikke er 0.
+                            var parentPropertyValueX = ConvertToLong(parent, parentProperties, currentAttribute, 0);
+                            parentPropertyValue = parentPropertyValueX[0];
                             break;
                     }
 
@@ -219,11 +150,7 @@ namespace TestHarness.Extensions
                     try
                     {
                         childProperty.SetValue(self, parentPropertyValue);
-                        //Her checker jeg om parentPropertyValue2 er null. Det gør jeg fordi der er nogen values fra CADint som skal fordeles ud over 2 properties i Orcad/capture. hvis den ikke er null så skal værdien gemmes til self. 
-                        if(parentPropertyValue2 != null)
-                        {
-                            childProperty.SetValue(self, parentPropertyValue2);
-                        }
+                        //parentPropertyValue2 bliver gems i casen.
                     }
                     catch (Exception ex)
                     {
@@ -353,6 +280,88 @@ namespace TestHarness.Extensions
                     }
                 }
             }
+        }
+        //Version1
+        public static long ConvertToLongY(object parent, PropertyInfo[] parentProperties, MatchParentAttribute currentAttribute)
+        {
+            foreach (PropertyInfo parentProperty in (IEnumerable)parentProperties)
+            {
+                //Det er nu muligt for mig at finde denne property ved hjælp af den overstående schDesign case. Så derfor er der ingen grund til at lave en masse foreach loops. Jeg kan ganske simplet behandle den property som stemmer over ens med currentAttribute.ParentPropertyName
+                if (parentProperty.Name == currentAttribute.ParentPropertyName)
+                {
+                    //eftersom pp er string af x og y koordinater, skal pp splittes. Hvilket gøres her og tilføjet til et string array.
+                    //X og Y i OrCad/Capture er type long, så derfor skal string results parses til en double for så at convert til long. Det er gjort på denne måde for at afrunde value af long variablen.
+                    object parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                    if (parentPropertyValue != null)
+                    {
+                        try 
+	                    {	        
+		                    //format til double.Parse og Convert.ToInt64(). Her bliver "." og "-" defineret som værende separator og negativ/minus tegn.
+                            var format = new NumberFormatInfo();
+                            format.NumberDecimalSeparator = ".";
+                            format.NegativeSign = "-";
+                            //splitter value af parentPropertyValue som er et sæt koordinator.
+                            string[] results = parentPropertyValue.ToString().Split(' ');
+                            //Først laver jeg en double som kan indeholde hele den korrekte value. Derefter convert til long.
+                            double parseStringToDoubleY = double.Parse(results[1], format);
+                            long y = Convert.ToInt64(parseStringToDoubleY, format);
+                            return y;
+	                    }
+	                    catch (Exception ex)
+	                    {
+                            Console.WriteLine("An exception has occurred in trying to convert string to long Y: " +ex);
+		                    return 0;
+	                    }
+                    }
+                    else { return 0; }
+                }
+            }
+            return 0;
+        }
+        //Version2
+        public static long[] ConvertToLong(object parent, PropertyInfo[] parentProperties, MatchParentAttribute currentAttribute, int X0orY1orBoth2)
+        {
+            long[] longarray = new long[2];
+            long x = 0;
+            long y = 0;
+            //int XorYorBoth er tiltænkt at 0 er x, 1 er y og 2 er begge.
+            foreach (PropertyInfo parentProperty in (IEnumerable)parentProperties)
+            {
+                if (parentProperty.Name == currentAttribute.ParentPropertyName)
+                {
+                    object parentPropertyValue = parent.GetType().GetProperty(parentProperty.Name).GetValue (parent, null);
+                    if (parentPropertyValue != null)
+                    {
+                        try 
+	                    {	        
+		                    var format = new NumberFormatInfo();
+                            format.NumberDecimalSeparator= ".";
+                            format.NegativeSign= "-";
+                            string[] results = parentPropertyValue.ToString().Split(' ');
+                            if (X0orY1orBoth2 == 0 || X0orY1orBoth2 == 2)
+                            {
+                                double parseStringToDoubleX = double.Parse(results[0], format);
+                                x = Convert.ToInt64(parseStringToDoubleX, format);
+                                longarray[0] = x;
+                            }
+                            if (X0orY1orBoth2 == 1 || X0orY1orBoth2 == 2)
+                            {
+                                double parseStringToDoubleX = double.Parse(results[1], format);
+                                y = Convert.ToInt64(parseStringToDoubleX, format);
+                                longarray[1] = y;
+                            }
+                            return longarray;
+	                    }
+	                    catch (Exception ex)
+	                    {
+                            Console.WriteLine("An exception has occurred in trying to convert string to long X: " +ex);
+		                    return null;
+	                    }
+                    }
+                    else { return null; }
+                }
+            }
+            return null;
         }
     }
 
