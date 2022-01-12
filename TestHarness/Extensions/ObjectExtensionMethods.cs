@@ -274,39 +274,39 @@ namespace TestHarness.Extensions
                                         childInstance.MatchPropertiesFrom(propertyOfvalue);
                                     
                                     }
-                                    //Hvis propertyOfValue's navn ikke er ens med ParentPropertyName skal der laves en liste af dens properties som bruges i ChildPropertySelf.TBA2().
-                                    PropertyInfo[] propertiesOfPropertyOfList = propertyOfvalue.GetType().GetProperties();
-                                    childPropertyself.TBA2(propertiesOfPropertyOfList, propertyOfvalue, captureSelf, currentAttribute);
-                                }
-                                //Hvis valueOfParentProperty ikke er en liste og hvis det er en complex type, fortsæt.
-                                else if (!IsSimple(valueOfParentProperty.GetType()))
-                                {
-                                    //Hvis valueOfParentProperty's navn er ens med ParentPropertyName fra currentAttribute, fortsæt.
-                                    if (currentAttribute.ParentPropertyName == valueOfParentProperty.GetType().Name)
-                                    {
-                                        //Opret en instance af childpropertyself som skal bruges til setvalue og MatchPropertiesFrom. Ligesom det er blevet gjort ovenover.
-                                        object childInstance = Activator.CreateInstance(Type.GetType(childPropertyself.PropertyType.FullName));
-                                        childPropertyself.SetValue(captureSelf, childInstance);
-                                        childInstance.MatchPropertiesFrom(parent);
-                                    }
-                                    PropertyInfo[] propertiesOfValueOfParentProperty = valueOfParentProperty.GetType().GetProperties();
-                                    foreach (var propertyVar in propertiesOfValueOfParentProperty)
-                                    {
-                                        if (IsList(propertyVar.PropertyType))
-                                        {
-                                            childPropertyself.TBA2(propertiesOfValueOfParentProperty, valueOfParentProperty, captureSelf, currentAttribute);
-                                        }
-                                    }
-                            
-                                }
-                                if (IsSimple(valueOfParentProperty.GetType()))
-                                {
-                                    childPropertyself.MatchPropertiesFrom(valueOfParentProperty);
+                                //Hvis propertyOfValue's navn ikke er ens med ParentPropertyName skal der laves en liste af dens properties som bruges i ChildPropertySelf.TBA2().
+                                PropertyInfo[] propertiesOfPropertyOfList = propertyOfvalue.GetType().GetProperties();
+                                childPropertyself.TBA2(propertiesOfPropertyOfList, propertyOfvalue, captureSelf, currentAttribute);
+                                
                                 }
                             }
                             
                         }
-                    
+                        //Hvis valueOfParentProperty ikke er en liste og hvis det er en complex type, fortsæt.
+                        else if (!IsSimple(valueOfParentProperty.GetType()))
+                        {
+                            //Hvis valueOfParentProperty's navn er ens med ParentPropertyName fra currentAttribute, fortsæt.
+                            if (currentAttribute.ParentPropertyName == valueOfParentProperty.GetType().Name)
+                            {
+                                //Opret en instance af childpropertyself som skal bruges til setvalue og MatchPropertiesFrom. Ligesom det er blevet gjort ovenover.
+                                object childInstance = Activator.CreateInstance(Type.GetType(childPropertyself.PropertyType.FullName));
+                                childPropertyself.SetValue(captureSelf, childInstance);
+                                childInstance.MatchPropertiesFrom(parent);
+                            }
+                            PropertyInfo[] propertiesOfValueOfParentProperty = valueOfParentProperty.GetType().GetProperties();
+                            foreach (var propertyVar in propertiesOfValueOfParentProperty)
+                            {
+                                if (IsList(propertyVar.PropertyType))
+                                {
+                                    childPropertyself.TBA2(propertiesOfValueOfParentProperty, valueOfParentProperty, captureSelf, currentAttribute);
+                                }
+                            }
+                            
+                        }
+                        if (IsSimple(valueOfParentProperty.GetType()))
+                        {
+                            childPropertyself.MatchPropertiesFrom(valueOfParentProperty);
+                        }
                     }
                 }
 
