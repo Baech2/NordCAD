@@ -66,7 +66,7 @@ namespace TestHarness
                 captureMaster.MatchPropertiesFrom(model);
 
                 //Serialze model fra det overstående. Samme type som før.
-                xmlOutputData = ser.Serialize<CADintMaster.CADintMaster.schDesign>(model); //Serialize the instance of  CADintMaster. Dette giver en CADint xml fil
+                xmlOutputData = ser.Serialize<Xsd2.dsn.Design>(captureMaster); //Serialize the instance of  CADintMaster. Dette giver en CADint xml fil
                 //xmlOutputData = ser.Serialize<Xsd2.dsn.Design>(model); //Dette skulle gerne give en OrCad/Capture fil. Undersøg nærmere.
 
                 //xmloutputdata bliver indsat i et xml dokument i denne region.

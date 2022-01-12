@@ -1019,26 +1019,26 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("BookMarkSymbol", typeof(DesignCacheBookMarkSymbol))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(object))]
-            //[System.Xml.Serialization.XmlElementAttribute("ERCSymbol", typeof(DesignCacheERCSymbol))]
-            //[System.Xml.Serialization.XmlElementAttribute("GlobalSymbol", typeof(DesignCacheGlobalSymbol))]
-            //[System.Xml.Serialization.XmlElementAttribute("OffPageSymbol", typeof(DesignCacheOffPageSymbol))]
-            //[System.Xml.Serialization.XmlElementAttribute("Package", typeof(DesignCachePackage))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinShapeSymbol", typeof(DesignCachePinShapeSymbol))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortSymbol", typeof(DesignCachePortSymbol))]
-            //[System.Xml.Serialization.XmlElementAttribute("TitleBlockSymbol", typeof(DesignCacheTitleBlockSymbol))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
+            [System.Xml.Serialization.XmlElementAttribute("BookMarkSymbol", typeof(DesignCacheBookMarkSymbol))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(object))]
+            [System.Xml.Serialization.XmlElementAttribute("ERCSymbol", typeof(DesignCacheERCSymbol))]
+            [System.Xml.Serialization.XmlElementAttribute("GlobalSymbol", typeof(DesignCacheGlobalSymbol))]
+            [System.Xml.Serialization.XmlElementAttribute("OffPageSymbol", typeof(DesignCacheOffPageSymbol))]
+            [System.Xml.Serialization.XmlElementAttribute("Package", typeof(DesignCachePackage))]
+            [System.Xml.Serialization.XmlElementAttribute("PinShapeSymbol", typeof(DesignCachePinShapeSymbol))]
+            [System.Xml.Serialization.XmlElementAttribute("PortSymbol", typeof(DesignCachePortSymbol))]
+            [System.Xml.Serialization.XmlElementAttribute("TitleBlockSymbol", typeof(DesignCacheTitleBlockSymbol))]
+            public object[] Items
+            {
+               get
+                {
+                   return this.itemsField;
+               }
+                set
+                {
+                    this.itemsField = value;
+                }
+            }
 
             private object defnField;
             [System.Xml.Serialization.XmlElementAttribute("Defn")]
@@ -1058,6 +1058,7 @@ namespace Xsd2
 
             private DesignCacheBookMarkSymbol designCacheBookMarkSymbolField;
             [System.Xml.Serialization.XmlElementAttribute("BookMarkSymbol")]
+            [MatchParentAttribute("schDesignSymbolBody")]
             public DesignCacheBookMarkSymbol DesignCacheBookMarkSymbol
             {
                 get { return designCacheBookMarkSymbolField; }
@@ -1105,7 +1106,7 @@ namespace Xsd2
             }
 
             private DesignCacheTitleBlockSymbol designCacheTitleBlockSymbolField;
-            [System.Xml.Serialization.XmlElementAttribute("TitleBlockSymbol")]
+            //[System.Xml.Serialization.XmlElementAttribute("TitleBlockSymbol")]
             public DesignCacheTitleBlockSymbol DesignCacheTitleBlockSymbol
             {
                 get { return designCacheTitleBlockSymbolField; }
@@ -1126,35 +1127,33 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheBookMarkSymbolArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheBookMarkSymbolBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheBookMarkSymbolBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheBookMarkSymbolCommentText))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheBookMarkSymbolDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheBookMarkSymbolEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheBookMarkSymbolLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheBookMarkSymbolPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheBookMarkSymbolPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheBookMarkSymbolRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheBookMarkSymbolSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheBookMarkSymbolSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheBookMarkSymbolSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheBookMarkSymbolSymbolUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheBookMarkSymbolSymbolVector))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheBookMarkSymbolArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheBookMarkSymbolBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheBookMarkSymbolBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheBookMarkSymbolCommentText))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheBookMarkSymbolDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheBookMarkSymbolEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheBookMarkSymbolLine))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheBookMarkSymbolPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheBookMarkSymbolPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheBookMarkSymbolRect))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheBookMarkSymbolSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheBookMarkSymbolSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheBookMarkSymbolSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheBookMarkSymbolSymbolUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheBookMarkSymbolSymbolVector))]
+            public object[] Items
+            {
+                get
+               {
+                   return this.itemsField;
+                }
+                set
+                {
+                   this.itemsField = value;
+               }
+            }
             private DesignCacheBookMarkSymbolArc designCacheBookMarkSymbolArcField;
-            [System.Xml.Serialization.XmlElementAttribute("Arc")]
             //[MatchParentAttribute("schDesignSymbolBodyArc")]
             public DesignCacheBookMarkSymbolArc DesignCacheBookMarkSymbolArc
             {
@@ -1163,7 +1162,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolBezier designCacheBookMarkSymbolBezierField;
-            [System.Xml.Serialization.XmlElementAttribute("Bezier")]
             public DesignCacheBookMarkSymbolBezier DesignCacheBookMarkSymbolBezier
             {
                 get { return designCacheBookMarkSymbolBezierField; }
@@ -1171,7 +1169,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolBitmap designCacheBookMarkSymbolBitmapField;
-            [System.Xml.Serialization.XmlElementAttribute("Bitmap")]
             public DesignCacheBookMarkSymbolBitmap DesignCacheBookMarkSymbolBitmap
             {
                 get { return designCacheBookMarkSymbolBitmapField; }
@@ -1179,7 +1176,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolCommentText designCacheBookMarkSymbolCommentTextField;
-            [System.Xml.Serialization.XmlElementAttribute("CommentText")]
             public DesignCacheBookMarkSymbolCommentText DesignCacheBookMarkSymbolCommentText
             {
                 get { return designCacheBookMarkSymbolCommentTextField; }
@@ -1187,7 +1183,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolDefn designCacheBookMarkSymbolDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
             public DesignCacheBookMarkSymbolDefn DesignCacheBookMarkSymbolDefn
             {
                 get { return designCacheBookMarkSymbolDefnField; }
@@ -1195,7 +1190,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolEllipse designCacheBookMarkSymbolEllipseField;
-            [System.Xml.Serialization.XmlElementAttribute("Ellipse")]
             public DesignCacheBookMarkSymbolEllipse DesignCacheBookMarkSymbolEllipse
             {
                 get { return designCacheBookMarkSymbolEllipseField; }
@@ -1203,7 +1197,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolLine designCacheBookMarkSymbolLineField;
-            [System.Xml.Serialization.XmlElementAttribute("Line")]
             public DesignCacheBookMarkSymbolLine DesignCacheBookMarkSymbolLine
             {
                 get { return designCacheBookMarkSymbolLineField; }
@@ -1211,7 +1204,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolPolygon designCacheBookMarkSymbolPolygonField;
-            [System.Xml.Serialization.XmlElementAttribute("Polygon")]
             public DesignCacheBookMarkSymbolPolygon DesignCacheBookMarkSymbolPolygon
             {
                 get { return designCacheBookMarkSymbolPolygonField; }
@@ -1219,7 +1211,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolPolyline designCacheBookMarkSymbolPolylineField;
-            [System.Xml.Serialization.XmlElementAttribute("Polyline")]
             public DesignCacheBookMarkSymbolPolyline DesignCacheBookMarkSymbolPolyline
             {
                 get { return designCacheBookMarkSymbolPolylineField; }
@@ -1227,7 +1218,7 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolRect designCacheBookMarkSymbolRectField;
-            [System.Xml.Serialization.XmlElementAttribute("Rect")]
+            [MatchParentAttribute("schDesignSymbolBodyRect")]
             public DesignCacheBookMarkSymbolRect DesignCacheBookMarkSymbolRect
             {
                 get { return designCacheBookMarkSymbolRectField; }
@@ -1235,7 +1226,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolSymbolBBox designCacheBookMarkSymbolSymbolBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox")]
             public DesignCacheBookMarkSymbolSymbolBBox DesignCacheBookMarkSymbolSymbolBBox
             {
                 get { return designCacheBookMarkSymbolSymbolBBoxField; }
@@ -1243,7 +1233,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolSymbolDisplayProp designCacheBookMarkSymbolSymbolDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp")]
             public DesignCacheBookMarkSymbolSymbolDisplayProp DesignCacheBookMarkSymbolSymbolDisplayProp
             {
                 get { return designCacheBookMarkSymbolSymbolDisplayPropField; }
@@ -1251,7 +1240,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolSymbolPinScalar designCacheBookMarkSymbolSymbolPinScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar")]
             public DesignCacheBookMarkSymbolSymbolPinScalar DesignCacheBookMarkSymbolSymbolPinScalar
             {
                 get { return designCacheBookMarkSymbolSymbolPinScalarField; }
@@ -1259,7 +1247,6 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolSymbolUserProp designCacheBookMarkSymbolSymbolUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp")]
             public DesignCacheBookMarkSymbolSymbolUserProp DesignCacheBookMarkSymbolSymbolUserProp
             {
                 get { return designCacheBookMarkSymbolSymbolUserPropField; }
@@ -1267,13 +1254,11 @@ namespace Xsd2
             }
 
             private DesignCacheBookMarkSymbolSymbolVector designCacheBookMarkSymbolSymbolVectorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolVector")]
             public DesignCacheBookMarkSymbolSymbolVector DesignCacheBookMarkSymbolSymbolVector
             {
                 get { return designCacheBookMarkSymbolSymbolVectorField; }
                 set { designCacheBookMarkSymbolSymbolVectorField = value; }
             }
-
         }
 
         /// <remarks/>
@@ -1288,7 +1273,7 @@ namespace Xsd2
             private DesignCacheBookMarkSymbolArcDefn defnField;
 
             /// <remarks/>
-            [MatchParentAttribute("schDesignSymbolBodyArc")]
+            //[MatchParentAttribute("schDesignSymbolBodyArc")]
             public DesignCacheBookMarkSymbolArcDefn Defn
             {
                 get
@@ -1417,7 +1402,7 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttribute("pp")]
+            //[MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -23946,234 +23931,44 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePackageLibPartNormalViewArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePackageLibPartNormalViewBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePackageLibPartNormalViewBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCachePackageLibPartNormalViewCommentText))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsLibName", typeof(DesignCachePackageLibPartNormalViewContentsLibName))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsViewName", typeof(DesignCachePackageLibPartNormalViewContentsViewName))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsViewType", typeof(DesignCachePackageLibPartNormalViewContentsViewType))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCachePackageLibPartNormalViewDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCachePackageLibPartNormalViewEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsPinNamesRotated", typeof(DesignCachePackageLibPartNormalViewIsPinNamesRotated))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsPinNamesVisible", typeof(DesignCachePackageLibPartNormalViewIsPinNamesVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsPinNumbersVisible", typeof(DesignCachePackageLibPartNormalViewIsPinNumbersVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCachePackageLibPartNormalViewLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("PartValue", typeof(DesignCachePackageLibPartNormalViewPartValue))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCachePackageLibPartNormalViewPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCachePackageLibPartNormalViewPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCachePackageLibPartNormalViewRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("Reference", typeof(DesignCachePackageLibPartNormalViewReference))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCachePackageLibPartNormalViewSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolColor", typeof(DesignCachePackageLibPartNormalViewSymbolColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCachePackageLibPartNormalViewSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinBus", typeof(DesignCachePackageLibPartNormalViewSymbolPinBus))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCachePackageLibPartNormalViewSymbolUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCachePackageLibPartNormalViewSymbolVector))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCachePackageLibPartNormalViewArc designCachePackageLibPartNormalViewArcField;
-            [System.Xml.Serialization.XmlElementAttribute("Arc")]
-            public DesignCachePackageLibPartNormalViewArc DesignCachePackageLibPartNormalViewArc
+            
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePackageLibPartNormalViewArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePackageLibPartNormalViewBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePackageLibPartNormalViewBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCachePackageLibPartNormalViewCommentText))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsLibName", typeof(DesignCachePackageLibPartNormalViewContentsLibName))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsViewName", typeof(DesignCachePackageLibPartNormalViewContentsViewName))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsViewType", typeof(DesignCachePackageLibPartNormalViewContentsViewType))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCachePackageLibPartNormalViewDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCachePackageLibPartNormalViewEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("IsPinNamesRotated", typeof(DesignCachePackageLibPartNormalViewIsPinNamesRotated))]
+            [System.Xml.Serialization.XmlElementAttribute("IsPinNamesVisible", typeof(DesignCachePackageLibPartNormalViewIsPinNamesVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsPinNumbersVisible", typeof(DesignCachePackageLibPartNormalViewIsPinNumbersVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCachePackageLibPartNormalViewLine))]
+            [System.Xml.Serialization.XmlElementAttribute("PartValue", typeof(DesignCachePackageLibPartNormalViewPartValue))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCachePackageLibPartNormalViewPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCachePackageLibPartNormalViewPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCachePackageLibPartNormalViewRect))]
+            [System.Xml.Serialization.XmlElementAttribute("Reference", typeof(DesignCachePackageLibPartNormalViewReference))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCachePackageLibPartNormalViewSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolColor", typeof(DesignCachePackageLibPartNormalViewSymbolColor))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCachePackageLibPartNormalViewSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinBus", typeof(DesignCachePackageLibPartNormalViewSymbolPinBus))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCachePackageLibPartNormalViewSymbolUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCachePackageLibPartNormalViewSymbolVector))]
+            public object[] Items
             {
-                get { return designCachePackageLibPartNormalViewArcField; }
-                set { designCachePackageLibPartNormalViewArcField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                   this.itemsField = value;
+                }
             }
 
-            private DesignCachePackageLibPartNormalViewBezier designCachePackageLibPartNormalViewBezierField;
-            [System.Xml.Serialization.XmlElementAttribute("Bezier")]
-            public DesignCachePackageLibPartNormalViewBezier DesignCachePackageLibPartNormalViewBezier
-            {
-                get { return designCachePackageLibPartNormalViewBezierField; }
-                set { designCachePackageLibPartNormalViewBezierField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewBitmap designCachePackageLibPartNormalViewBitmapField;
-            [System.Xml.Serialization.XmlElementAttribute("Bitmap")]
-            public DesignCachePackageLibPartNormalViewBitmap DesignCachePackageLibPartNormalViewBitmap
-            {
-                get { return designCachePackageLibPartNormalViewBitmapField; }
-                set { designCachePackageLibPartNormalViewBitmapField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewCommentText designCachePackageLibPartNormalViewCommentTextField;
-            [System.Xml.Serialization.XmlElementAttribute("CommentText")]
-            public DesignCachePackageLibPartNormalViewCommentText DesignCachePackageLibPartNormalViewCommentText
-            {
-                get { return designCachePackageLibPartNormalViewCommentTextField; }
-                set { designCachePackageLibPartNormalViewCommentTextField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewContentsLibName designCachePackageLibPartNormalViewContentsLibNameField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsLibName")]
-            public DesignCachePackageLibPartNormalViewContentsLibName DesignCachePackageLibPartNormalViewContentsLibName
-            {
-                get { return designCachePackageLibPartNormalViewContentsLibNameField; }
-                set { designCachePackageLibPartNormalViewContentsLibNameField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewContentsViewType designCachePackageLibPartNormalViewContentsViewTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsViewType")]
-            public DesignCachePackageLibPartNormalViewContentsViewType DesignCachePackageLibPartNormalViewContentsViewType
-            {
-                get { return designCachePackageLibPartNormalViewContentsViewTypeField; }
-                set { designCachePackageLibPartNormalViewContentsViewTypeField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewDefn designCachePackageLibPartNormalViewDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignCachePackageLibPartNormalViewDefn DesignCachePackageLibPartNormalViewDefn
-            {
-                get { return designCachePackageLibPartNormalViewDefnField; }
-                set { designCachePackageLibPartNormalViewDefnField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewEllipse designCachePackageLibPartNormalViewEllipseField;
-            [System.Xml.Serialization.XmlElementAttribute("Ellipse")]
-            public DesignCachePackageLibPartNormalViewEllipse DesignCachePackageLibPartNormalViewEllipse
-            {
-                get { return designCachePackageLibPartNormalViewEllipseField; }
-                set { designCachePackageLibPartNormalViewEllipseField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewIsPinNamesRotated designCachePackageLibPartNormalViewIsPinNamesRotatedField;
-            [System.Xml.Serialization.XmlElementAttribute("IsPinNamesRotated")]
-            public DesignCachePackageLibPartNormalViewIsPinNamesRotated DesignCachePackageLibPartNormalViewIsPinNamesRotated
-            {
-                get { return designCachePackageLibPartNormalViewIsPinNamesRotatedField; }
-                set { designCachePackageLibPartNormalViewIsPinNamesRotatedField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewIsPinNamesVisible designCachePackageLibPartNormalViewIsPinNamesVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsPinNamesVisible")]
-            public DesignCachePackageLibPartNormalViewIsPinNamesVisible DesignCachePackageLibPartNormalViewIsPinNamesVisible
-            {
-                get { return designCachePackageLibPartNormalViewIsPinNamesVisibleField; }
-                set { designCachePackageLibPartNormalViewIsPinNamesVisibleField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewIsPinNumbersVisible DesignCachePackageLibPartNormalViewIsPinNumbersVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("isPinNumbersVisible")]
-            public DesignCachePackageLibPartNormalViewIsPinNumbersVisible DesignCachePackageLibPartNormalViewIsPinNumbersVisible
-            {
-                get { return DesignCachePackageLibPartNormalViewIsPinNumbersVisibleField; }
-                set { DesignCachePackageLibPartNormalViewIsPinNumbersVisibleField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewLine designCachePackageLibPartNormalViewLineField;
-            [System.Xml.Serialization.XmlElementAttribute("Line")]
-            public DesignCachePackageLibPartNormalViewLine DesignCachePackageLibPartNormalViewLine
-            {
-                get { return designCachePackageLibPartNormalViewLineField; }
-                set { designCachePackageLibPartNormalViewLineField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewPartValue designCachePackageLibPartNormalViewPartValueField;
-            [System.Xml.Serialization.XmlElementAttribute("PartValue")]
-            public DesignCachePackageLibPartNormalViewPartValue DesignCachePackageLibPartNormalViewPartValue
-            {
-                get { return designCachePackageLibPartNormalViewPartValueField; }
-                set { designCachePackageLibPartNormalViewPartValueField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewPolygon designCachePackageLibPartNormalViewPolygonField;
-            [System.Xml.Serialization.XmlElementAttribute("Polygon")]
-            public DesignCachePackageLibPartNormalViewPolygon DesignCachePackageLibPartNormalViewPolygon
-            {
-                get { return designCachePackageLibPartNormalViewPolygonField; }
-                set { designCachePackageLibPartNormalViewPolygonField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewPolyline DesignCachePackageLibPartNormalViewPolylineField;
-            [System.Xml.Serialization.XmlElementAttribute("Polyline")]
-            public DesignCachePackageLibPartNormalViewPolyline DesignCachePackageLibPartNormalViewPolyline
-            {
-                get { return DesignCachePackageLibPartNormalViewPolylineField; }
-                set { DesignCachePackageLibPartNormalViewPolylineField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewRect designCachePackageLibPartNormalViewRectField;
-            [System.Xml.Serialization.XmlElementAttribute("Rect")]
-            public DesignCachePackageLibPartNormalViewRect DesignCachePackageLibPartNormalViewRect
-            {
-                get { return designCachePackageLibPartNormalViewRectField; }
-                set { designCachePackageLibPartNormalViewRectField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewReference designCachePackageLibPartNormalViewReferenceField;
-            [System.Xml.Serialization.XmlElementAttribute("Reference")]
-            public DesignCachePackageLibPartNormalViewReference DesignCachePackageLibPartNormalViewReference
-            {
-                get { return designCachePackageLibPartNormalViewReferenceField; }
-                set { designCachePackageLibPartNormalViewReferenceField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolBBox designCachePackageLibPartNormalViewSymbolBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox")]
-            public DesignCachePackageLibPartNormalViewSymbolBBox DesignCachePackageLibPartNormalViewSymbolBBox
-            {
-                get { return designCachePackageLibPartNormalViewSymbolBBoxField; }
-                set { designCachePackageLibPartNormalViewSymbolBBoxField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolColor designCachePackageLibPartNormalViewSymbolColorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolColor")]
-            public DesignCachePackageLibPartNormalViewSymbolColor DesignCachePackageLibPartNormalViewSymbolColor
-            {
-                get { return designCachePackageLibPartNormalViewSymbolColorField; }
-                set { designCachePackageLibPartNormalViewSymbolColorField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolDisplayProp designCachePackageLibPartNormalViewSymbolDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp")]
-            public DesignCachePackageLibPartNormalViewSymbolDisplayProp DesignCachePackageLibPartNormalViewSymbolDisplayProp
-            {
-                get { return designCachePackageLibPartNormalViewSymbolDisplayPropField; }
-                set { designCachePackageLibPartNormalViewSymbolDisplayPropField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinBus designCachePackageLibPartNormalViewSymbolPinBusField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinBus")]
-            public DesignCachePackageLibPartNormalViewSymbolPinBus DesignCachePackageLibPartNormalViewSymbolPinBus
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinBusField; }
-                set { designCachePackageLibPartNormalViewSymbolPinBusField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalar designCachePackageLibPartNormalViewSymbolPinScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScarlar")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalar DesignCachePackageLibPartNormalViewSymbolPinScalar
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolUserProp designCachePackageLibPartNormalViewSymbolUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp")]
-            public DesignCachePackageLibPartNormalViewSymbolUserProp DesignCachePackageLibPartNormalViewSymbolUserProp
-            {
-                get { return designCachePackageLibPartNormalViewSymbolUserPropField; }
-                set { designCachePackageLibPartNormalViewSymbolUserPropField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolVector designCachePackageLibPartNormalViewSymbolVectorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolVector")]
-            public DesignCachePackageLibPartNormalViewSymbolVector DesignCachePackageLibPartNormalViewSymbolVector
-            {
-                get { return designCachePackageLibPartNormalViewSymbolVectorField; }
-                set { designCachePackageLibPartNormalViewSymbolVectorField = value; }
-            }
 
         }
 
@@ -24189,6 +23984,7 @@ namespace Xsd2
             private DesignCachePackageLibPartNormalViewArcDefn defnField;
 
             /// <remarks/>
+            [MatchParentAttribute("schDesignSymbolBodyArc")]
             public DesignCachePackageLibPartNormalViewArcDefn Defn
             {
                 get
