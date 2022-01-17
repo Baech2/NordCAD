@@ -200,13 +200,13 @@ namespace TestHarness.Extensions
                                         {
                                             //lav til liste som i sidste ende kan convert til array.
                                             object[] childPropertyArray = new object[0];
-                                            IList list = new IList();
                                             foreach (var attribsItem in attribs)
                                             {
                                                 object attribsItemInstance = Activator.CreateInstance(Type.GetType(attribsItem.Type.FullName));
                                                 attribsItemInstance.MatchPropertiesFrom(parent);
-                                                list.Add(attribsItemInstance);
-                                                childProperty.SetValue(self, list);
+                                                Array.Resize(ref childPropertyArray, childPropertyArray.Length + 1);
+                                                childPropertyArray[childPropertyArray.Length - 1] = attribsItemInstance;
+                                                childProperty.SetValue(self, childPropertyArray);
                                             }
                                         }
                                     }
