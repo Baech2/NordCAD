@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
-using TestHarness.Extensions;
-
 namespace Xsd2
 {
-
+    using System;
+    using System.Collections.Generic;
+    using TestHarness.Extensions;
+    [Serializable()]
     public class dsn
     {
+
 
         /// <remarks/>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xsd2", "1.0.0.0")]
@@ -21,87 +21,24 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("CIS", typeof(DesignCIS))]
-            //[System.Xml.Serialization.XmlElementAttribute("Cache", typeof(DesignCache))]
-            //[System.Xml.Serialization.XmlElementAttribute("DefaultValues", typeof(DesignDefaultValues))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("DesignLock", typeof(DesignDesignLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("Netgroup", typeof(DesignNetgroup))]
-            //[System.Xml.Serialization.XmlElementAttribute("Occurrences", typeof(DesignOccurrences))]
-            //[System.Xml.Serialization.XmlElementAttribute("Schematic", typeof(DesignSchematic))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignDefn designDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignDefn DesignDefn
+            [System.Xml.Serialization.XmlElementAttribute("CIS", typeof(DesignCIS))]
+            [System.Xml.Serialization.XmlElementAttribute("Cache", typeof(DesignCache))]
+            [System.Xml.Serialization.XmlElementAttribute("DefaultValues", typeof(DesignDefaultValues))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("DesignLock", typeof(DesignDesignLock))]
+            [System.Xml.Serialization.XmlElementAttribute("Netgroup", typeof(DesignNetgroup))]
+            [System.Xml.Serialization.XmlElementAttribute("Occurrences", typeof(DesignOccurrences))]
+            [System.Xml.Serialization.XmlElementAttribute("Schematic", typeof(DesignSchematic))]
+            public object[] Items
             {
-                get { return designDefnField; }
-                set { designDefnField = value; }
-            }
-
-            private DesignDefaultValues designDefaultValuesField;
-            [System.Xml.Serialization.XmlElementAttribute("DefaultValues")]
-            public DesignDefaultValues DesignDefaultValues
-            {
-                get { return designDefaultValuesField; }
-                set { designDefaultValuesField = value; }
-            }
-
-            private DesignCache designCacheField;
-            [System.Xml.Serialization.XmlElementAttribute("Cache")]
-            public DesignCache DesignCache
-            {
-                get { return designCacheField; }
-                set { designCacheField = value; }
-            }
-
-            private DesignDesignLock designDesignLock;
-            [System.Xml.Serialization.XmlElementAttribute("DesignLock")]
-            public DesignDesignLock DesignDesignLock
-            {
-                get { return designDesignLock; }
-                set { designDesignLock = value; }
-            }
-
-            private DesignNetgroup designNetgroupField;
-            [System.Xml.Serialization.XmlElementAttribute("Netgroup")]
-            public DesignNetgroup DesignNetgroup
-            {
-                get { return designNetgroupField; }
-                set { designNetgroupField = value; }
-            }
-
-            private List<DesignSchematic> designSchematicsField;
-            [System.Xml.Serialization.XmlElementAttribute("Schematic")]
-            public List<DesignSchematic> DesignSchematics
-            {
-                get { return designSchematicsField; }
-                set { designSchematicsField = value; }
-            }
-
-            private DesignOccurrences designOccurrencesField;
-            [System.Xml.Serialization.XmlElementAttribute("Occurrences")]
-            public DesignOccurrences DesignOccurrences
-            {
-                get { return designOccurrencesField; }
-                set { designOccurrencesField = value; }
-            }
-
-            private DesignCIS designCISField;
-            [System.Xml.Serialization.XmlElementAttribute("CIS")]
-            public DesignCIS DesignCIS
-            {
-                get { return designCISField; }
-                set { designCISField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
         }
 
@@ -409,35 +346,19 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("GroupCorePart", typeof(DesignCISGroupsGroupNameSubGroupNameGroupCorePart))]
-            //[System.Xml.Serialization.XmlElementAttribute("LinkedPart", typeof(DesignCISGroupsGroupNameSubGroupNameLinkedPart))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignCISGroupsGroupNameSubGroupNameGroupCorePart designCISGroupsGroupNameSubGroupNameGroupCorePartField;
-            [System.Xml.Serialization.XmlElementAttribute("GroupCorePart")]
-            public DesignCISGroupsGroupNameSubGroupNameGroupCorePart DesignCISGroupsGroupNameSubGroupNameGroupCorePart
+            [System.Xml.Serialization.XmlElementAttribute("GroupCorePart", typeof(DesignCISGroupsGroupNameSubGroupNameGroupCorePart))]
+            [System.Xml.Serialization.XmlElementAttribute("LinkedPart", typeof(DesignCISGroupsGroupNameSubGroupNameLinkedPart))]
+            public object[] Items
             {
-                get { return designCISGroupsGroupNameSubGroupNameGroupCorePartField; }
-                set { designCISGroupsGroupNameSubGroupNameGroupCorePartField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCISGroupsGroupNameSubGroupNameLinkedPart designCISGroupsGroupNameSubGroupNameLinkedPartField;
-            [System.Xml.Serialization.XmlElementAttribute("LinkedPart")]
-            public DesignCISGroupsGroupNameSubGroupNameLinkedPart DesignCISGroupsGroupNameSubGroupNameLinkedPart
-            {
-                get { return designCISGroupsGroupNameSubGroupNameLinkedPartField; }
-                set { designCISGroupsGroupNameSubGroupNameLinkedPartField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -1030,89 +951,15 @@ namespace Xsd2
             [System.Xml.Serialization.XmlElementAttribute("TitleBlockSymbol", typeof(DesignCacheTitleBlockSymbol))]
             public object[] Items
             {
-               get
+                get
                 {
-                   return this.itemsField;
-               }
+                    return this.itemsField;
+                }
                 set
                 {
                     this.itemsField = value;
                 }
             }
-
-            private object defnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public object Defn
-            {
-                get { return defnField; }
-                set { defnField = value; }
-            }
-
-            private DesignCacheERCSymbol designCacheERCSymbolField;
-            [System.Xml.Serialization.XmlElementAttribute("ERCSymbol")]
-            public DesignCacheERCSymbol DesignCacheERCSymbol
-            {
-                get { return designCacheERCSymbolField; }
-                set { designCacheERCSymbolField = value; }
-            }
-
-            private DesignCacheBookMarkSymbol designCacheBookMarkSymbolField;
-            [System.Xml.Serialization.XmlElementAttribute("BookMarkSymbol")]
-            [MatchParentAttribute("schDesignSymbolBody")]
-            public DesignCacheBookMarkSymbol DesignCacheBookMarkSymbol
-            {
-                get { return designCacheBookMarkSymbolField; }
-                set { designCacheBookMarkSymbolField = value; }
-            }
-
-            private List<DesignCacheGlobalSymbol> designCacheGlobalSymbolsField;
-            [System.Xml.Serialization.XmlElementAttribute("GlobalSymbol")]
-            public List<DesignCacheGlobalSymbol> DesignCacheGlobalSymbols
-            {
-                get { return designCacheGlobalSymbolsField; }
-                set { designCacheGlobalSymbolsField = value; }
-            }
-
-            private DesignCacheOffPageSymbol designCacheOffPageSymbolField;
-            [System.Xml.Serialization.XmlElementAttribute("OffPageSymbol")]
-            public DesignCacheOffPageSymbol DesignCacheOffPageSymbol
-            {
-                get { return designCacheOffPageSymbolField; }
-                set { designCacheOffPageSymbolField = value; }
-            }
-
-            private List<DesignCachePackage> designCachePackagesField;
-            [System.Xml.Serialization.XmlElementAttribute("Package")]
-            public List<DesignCachePackage> DesignCachePackages
-            {
-                get { return designCachePackagesField; }
-                set { designCachePackagesField = value; }
-            }
-
-            private DesignCachePinShapeSymbol designCachePinShapeSymbolField;
-            [System.Xml.Serialization.XmlElementAttribute("PinShapeSymbol")]
-            public DesignCachePinShapeSymbol DesignCachePinShapeSymbol
-            {
-                get { return designCachePinShapeSymbolField; }
-                set { designCachePinShapeSymbolField = value; }
-            }
-
-            private DesignCachePortSymbol designCachePortSymbolField;
-            [System.Xml.Serialization.XmlElementAttribute("PortSymbol")]
-            public DesignCachePortSymbol DesignCachePortSymbol
-            {
-                get { return designCachePortSymbolField; }
-                set { designCachePortSymbolField = value; }
-            }
-
-            private DesignCacheTitleBlockSymbol designCacheTitleBlockSymbolField;
-            //[System.Xml.Serialization.XmlElementAttribute("TitleBlockSymbol")]
-            public DesignCacheTitleBlockSymbol DesignCacheTitleBlockSymbol
-            {
-                get { return designCacheTitleBlockSymbolField; }
-                set { designCacheTitleBlockSymbolField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -1145,119 +992,13 @@ namespace Xsd2
             public object[] Items
             {
                 get
-               {
-                   return this.itemsField;
+                {
+                    return this.itemsField;
                 }
                 set
                 {
-                   this.itemsField = value;
-               }
-            }
-            private DesignCacheBookMarkSymbolArc designCacheBookMarkSymbolArcField;
-            //[MatchParentAttribute("schDesignSymbolBodyArc")]
-            public DesignCacheBookMarkSymbolArc DesignCacheBookMarkSymbolArc
-            {
-                get { return designCacheBookMarkSymbolArcField; }
-                set { designCacheBookMarkSymbolArcField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolBezier designCacheBookMarkSymbolBezierField;
-            public DesignCacheBookMarkSymbolBezier DesignCacheBookMarkSymbolBezier
-            {
-                get { return designCacheBookMarkSymbolBezierField; }
-                set { designCacheBookMarkSymbolBezierField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolBitmap designCacheBookMarkSymbolBitmapField;
-            public DesignCacheBookMarkSymbolBitmap DesignCacheBookMarkSymbolBitmap
-            {
-                get { return designCacheBookMarkSymbolBitmapField; }
-                set { designCacheBookMarkSymbolBitmapField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolCommentText designCacheBookMarkSymbolCommentTextField;
-            public DesignCacheBookMarkSymbolCommentText DesignCacheBookMarkSymbolCommentText
-            {
-                get { return designCacheBookMarkSymbolCommentTextField; }
-                set { designCacheBookMarkSymbolCommentTextField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolDefn designCacheBookMarkSymbolDefnField;
-            public DesignCacheBookMarkSymbolDefn DesignCacheBookMarkSymbolDefn
-            {
-                get { return designCacheBookMarkSymbolDefnField; }
-                set { designCacheBookMarkSymbolDefnField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolEllipse designCacheBookMarkSymbolEllipseField;
-            public DesignCacheBookMarkSymbolEllipse DesignCacheBookMarkSymbolEllipse
-            {
-                get { return designCacheBookMarkSymbolEllipseField; }
-                set { designCacheBookMarkSymbolEllipseField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolLine designCacheBookMarkSymbolLineField;
-            public DesignCacheBookMarkSymbolLine DesignCacheBookMarkSymbolLine
-            {
-                get { return designCacheBookMarkSymbolLineField; }
-                set { designCacheBookMarkSymbolLineField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolPolygon designCacheBookMarkSymbolPolygonField;
-            public DesignCacheBookMarkSymbolPolygon DesignCacheBookMarkSymbolPolygon
-            {
-                get { return designCacheBookMarkSymbolPolygonField; }
-                set { designCacheBookMarkSymbolPolygonField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolPolyline designCacheBookMarkSymbolPolylineField;
-            public DesignCacheBookMarkSymbolPolyline DesignCacheBookMarkSymbolPolyline
-            {
-                get { return designCacheBookMarkSymbolPolylineField; }
-                set { designCacheBookMarkSymbolPolylineField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolRect designCacheBookMarkSymbolRectField;
-            [MatchParentAttribute("schDesignSymbolBodyRect")]
-            public DesignCacheBookMarkSymbolRect DesignCacheBookMarkSymbolRect
-            {
-                get { return designCacheBookMarkSymbolRectField; }
-                set { designCacheBookMarkSymbolRectField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolBBox designCacheBookMarkSymbolSymbolBBoxField;
-            public DesignCacheBookMarkSymbolSymbolBBox DesignCacheBookMarkSymbolSymbolBBox
-            {
-                get { return designCacheBookMarkSymbolSymbolBBoxField; }
-                set { designCacheBookMarkSymbolSymbolBBoxField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolDisplayProp designCacheBookMarkSymbolSymbolDisplayPropField;
-            public DesignCacheBookMarkSymbolSymbolDisplayProp DesignCacheBookMarkSymbolSymbolDisplayProp
-            {
-                get { return designCacheBookMarkSymbolSymbolDisplayPropField; }
-                set { designCacheBookMarkSymbolSymbolDisplayPropField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalar designCacheBookMarkSymbolSymbolPinScalarField;
-            public DesignCacheBookMarkSymbolSymbolPinScalar DesignCacheBookMarkSymbolSymbolPinScalar
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolUserProp designCacheBookMarkSymbolSymbolUserPropField;
-            public DesignCacheBookMarkSymbolSymbolUserProp DesignCacheBookMarkSymbolSymbolUserProp
-            {
-                get { return designCacheBookMarkSymbolSymbolUserPropField; }
-                set { designCacheBookMarkSymbolSymbolUserPropField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolVector designCacheBookMarkSymbolSymbolVectorField;
-            public DesignCacheBookMarkSymbolSymbolVector DesignCacheBookMarkSymbolSymbolVector
-            {
-                get { return designCacheBookMarkSymbolSymbolVectorField; }
-                set { designCacheBookMarkSymbolSymbolVectorField = value; }
+                    this.itemsField = value;
+                }
             }
         }
 
@@ -1273,7 +1014,7 @@ namespace Xsd2
             private DesignCacheBookMarkSymbolArcDefn defnField;
 
             /// <remarks/>
-            //[MatchParentAttribute("schDesignSymbolBodyArc")]
+            [MatchParentAttribute("schDesignSymbolBodyArc")]
             public DesignCacheBookMarkSymbolArcDefn Defn
             {
                 get
@@ -1401,8 +1142,8 @@ namespace Xsd2
             }
 
             /// <remarks/>
+            [MatchParentAttribute("pp")]
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -1777,7 +1518,6 @@ namespace Xsd2
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.ComponentModel.DesignerCategoryAttribute("code")]
         [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-
         public partial class DesignCacheBookMarkSymbolCommentText
         {
 
@@ -1786,7 +1526,6 @@ namespace Xsd2
             private DesignCacheBookMarkSymbolCommentTextTextFont textFontField;
 
             /// <remarks/>
-            [MatchParentAttribute("schDesignSymbolBodyText")]
             public DesignCacheBookMarkSymbolCommentTextDefn Defn
             {
                 get
@@ -1870,7 +1609,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttribute("faceNameField")]
             public string name
             {
                 get
@@ -1912,7 +1650,6 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            [MatchParentAttribute("pp")]
             [System.Xml.Serialization.XmlAttributeAttribute()]
             public long x1
             {
@@ -2423,7 +2160,6 @@ namespace Xsd2
         [System.Diagnostics.DebuggerStepThroughAttribute()]
         [System.ComponentModel.DesignerCategoryAttribute("code")]
         [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-
         public partial class DesignCacheBookMarkSymbolLine
         {
 
@@ -2456,9 +2192,9 @@ namespace Xsd2
             private long lineStyleField;
 
             private long lineWidthField;
-            
+
             private long x1Field;
-            
+
             private long x2Field;
 
             private long y1Field;
@@ -2495,7 +2231,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -2510,7 +2245,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttribute("dxy")]
             public long x2
             {
                 get
@@ -2928,7 +2662,7 @@ namespace Xsd2
             private long lineWidthField;
 
             private long x1Field;
-            
+
             private long x2Field;
 
             private long y1Field;
@@ -2991,9 +2725,8 @@ namespace Xsd2
                 }
             }
 
-            /// I princippet er "pp" en del af disse 4 properties.
+            /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -3008,7 +2741,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttribute("pk1")]
             public long x2
             {
                 get
@@ -3037,7 +2769,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            [MatchParentAttribute("pk")]
             public long y2
             {
                 get
@@ -3666,117 +3397,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsNumberVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheBookMarkSymbolSymbolPinScalarPinDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheBookMarkSymbolSymbolPinScalarPinUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsClock designCacheBookMarkSymbolSymbolPinScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsClock DesignCacheBookMarkSymbolSymbolPinScalarIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsNumberVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheBookMarkSymbolSymbolPinScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheBookMarkSymbolSymbolPinScalarPinDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheBookMarkSymbolSymbolPinScalarPinUserProp))]
+            public object[] Items
             {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsClockField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsDot designCacheBookMarkSymbolSymbolPinScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsDot DesignCacheBookMarkSymbolSymbolPinScalarIsDot
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsDotField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsDotField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsGlobal designCacheBookMarkSymbolSymbolPinScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsGlobal DesignCacheBookMarkSymbolSymbolPinScalarIsGlobal
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsGlobalField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsGlobalField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsLeftPointing designCacheBookMarkSymbolSymbolPinScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsLeftPointing DesignCacheBookMarkSymbolSymbolPinScalarIsLeftPointing
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsLeftPointingField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsLeftPointingField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsLong designCacheBookMarkSymbolSymbolPinScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("Islong")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsLong DesignCacheBookMarkSymbolSymbolPinScalarIsLong
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsLongField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsLongField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsNetStyle designCacheBookMarkSymbolSymbolPinScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsNetStyle DesignCacheBookMarkSymbolSymbolPinScalarIsNetStyle
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsNetStyleField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsNetStyleField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsNoConnect designCacheBookMarkSymbolSymbolPinScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsNoConnect DesignCacheBookMarkSymbolSymbolPinScalarIsNoConnect
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsNoConnectField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsNoConnectField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsNumberVisible designCacheBookMarkSymbolSymbolPinScalarIsNumberVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsNumberVisible DesignCacheBookMarkSymbolSymbolPinScalarIsNumberVisible
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsNumberVisibleField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsNumberVisibleField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarIsRightPointing designCacheBookMarkSymbolSymbolPinScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarIsRightPointing DesignCacheBookMarkSymbolSymbolPinScalarIsRightPointing
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarIsRightPointingField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarIsRightPointingField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarPinDisplayProp designCacheBookMarkSymbolSymbolPinScalarPinDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarPinDisplayProp DesignCacheBookMarkSymbolSymbolPinScalarPinDisplayProp
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarPinDisplayPropField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarPinDisplayPropField = value; }
-            }
-
-            private DesignCacheBookMarkSymbolSymbolPinScalarPinUserProp designCacheBookMarkSymbolSymbolPinScalarPinUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinUserProp")]
-            public DesignCacheBookMarkSymbolSymbolPinScalarPinUserProp DesignCacheBookMarkSymbolSymbolPinScalarPinUserProp
-            {
-                get { return designCacheBookMarkSymbolSymbolPinScalarPinUserPropField; }
-                set { designCacheBookMarkSymbolSymbolPinScalarPinUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -6729,137 +6371,32 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheERCSymbolArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheERCSymbolBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheERCSymbolBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheERCSymbolCommentText))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheERCSymbolDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheERCSymbolEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheERCSymbolLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheERCSymbolPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheERCSymbolPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheERCSymbolRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheERCSymbolSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheERCSymbolSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheERCSymbolSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheERCSymbolSymbolUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheERCSymbolSymbolVector))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCacheERCSymbolArc designCacheERCSymbolArcField;
-            [System.Xml.Serialization.XmlElementAttribute("Arc")]
-            public DesignCacheERCSymbolArc DesignCacheERCSymbolArc
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheERCSymbolArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheERCSymbolBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheERCSymbolBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheERCSymbolCommentText))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheERCSymbolDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheERCSymbolEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheERCSymbolLine))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheERCSymbolPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheERCSymbolPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheERCSymbolRect))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheERCSymbolSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheERCSymbolSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheERCSymbolSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheERCSymbolSymbolUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheERCSymbolSymbolVector))]
+            public object[] Items
             {
-                get { return designCacheERCSymbolArcField; }
-                set { designCacheERCSymbolArcField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCacheERCSymbolBezier designCacheERCSymbolBezierField;
-            [System.Xml.Serialization.XmlElementAttribute("Bezier")]
-            public DesignCacheERCSymbolBezier DesignCacheERCSymbolBezier
-            {
-                get { return designCacheERCSymbolBezierField; }
-                set { designCacheERCSymbolBezierField = value; }
-            }
-
-            private DesignCacheERCSymbolBitmap designCacheERCSymbolBitmapField;
-            [System.Xml.Serialization.XmlElementAttribute("Bitmap")]
-            public DesignCacheERCSymbolBitmap DesignCacheERCSymbolBitmap
-            {
-                get { return designCacheERCSymbolBitmapField; }
-                set { designCacheERCSymbolBitmapField = value; }
-            }
-
-            private DesignCacheERCSymbolCommentText designCacheERCSymbolCommentTextField;
-            [System.Xml.Serialization.XmlElementAttribute("CommentText")]
-            public DesignCacheERCSymbolCommentText DesignCacheERCSymbolCommentText
-            {
-                get { return designCacheERCSymbolCommentTextField; }
-                set { designCacheERCSymbolCommentTextField = value; }
-            }
-
-            private DesignCacheERCSymbolDefn designCacheERCSymbolDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignCacheERCSymbolDefn DesignCacheERCSymbolDefn
-            {
-                get { return designCacheERCSymbolDefnField; }
-                set { designCacheERCSymbolDefnField = value; }
-            }
-
-            private DesignCacheERCSymbolEllipse designCacheERCSymbolEllipseField;
-            [System.Xml.Serialization.XmlElementAttribute("Ellipse")]
-            public DesignCacheERCSymbolEllipse DesignCacheERCSymbolEllipse
-            {
-                get { return designCacheERCSymbolEllipseField; }
-                set { designCacheERCSymbolEllipseField = value; }
-            }
-
-            private DesignCacheERCSymbolLine designCacheERCSymbolLineField;
-            [System.Xml.Serialization.XmlElementAttribute("Line")]
-            public DesignCacheERCSymbolLine DesignCacheERCSymbolLine
-            {
-                get { return designCacheERCSymbolLineField; }
-                set { designCacheERCSymbolLineField = value; }
-            }
-
-            private DesignCacheERCSymbolRect designCacheERCSymbolRectField;
-            [System.Xml.Serialization.XmlElementAttribute("Rect")]
-            public DesignCacheERCSymbolRect DesignCacheERCSymbolRect
-            {
-                get { return designCacheERCSymbolRectField; }
-                set { designCacheERCSymbolRectField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolBBox designCacheERCSymbolSymbolBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox")]
-            public DesignCacheERCSymbolSymbolBBox DesignCacheERCSymbolSymbolBBox
-            {
-                get { return designCacheERCSymbolSymbolBBoxField; }
-                set { designCacheERCSymbolSymbolBBoxField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolDisplayProp designCacheERCSymbolSymbolDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp")]
-            public DesignCacheERCSymbolSymbolDisplayProp DesignCacheERCSymbolSymbolDisplayProp
-            {
-                get { return designCacheERCSymbolSymbolDisplayPropField; }
-                set { designCacheERCSymbolSymbolDisplayPropField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalar designCacheERCSymbolSymbolPinScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScarlar")]
-            public DesignCacheERCSymbolSymbolPinScalar DesignCacheERCSymbolSymbolPinScalar
-            {
-                get { return designCacheERCSymbolSymbolPinScalarField; }
-                set { designCacheERCSymbolSymbolPinScalarField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolUserProp designCacheERCSymbolSymbolUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp")]
-            public DesignCacheERCSymbolSymbolUserProp DesignCacheERCSymbolSymbolUserProp
-            {
-                get { return designCacheERCSymbolSymbolUserPropField; }
-                set { designCacheERCSymbolSymbolUserPropField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolVector designCacheERCSymbolSymbolVectorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolVector")]
-            public DesignCacheERCSymbolSymbolVector DesignCacheERCSymbolSymbolVector
-            {
-                get { return designCacheERCSymbolSymbolVectorField; }
-                set { designCacheERCSymbolSymbolVectorField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -9253,117 +8790,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheERCSymbolSymbolPinScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheERCSymbolSymbolPinScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheERCSymbolSymbolPinScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheERCSymbolSymbolPinScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheERCSymbolSymbolPinScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheERCSymbolSymbolPinScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheERCSymbolSymbolPinScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheERCSymbolSymbolPinScalarIsNumberVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheERCSymbolSymbolPinScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheERCSymbolSymbolPinScalarPinDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheERCSymbolSymbolPinScalarPinUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCacheERCSymbolSymbolPinScalarIsClock designCacheERCSymbolSymbolPinScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignCacheERCSymbolSymbolPinScalarIsClock DesignCacheERCSymbolSymbolPinScalarIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheERCSymbolSymbolPinScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheERCSymbolSymbolPinScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheERCSymbolSymbolPinScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheERCSymbolSymbolPinScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheERCSymbolSymbolPinScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheERCSymbolSymbolPinScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheERCSymbolSymbolPinScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheERCSymbolSymbolPinScalarIsNumberVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheERCSymbolSymbolPinScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheERCSymbolSymbolPinScalarPinDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheERCSymbolSymbolPinScalarPinUserProp))]
+            public object[] Items
             {
-                get { return designCacheERCSymbolSymbolPinScalarIsClockField; }
-                set { designCacheERCSymbolSymbolPinScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCacheERCSymbolSymbolPinScalarIsDot designCacheERCSymbolSymbolPinScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignCacheERCSymbolSymbolPinScalarIsDot DesignCacheERCSymbolSymbolPinScalarIsDot
-            {
-                get { return designCacheERCSymbolSymbolPinScalarIsDotField; }
-                set { designCacheERCSymbolSymbolPinScalarIsDotField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarIsGlobal designCacheERCSymbolSymbolPinScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignCacheERCSymbolSymbolPinScalarIsGlobal DesignCacheERCSymbolSymbolPinScalarIsGlobal
-            {
-                get { return designCacheERCSymbolSymbolPinScalarIsGlobalField; }
-                set { designCacheERCSymbolSymbolPinScalarIsGlobalField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarIsLeftPointing designCacheERCSymbolSymbolPinScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignCacheERCSymbolSymbolPinScalarIsLeftPointing DesignCacheERCSymbolSymbolPinScalarIsLeftPointing
-            {
-                get { return designCacheERCSymbolSymbolPinScalarIsLeftPointingField; }
-                set { designCacheERCSymbolSymbolPinScalarIsLeftPointingField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarIsLong designCacheERCSymbolSymbolPinScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignCacheERCSymbolSymbolPinScalarIsLong DesignCacheERCSymbolSymbolPinScalarIsLong
-            {
-                get { return designCacheERCSymbolSymbolPinScalarIsLongField; }
-                set { designCacheERCSymbolSymbolPinScalarIsLongField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarIsNetStyle designCacheERCSymbolSymbolPinScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignCacheERCSymbolSymbolPinScalarIsNetStyle DesignCacheERCSymbolSymbolPinScalarIsNetStyle
-            {
-                get { return designCacheERCSymbolSymbolPinScalarIsNetStyleField; }
-                set { designCacheERCSymbolSymbolPinScalarIsNetStyleField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarIsNoConnect designCacheERCSymbolSymbolPinScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignCacheERCSymbolSymbolPinScalarIsNoConnect DesignCacheERCSymbolSymbolPinScalarIsNoConnect
-            {
-                get { return designCacheERCSymbolSymbolPinScalarIsNoConnectField; }
-                set { designCacheERCSymbolSymbolPinScalarIsNoConnectField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarIsNumberVisible designCacheERCSymbolSymbolPinScalarIsNumberVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible")]
-            public DesignCacheERCSymbolSymbolPinScalarIsNumberVisible DesignCacheERCSymbolSymbolPinScalarIsNumberVisible
-            {
-                get { return designCacheERCSymbolSymbolPinScalarIsNumberVisibleField; }
-                set { designCacheERCSymbolSymbolPinScalarIsNumberVisibleField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarIsRightPointing designCacheERCSymbolSymbolPinScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignCacheERCSymbolSymbolPinScalarIsRightPointing DesignCacheERCSymbolSymbolPinScalarIsRightPointing
-            {
-                get { return designCacheERCSymbolSymbolPinScalarIsRightPointingField; }
-                set { designCacheERCSymbolSymbolPinScalarIsRightPointingField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarPinDisplayProp designCacheERCSymbolSymbolPinScalarPinDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp")]
-            public DesignCacheERCSymbolSymbolPinScalarPinDisplayProp DesignCacheERCSymbolSymbolPinScalarPinDisplayProp
-            {
-                get { return designCacheERCSymbolSymbolPinScalarPinDisplayPropField; }
-                set { designCacheERCSymbolSymbolPinScalarPinDisplayPropField = value; }
-            }
-
-            private DesignCacheERCSymbolSymbolPinScalarPinUserProp designCacheERCSymbolSymbolPinScalarPinUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinUserProp")]
-            public DesignCacheERCSymbolSymbolPinScalarPinUserProp DesignCacheERCSymbolSymbolPinScalarPinUserProp
-            {
-                get { return designCacheERCSymbolSymbolPinScalarPinUserPropField; }
-                set { designCacheERCSymbolSymbolPinScalarPinUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -12316,153 +11764,32 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheGlobalSymbolArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheGlobalSymbolBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheGlobalSymbolBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheGlobalSymbolCommentText))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheGlobalSymbolDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheGlobalSymbolEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheGlobalSymbolLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheGlobalSymbolPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheGlobalSymbolPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheGlobalSymbolRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheGlobalSymbolSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheGlobalSymbolSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheGlobalSymbolSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheGlobalSymbolSymbolUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheGlobalSymbolSymbolVector))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCacheGlobalSymbolArc designCacheGlobalSymbolArcField;
-
-            public DesignCacheGlobalSymbolArc DesignCacheGlobalSymbolArc
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheGlobalSymbolArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheGlobalSymbolBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheGlobalSymbolBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheGlobalSymbolCommentText))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheGlobalSymbolDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheGlobalSymbolEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheGlobalSymbolLine))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheGlobalSymbolPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheGlobalSymbolPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheGlobalSymbolRect))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheGlobalSymbolSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheGlobalSymbolSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheGlobalSymbolSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheGlobalSymbolSymbolUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheGlobalSymbolSymbolVector))]
+            public object[] Items
             {
-                get { return designCacheGlobalSymbolArcField; }
-                set { designCacheGlobalSymbolArcField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCacheGlobalSymbolBezier designCacheGlobalSymbolBezierField;
-
-            public DesignCacheGlobalSymbolBezier DesignCacheGlobalSymbolBezier
-            {
-                get { return designCacheGlobalSymbolBezierField; }
-                set { designCacheGlobalSymbolBezierField = value; }
-            }
-
-            private DesignCacheGlobalSymbolBitmap designCacheGlobalSymbolBitmapField;
-
-            public DesignCacheGlobalSymbolBitmap DesignCacheGlobalSymbolBitmap
-            {
-                get { return designCacheGlobalSymbolBitmapField; }
-                set { designCacheGlobalSymbolBitmapField = value; }
-            }
-
-            private DesignCacheGlobalSymbolCommentText designCacheGlobalSymbolCommentTextField;
-
-            public DesignCacheGlobalSymbolCommentText DesignCacheGlobalSymbolCommentText
-            {
-                get { return designCacheGlobalSymbolCommentTextField; }
-                set { designCacheGlobalSymbolCommentTextField = value; }
-            }
-
-            private DesignCacheGlobalSymbolDefn designCacheGlobalSymbolDefnField;
-
-            public DesignCacheGlobalSymbolDefn DesignCacheGlobalSymbolDefn
-            {
-                get { return designCacheGlobalSymbolDefnField; }
-                set { designCacheGlobalSymbolDefnField = value; }
-            }
-
-            private DesignCacheGlobalSymbolEllipse designCacheGlobalSymbolEllipseField;
-
-            public DesignCacheGlobalSymbolEllipse DesignCacheGlobalSymbolEllipse
-            {
-                get { return designCacheGlobalSymbolEllipseField; }
-                set { designCacheGlobalSymbolEllipseField = value; }
-            }
-
-            private DesignCacheGlobalSymbolLine designCacheGlobalSymbolLineField;
-
-            public DesignCacheGlobalSymbolLine DesignCacheGlobalSymbolLine
-            {
-                get { return designCacheGlobalSymbolLineField; }
-                set { designCacheGlobalSymbolLineField = value; }
-            }
-
-            private DesignCacheGlobalSymbolPolygon designCacheGlobalSymbolPolygonField;
-
-            public DesignCacheGlobalSymbolPolygon DesignCacheGlobalSymbolPolygon
-            {
-                get { return designCacheGlobalSymbolPolygonField; }
-                set { designCacheGlobalSymbolPolygonField = value; }
-            }
-
-            private DesignCacheGlobalSymbolPolyline designCacheGlobalSymbolPolylineField;
-
-            public DesignCacheGlobalSymbolPolyline DesignCacheGlobalSymbolPolyline
-            {
-                get { return designCacheGlobalSymbolPolylineField; }
-                set { designCacheGlobalSymbolPolylineField = value; }
-            }
-
-            private DesignCacheGlobalSymbolRect designCacheGlobalSymbolRectField;
-
-            public DesignCacheGlobalSymbolRect DesignCacheGlobalSymbolRect
-            {
-                get { return designCacheGlobalSymbolRectField; }
-                set { designCacheGlobalSymbolRectField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolBBox designCacheGlobalSymbolSymbolBBoxField;
-
-            public DesignCacheGlobalSymbolSymbolBBox DesignCacheGlobalSymbolSymbolBBox
-            {
-                get { return designCacheGlobalSymbolSymbolBBoxField; }
-                set { designCacheGlobalSymbolSymbolBBoxField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolDisplayProp designCacheGlobalSymbolSymbolDisplayPropField;
-
-            public DesignCacheGlobalSymbolSymbolDisplayProp DesignCacheGlobalSymbolSymbolDisplayProp
-            {
-                get { return designCacheGlobalSymbolSymbolDisplayPropField; }
-                set { designCacheGlobalSymbolSymbolDisplayPropField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalar designCacheGlobalSymbolSymbolPinScalarField;
-
-            public DesignCacheGlobalSymbolSymbolPinScalar DesignCacheGlobalSymbolSymbolPinScalar
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarField; }
-                set { designCacheGlobalSymbolSymbolPinScalarField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolUserProp designCacheGlobalSymbolSymbolUserPropField;
-
-            public DesignCacheGlobalSymbolSymbolUserProp DesignCacheGlobalSymbolSymbolUserProp
-            {
-                get { return designCacheGlobalSymbolSymbolUserPropField; }
-                set { designCacheGlobalSymbolSymbolUserPropField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolVector designCacheGlobalSymbolSymbolVectorField;
-
-            public DesignCacheGlobalSymbolSymbolVector DesignCacheGlobalSymbolSymbolVector
-            {
-                get { return designCacheGlobalSymbolSymbolVectorField; }
-                set { designCacheGlobalSymbolSymbolVectorField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -14856,119 +14183,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsNumberVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheGlobalSymbolSymbolPinScalarPinDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheGlobalSymbolSymbolPinScalarPinUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsClock designCacheGlobalSymbolSymbolPinScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsClock DesignCacheGlobalSymbolSymbolPinScalarIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsNumberVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheGlobalSymbolSymbolPinScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheGlobalSymbolSymbolPinScalarPinDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheGlobalSymbolSymbolPinScalarPinUserProp))]
+            public object[] Items
             {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsClockField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsDot designCacheGlobalSymbolSymbolPinScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsDot DesignCacheGlobalSymbolSymbolPinScalarIsDot
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsDotField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsDotField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsGlobal designCacheGlobalSymbolSymbolPinScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsGlobal DesignCacheGlobalSymbolSymbolPinScalarIsGlobal
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsGlobalField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsGlobalField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsLeftPointing designCacheGlobalSymbolSymbolPinScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsLeftPointing DesignCacheGlobalSymbolSymbolPinScalarIsLeftPointing
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsLeftPointingField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsLeftPointingField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsLong designCacheGlobalSymbolSymbolPinScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsLong DesignCacheGlobalSymbolSymbolPinScalarIsLong
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsLongField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsLongField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsNetStyle designCacheGlobalSymbolSymbolPinScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsNetStyle DesignCacheGlobalSymbolSymbolPinScalarIsNetStyle
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsNetStyleField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsNetStyleField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsNoConnect designCacheGlobalSymbolSymbolPinScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsNoConnect DesignCacheGlobalSymbolSymbolPinScalarIsNoConnect
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsNoConnectField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsNoConnectField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsNumberVisible designCacheGlobalSymbolSymbolPinScalarIsNumberVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsNumberVisible DesignCacheGlobalSymbolSymbolPinScalarIsNumberVisible
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsNumberVisibleField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsNumberVisibleField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarIsRightPointing designCacheGlobalSymbolSymbolPinScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignCacheGlobalSymbolSymbolPinScalarIsRightPointing DesignCacheGlobalSymbolSymbolPinScalarIsRightPointing
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarIsRightPointingField; }
-                set { designCacheGlobalSymbolSymbolPinScalarIsRightPointingField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarPinDisplayProp designCacheGlobalSymbolSymbolPinScalarPinDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp")]
-            public DesignCacheGlobalSymbolSymbolPinScalarPinDisplayProp DesignCacheGlobalSymbolSymbolPinScalarPinDisplayProp
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarPinDisplayPropField; }
-                set { designCacheGlobalSymbolSymbolPinScalarPinDisplayPropField = value; }
-            }
-
-            private DesignCacheGlobalSymbolSymbolPinScalarPinUserProp designCacheGlobalSymbolSymbolPinScalarPinUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinUserProp")]
-            public DesignCacheGlobalSymbolSymbolPinScalarPinUserProp DesignCacheGlobalSymbolSymbolPinScalarPinUserProp
-            {
-                get { return designCacheGlobalSymbolSymbolPinScalarPinUserPropField; }
-                set { designCacheGlobalSymbolSymbolPinScalarPinUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -17921,153 +17157,32 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheOffPageSymbolArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheOffPageSymbolBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheOffPageSymbolBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheOffPageSymbolCommentText))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheOffPageSymbolDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheOffPageSymbolEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheOffPageSymbolLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheOffPageSymbolPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheOffPageSymbolPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheOffPageSymbolRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheOffPageSymbolSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheOffPageSymbolSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheOffPageSymbolSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheOffPageSymbolSymbolUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheOffPageSymbolSymbolVector))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCacheOffPageSymbolArc designCacheOffPageSymbolArcField;
-            [System.Xml.Serialization.XmlElementAttribute("Arc")]
-            public DesignCacheOffPageSymbolArc DesignCacheOffPageSymbolArc
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheOffPageSymbolArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheOffPageSymbolBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheOffPageSymbolBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheOffPageSymbolCommentText))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheOffPageSymbolDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheOffPageSymbolEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheOffPageSymbolLine))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheOffPageSymbolPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheOffPageSymbolPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheOffPageSymbolRect))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheOffPageSymbolSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheOffPageSymbolSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheOffPageSymbolSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheOffPageSymbolSymbolUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheOffPageSymbolSymbolVector))]
+            public object[] Items
             {
-                get { return designCacheOffPageSymbolArcField; }
-                set { designCacheOffPageSymbolArcField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCacheOffPageSymbolBezier designCacheOffPageSymbolBezierField;
-            [System.Xml.Serialization.XmlElementAttribute("Bezier")]
-            public DesignCacheOffPageSymbolBezier DesignCacheOffPageSymbolBezier
-            {
-                get { return designCacheOffPageSymbolBezierField; }
-                set { designCacheOffPageSymbolBezierField = value; }
-            }
-
-            private DesignCacheOffPageSymbolBitmap designCacheOffPageSymbolBitmapField;
-            [System.Xml.Serialization.XmlElementAttribute("Bitmap")]
-            public DesignCacheOffPageSymbolBitmap DesignCacheOffPageSymbolBitmap
-            {
-                get { return designCacheOffPageSymbolBitmapField; }
-                set { designCacheOffPageSymbolBitmapField = value; }
-            }
-
-            private DesignCacheOffPageSymbolCommentText designCacheOffPageSymbolCommentTextField;
-            [System.Xml.Serialization.XmlElementAttribute("CommentText")]
-            public DesignCacheOffPageSymbolCommentText DesignCacheOffPageSymbolCommentText
-            {
-                get { return designCacheOffPageSymbolCommentTextField; }
-                set { designCacheOffPageSymbolCommentTextField = value; }
-            }
-
-            private DesignCacheOffPageSymbolDefn designCacheOffPageSymbolDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignCacheOffPageSymbolDefn DesignCacheOffPageSymbolDefn
-            {
-                get { return designCacheOffPageSymbolDefnField; }
-                set { designCacheOffPageSymbolDefnField = value; }
-            }
-
-            private DesignCacheOffPageSymbolEllipse designCacheOffPageSymbolEllipseField;
-            [System.Xml.Serialization.XmlElementAttribute("Ellipse")]
-            public DesignCacheOffPageSymbolEllipse DesignCacheOffPageSymbolEllipse
-            {
-                get { return designCacheOffPageSymbolEllipseField; }
-                set { designCacheOffPageSymbolEllipseField = value; }
-            }
-
-            private DesignCacheOffPageSymbolLine designCacheOffPageSymbolLineField;
-            [System.Xml.Serialization.XmlElementAttribute("Line")]
-            public DesignCacheOffPageSymbolLine DesignCacheOffPageSymbolLine
-            {
-                get { return designCacheOffPageSymbolLineField; }
-                set { designCacheOffPageSymbolLineField = value; }
-            }
-
-            private DesignCacheOffPageSymbolPolygon designCacheOffPageSymbolPolygonField;
-            [System.Xml.Serialization.XmlElementAttribute("Polygon")]
-            public DesignCacheOffPageSymbolPolygon DesignCacheOffPageSymbolPolygon
-            {
-                get { return designCacheOffPageSymbolPolygonField; }
-                set { designCacheOffPageSymbolPolygonField = value; }
-            }
-
-            private DesignCacheOffPageSymbolPolyline designCacheOffPageSymbolPolylineField;
-            [System.Xml.Serialization.XmlElementAttribute("Polyline")]
-            public DesignCacheOffPageSymbolPolyline DesignCacheOffPageSymbolPolyline
-            {
-                get { return designCacheOffPageSymbolPolylineField; }
-                set { designCacheOffPageSymbolPolylineField = value; }
-            }
-
-            private DesignCacheOffPageSymbolRect designCacheOffPageSymbolRectField;
-            [System.Xml.Serialization.XmlElementAttribute("Rect")]
-            public DesignCacheOffPageSymbolRect DesignCacheOffPageSymbolRect
-            {
-                get { return designCacheOffPageSymbolRectField; }
-                set { designCacheOffPageSymbolRectField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolBBox designCacheOffPageSymbolSymbolBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox")]
-            public DesignCacheOffPageSymbolSymbolBBox DesignCacheOffPageSymbolSymbolBBox
-            {
-                get { return designCacheOffPageSymbolSymbolBBoxField; }
-                set { designCacheOffPageSymbolSymbolBBoxField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolDisplayProp designCacheOffPageSymbolSymbolDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp")]
-            public DesignCacheOffPageSymbolSymbolDisplayProp DesignCacheOffPageSymbolSymbolDisplayProp
-            {
-                get { return designCacheOffPageSymbolSymbolDisplayPropField; }
-                set { designCacheOffPageSymbolSymbolDisplayPropField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalar designCacheOffPageSymbolSymbolPinScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScarlar")]
-            public DesignCacheOffPageSymbolSymbolPinScalar DesignCacheOffPageSymbolSymbolPinScalar
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarField; }
-                set { designCacheOffPageSymbolSymbolPinScalarField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolUserProp designCacheOffPageSymbolSymbolUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp")]
-            public DesignCacheOffPageSymbolSymbolUserProp DesignCacheOffPageSymbolSymbolUserProp
-            {
-                get { return designCacheOffPageSymbolSymbolUserPropField; }
-                set { designCacheOffPageSymbolSymbolUserPropField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolVector designCacheOffPageSymbolSymbolVectorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolVector")]
-            public DesignCacheOffPageSymbolSymbolVector DesignCacheOffPageSymbolSymbolVector
-            {
-                get { return designCacheOffPageSymbolSymbolVectorField; }
-                set { designCacheOffPageSymbolSymbolVectorField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -20461,117 +19576,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsNumberVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheOffPageSymbolSymbolPinScalarPinDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheOffPageSymbolSymbolPinScalarPinUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsClock designCacheOffPageSymbolSymbolPinScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsClock DesignCacheOffPageSymbolSymbolPinScalarIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsNumberVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheOffPageSymbolSymbolPinScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheOffPageSymbolSymbolPinScalarPinDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheOffPageSymbolSymbolPinScalarPinUserProp))]
+            public object[] Items
             {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsClockField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsDot designCacheOffPageSymbolSymbolPinScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsDot DesignCacheOffPageSymbolSymbolPinScalarIsDot
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsDotField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsDotField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsGlobal designCacheOffPageSymbolSymbolPinScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsGlobal DesignCacheOffPageSymbolSymbolPinScalarIsGlobal
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsGlobalField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsGlobalField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsLeftPointing designCacheOffPageSymbolSymbolPinScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsLeftPointing DesignCacheOffPageSymbolSymbolPinScalarIsLeftPointing
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsLeftPointingField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsLeftPointingField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsLong designCacheOffPageSymbolSymbolPinScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsLong DesignCacheOffPageSymbolSymbolPinScalarIsLong
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsLongField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsLongField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsNetStyle designCacheOffPageSymbolSymbolPinScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsNetStyle DesignCacheOffPageSymbolSymbolPinScalarIsNetStyle
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsNetStyleField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsNetStyleField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsNoConnect designCacheOffPageSymbolSymbolPinScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsNoConnect DesignCacheOffPageSymbolSymbolPinScalarIsNoConnect
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsNoConnectField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsNoConnectField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsNumberVisible designCacheOffPageSymbolSymbolPinScalarIsNumberVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsNumberVisible DesignCacheOffPageSymbolSymbolPinScalarIsNumberVisible
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsNumberVisibleField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsNumberVisibleField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarIsRightPointing designCacheOffPageSymbolSymbolPinScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignCacheOffPageSymbolSymbolPinScalarIsRightPointing DesignCacheOffPageSymbolSymbolPinScalarIsRightPointing
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarIsRightPointingField; }
-                set { designCacheOffPageSymbolSymbolPinScalarIsRightPointingField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarPinDisplayProp designCacheOffPageSymbolSymbolPinScalarPinDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp")]
-            public DesignCacheOffPageSymbolSymbolPinScalarPinDisplayProp DesignCacheOffPageSymbolSymbolPinScalarPinDisplayProp
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarPinDisplayPropField; }
-                set { designCacheOffPageSymbolSymbolPinScalarPinDisplayPropField = value; }
-            }
-
-            private DesignCacheOffPageSymbolSymbolPinScalarPinUserProp designCacheOffPageSymbolSymbolPinScalarPinUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinUserProp")]
-            public DesignCacheOffPageSymbolSymbolPinScalarPinUserProp DesignCacheOffPageSymbolSymbolPinScalarPinUserProp
-            {
-                get { return designCacheOffPageSymbolSymbolPinScalarPinUserPropField; }
-                set { designCacheOffPageSymbolSymbolPinScalarPinUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -23931,7 +22957,6 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            
             [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePackageLibPartNormalViewArc))]
             [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePackageLibPartNormalViewBezier))]
             [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePackageLibPartNormalViewBitmap))]
@@ -23965,11 +22990,9 @@ namespace Xsd2
                 }
                 set
                 {
-                   this.itemsField = value;
+                    this.itemsField = value;
                 }
             }
-
-
         }
 
         /// <remarks/>
@@ -23984,7 +23007,6 @@ namespace Xsd2
             private DesignCachePackageLibPartNormalViewArcDefn defnField;
 
             /// <remarks/>
-            [MatchParentAttribute("schDesignSymbolBodyArc")]
             public DesignCachePackageLibPartNormalViewArcDefn Defn
             {
                 get
@@ -24085,7 +23107,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("pp")]
             public long startX
             {
                 get
@@ -25426,7 +24447,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -25973,7 +24993,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("pp")]
             public long x1
             {
                 get
@@ -28091,117 +27110,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsNumberVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarPinDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarPinUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsClock designCachePackageLibPartNormalViewSymbolPinScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsClock DesignCachePackageLibPartNormalViewSymbolPinScalarIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsNumberVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarPinDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCachePackageLibPartNormalViewSymbolPinScalarPinUserProp))]
+            public object[] Items
             {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsClockField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsDot designCachePackageLibPartNormalViewSymbolPinScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsDot DesignCachePackageLibPartNormalViewSymbolPinScalarIsDot
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsDotField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsDotField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsGlobal designCachePackageLibPartNormalViewSymbolPinScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsGlobal DesignCachePackageLibPartNormalViewSymbolPinScalarIsGlobal
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsGlobalField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsGlobalField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsLeftPointing designCachePackageLibPartNormalViewSymbolPinScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsLeftPointing DesignCachePackageLibPartNormalViewSymbolPinScalarIsLeftPointing
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsLeftPointingField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsLeftPointingField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsLong designCachePackageLibPartNormalViewSymbolPinScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsLong DesignCachePackageLibPartNormalViewSymbolPinScalarIsLong
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsLongField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsLongField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsNetStyle designCachePackageLibPartNormalViewSymbolPinScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsNetStyle DesignCachePackageLibPartNormalViewSymbolPinScalarIsNetStyle
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsNetStyleField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsNetStyleField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsNoConnect designCachePackageLibPartNormalViewSymbolPinScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsNoConnect DesignCachePackageLibPartNormalViewSymbolPinScalarIsNoConnect
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsNoConnectField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsNoConnectField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsNumberVisible designCachePackageLibPartNormalViewSymbolPinScalarIsNumberVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsNumberVisible DesignCachePackageLibPartNormalViewSymbolPinScalarIsNumberVisible
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsNumberVisibleField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsNumberVisibleField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarIsRightPointing designCachePackageLibPartNormalViewSymbolPinScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarIsRightPointing DesignCachePackageLibPartNormalViewSymbolPinScalarIsRightPointing
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarIsRightPointingField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarIsRightPointingField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarPinDisplayProp designCachePackageLibPartNormalViewSymbolPinScalarPinDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarPinDisplayProp DesignCachePackageLibPartNormalViewSymbolPinScalarPinDisplayProp
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarPinDisplayPropField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarPinDisplayPropField = value; }
-            }
-
-            private DesignCachePackageLibPartNormalViewSymbolPinScalarPinUserProp designCachePackageLibPartNormalViewSymbolPinScalarPinUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinUserProp")]
-            public DesignCachePackageLibPartNormalViewSymbolPinScalarPinUserProp DesignCachePackageLibPartNormalViewSymbolPinScalarPinUserProp
-            {
-                get { return designCachePackageLibPartNormalViewSymbolPinScalarPinUserPropField; }
-                set { designCachePackageLibPartNormalViewSymbolPinScalarPinUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -29397,7 +28327,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("Key")]
             public string name
             {
                 get
@@ -29412,7 +28341,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("Value")]
             public string val
             {
                 get
@@ -31156,235 +30084,42 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePackageLibPartConvertViewArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePackageLibPartConvertViewBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePackageLibPartConvertViewBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCachePackageLibPartConvertViewCommentText))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsLibName", typeof(DesignCachePackageLibPartConvertViewContentsLibName))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsViewName", typeof(DesignCachePackageLibPartConvertViewContentsViewName))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsViewType", typeof(DesignCachePackageLibPartConvertViewContentsViewType))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCachePackageLibPartConvertViewDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCachePackageLibPartConvertViewEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsPinNamesRotated", typeof(DesignCachePackageLibPartConvertViewIsPinNamesRotated))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsPinNamesVisible", typeof(DesignCachePackageLibPartConvertViewIsPinNamesVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsPinNumbersVisible", typeof(DesignCachePackageLibPartConvertViewIsPinNumbersVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCachePackageLibPartConvertViewLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("PartValue", typeof(DesignCachePackageLibPartConvertViewPartValue))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCachePackageLibPartConvertViewPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCachePackageLibPartConvertViewPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCachePackageLibPartConvertViewRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("Reference", typeof(DesignCachePackageLibPartConvertViewReference))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCachePackageLibPartConvertViewSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolColor", typeof(DesignCachePackageLibPartConvertViewSymbolColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCachePackageLibPartConvertViewSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinBus", typeof(DesignCachePackageLibPartConvertViewSymbolPinBus))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCachePackageLibPartConvertViewSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCachePackageLibPartConvertViewSymbolUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCachePackageLibPartConvertViewSymbolVector))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private DesignCachePackageLibPartConvertViewArc designCachePackageLibPartConvertViewArcField;
-            [System.Xml.Serialization.XmlElementAttribute("Arc")]
-            public DesignCachePackageLibPartConvertViewArc DesignCachePackageLibPartConvertViewArc
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePackageLibPartConvertViewArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePackageLibPartConvertViewBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePackageLibPartConvertViewBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCachePackageLibPartConvertViewCommentText))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsLibName", typeof(DesignCachePackageLibPartConvertViewContentsLibName))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsViewName", typeof(DesignCachePackageLibPartConvertViewContentsViewName))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsViewType", typeof(DesignCachePackageLibPartConvertViewContentsViewType))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCachePackageLibPartConvertViewDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCachePackageLibPartConvertViewEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("IsPinNamesRotated", typeof(DesignCachePackageLibPartConvertViewIsPinNamesRotated))]
+            [System.Xml.Serialization.XmlElementAttribute("IsPinNamesVisible", typeof(DesignCachePackageLibPartConvertViewIsPinNamesVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsPinNumbersVisible", typeof(DesignCachePackageLibPartConvertViewIsPinNumbersVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCachePackageLibPartConvertViewLine))]
+            [System.Xml.Serialization.XmlElementAttribute("PartValue", typeof(DesignCachePackageLibPartConvertViewPartValue))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCachePackageLibPartConvertViewPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCachePackageLibPartConvertViewPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCachePackageLibPartConvertViewRect))]
+            [System.Xml.Serialization.XmlElementAttribute("Reference", typeof(DesignCachePackageLibPartConvertViewReference))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCachePackageLibPartConvertViewSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolColor", typeof(DesignCachePackageLibPartConvertViewSymbolColor))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCachePackageLibPartConvertViewSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinBus", typeof(DesignCachePackageLibPartConvertViewSymbolPinBus))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCachePackageLibPartConvertViewSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCachePackageLibPartConvertViewSymbolUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCachePackageLibPartConvertViewSymbolVector))]
+            public object[] Items
             {
-                get { return designCachePackageLibPartConvertViewArcField; }
-                set { designCachePackageLibPartConvertViewArcField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignCachePackageLibPartConvertViewBezier designCachePackageLibPartConvertViewBezierField;
-            [System.Xml.Serialization.XmlElementAttribute("Bezier")]
-            public DesignCachePackageLibPartConvertViewBezier DesignCachePackageLibPartConvertViewBezier
-            {
-                get { return designCachePackageLibPartConvertViewBezierField; }
-                set { designCachePackageLibPartConvertViewBezierField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewBitmap designCachePackageLibPartConvertViewBitmapField;
-            [System.Xml.Serialization.XmlElementAttribute("Bitmap")]
-            public DesignCachePackageLibPartConvertViewBitmap DesignCachePackageLibPartConvertViewBitmap
-            {
-                get { return designCachePackageLibPartConvertViewBitmapField; }
-                set { designCachePackageLibPartConvertViewBitmapField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewCommentText designCachePackageLibPartConvertViewCommentTextField;
-            [System.Xml.Serialization.XmlElementAttribute("CommentText")]
-            public DesignCachePackageLibPartConvertViewCommentText DesignCachePackageLibPartConvertViewCommentText
-            {
-                get { return designCachePackageLibPartConvertViewCommentTextField; }
-                set { designCachePackageLibPartConvertViewCommentTextField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewContentsLibName designCachePackageLibPartConvertViewContentsLibNameField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsLibName")]
-            public DesignCachePackageLibPartConvertViewContentsLibName DesignCachePackageLibPartConvertViewContentsLibName
-            {
-                get { return designCachePackageLibPartConvertViewContentsLibNameField; }
-                set { designCachePackageLibPartConvertViewContentsLibNameField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewContentsViewName designCachePackageLibPartConvertViewContentsViewNameField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsViewName")]
-            public DesignCachePackageLibPartConvertViewContentsViewName DesignCachePackageLibPartConvertViewContentsViewName
-            {
-                get { return designCachePackageLibPartConvertViewContentsViewNameField; }
-                set { designCachePackageLibPartConvertViewContentsViewNameField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewContentsViewType designCachePackageLibPartConvertViewContentsViewTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsViewType")]
-            public DesignCachePackageLibPartConvertViewContentsViewType DesignCachePackageLibPartConvertViewContentsViewType
-            {
-                get { return designCachePackageLibPartConvertViewContentsViewTypeField; }
-                set { designCachePackageLibPartConvertViewContentsViewTypeField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewDefn designCachePackageLibPartConvertViewDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignCachePackageLibPartConvertViewDefn DesignCachePackageLibPartConvertViewDefn
-            {
-                get { return designCachePackageLibPartConvertViewDefnField; }
-                set { designCachePackageLibPartConvertViewDefnField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewEllipse designCachePackageLibPartConvertViewEllipseField;
-            [System.Xml.Serialization.XmlElementAttribute("Ellipse")]
-            public DesignCachePackageLibPartConvertViewEllipse DesignCachePackageLibPartConvertViewEllipse
-            {
-                get { return designCachePackageLibPartConvertViewEllipseField; }
-                set { designCachePackageLibPartConvertViewEllipseField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewIsPinNamesRotated designCachePackageLibPartConvertViewIsPinNamesRotatedField;
-            [System.Xml.Serialization.XmlElementAttribute("IsPinNamesRotated")]
-            public DesignCachePackageLibPartConvertViewIsPinNamesRotated DesignCachePackageLibPartConvertViewIsPinNamesRotated
-            {
-                get { return designCachePackageLibPartConvertViewIsPinNamesRotatedField; }
-                set { designCachePackageLibPartConvertViewIsPinNamesRotatedField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewIsPinNamesVisible designCachePackageLibPartConvertViewIsPinNamesVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsPinNamesVisible")]
-            public DesignCachePackageLibPartConvertViewIsPinNamesVisible DesignCachePackageLibPartConvertViewIsPinNamesVisible
-            {
-                get { return designCachePackageLibPartConvertViewIsPinNamesVisibleField; }
-                set { designCachePackageLibPartConvertViewIsPinNamesVisibleField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewLine designCachePackageLibPartConvertViewLineField;
-            [System.Xml.Serialization.XmlElementAttribute("Line")]
-            public DesignCachePackageLibPartConvertViewLine DesignCachePackageLibPartConvertViewLine
-            {
-                get { return designCachePackageLibPartConvertViewLineField; }
-                set { designCachePackageLibPartConvertViewLineField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewPartValue designCachePackageLibPartConvertViewPartValueField;
-            [System.Xml.Serialization.XmlElementAttribute("PartValue")]
-            public DesignCachePackageLibPartConvertViewPartValue DesignCachePackageLibPartConvertViewPartValue
-            {
-                get { return designCachePackageLibPartConvertViewPartValueField; }
-                set { designCachePackageLibPartConvertViewPartValueField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewPolygon designCachePackageLibPartConvertViewPolygonField;
-            [System.Xml.Serialization.XmlElementAttribute("Polygon")]
-            public DesignCachePackageLibPartConvertViewPolygon DesignCachePackageLibPartConvertViewPolygon
-            {
-                get { return designCachePackageLibPartConvertViewPolygonField; }
-                set { designCachePackageLibPartConvertViewPolygonField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewPolyline designCachePackageLibPartConvertViewPolylineField;
-            [System.Xml.Serialization.XmlElementAttribute("Polyline")]
-            public DesignCachePackageLibPartConvertViewPolyline DesignCachePackageLibPartConvertViewPolyline
-            {
-                get { return designCachePackageLibPartConvertViewPolylineField; }
-                set { designCachePackageLibPartConvertViewPolylineField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewRect designCachePackageLibPartConvertViewRectField;
-            [System.Xml.Serialization.XmlElementAttribute("Rect")]
-            public DesignCachePackageLibPartConvertViewRect DesignCachePackageLibPartConvertViewRect
-            {
-                get { return designCachePackageLibPartConvertViewRectField; }
-                set { designCachePackageLibPartConvertViewRectField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewReference designCachePackageLibPartConvertViewReferenceField;
-            [System.Xml.Serialization.XmlElementAttribute("Reference")]
-            public DesignCachePackageLibPartConvertViewReference DesignCachePackageLibPartConvertViewReference
-            {
-                get { return designCachePackageLibPartConvertViewReferenceField; }
-                set { designCachePackageLibPartConvertViewReferenceField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewSymbolBBox designCachePackageLibPartConvertViewSymbolBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox")]
-            public DesignCachePackageLibPartConvertViewSymbolBBox DesignCachePackageLibPartConvertViewSymbolBBox
-            {
-                get { return designCachePackageLibPartConvertViewSymbolBBoxField; }
-                set { designCachePackageLibPartConvertViewSymbolBBoxField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewSymbolColor designCachePackageLibPartConvertViewSymbolColorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolColor")]
-            public DesignCachePackageLibPartConvertViewSymbolColor DesignCachePackageLibPartConvertViewSymbolColor
-            {
-                get { return designCachePackageLibPartConvertViewSymbolColorField; }
-                set { designCachePackageLibPartConvertViewSymbolColorField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewSymbolDisplayProp designCachePackageLibPartConvertViewSymbolDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp")]
-            public DesignCachePackageLibPartConvertViewSymbolDisplayProp DesignCachePackageLibPartConvertViewSymbolDisplayProp
-            {
-                get { return designCachePackageLibPartConvertViewSymbolDisplayPropField; }
-                set { designCachePackageLibPartConvertViewSymbolDisplayPropField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewSymbolPinBus designCachePackageLibPartConvertViewSymbolPinBusField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinBus")]
-            public DesignCachePackageLibPartConvertViewSymbolPinBus DesignCachePackageLibPartConvertViewSymbolPinBus
-            {
-                get { return designCachePackageLibPartConvertViewSymbolPinBusField; }
-                set { designCachePackageLibPartConvertViewSymbolPinBusField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewSymbolPinScalar designCachePackageLibPartConvertViewSymbolPinScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScarlar")]
-            public DesignCachePackageLibPartConvertViewSymbolPinScalar DesignCachePackageLibPartConvertViewSymbolPinScalar
-            {
-                get { return designCachePackageLibPartConvertViewSymbolPinScalarField; }
-                set { designCachePackageLibPartConvertViewSymbolPinScalarField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewSymbolUserProp designCachePackageLibPartConvertViewSymbolUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp")]
-            public DesignCachePackageLibPartConvertViewSymbolUserProp DesignCachePackageLibPartConvertViewSymbolUserProp
-            {
-                get { return designCachePackageLibPartConvertViewSymbolUserPropField; }
-                set { designCachePackageLibPartConvertViewSymbolUserPropField = value; }
-            }
-
-            private DesignCachePackageLibPartConvertViewSymbolVector designCachePackageLibPartConvertViewSymbolVectorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolVector")]
-            public DesignCachePackageLibPartConvertViewSymbolVector DesignCachePackageLibPartConvertViewSymbolVector
-            {
-                get { return designCachePackageLibPartConvertViewSymbolVectorField; }
-                set { designCachePackageLibPartConvertViewSymbolVectorField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -38617,53 +37352,21 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(object))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinNumber", typeof(DesignCachePackageLibPartPhysicalPartPinNumber))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinShared", typeof(DesignCachePackageLibPartPhysicalPartPinShared))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinSwap", typeof(DesignCachePackageLibPartPhysicalPartPinSwap))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-
-            private object defnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public object Defn
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(object))]
+            [System.Xml.Serialization.XmlElementAttribute("PinNumber", typeof(DesignCachePackageLibPartPhysicalPartPinNumber))]
+            [System.Xml.Serialization.XmlElementAttribute("PinShared", typeof(DesignCachePackageLibPartPhysicalPartPinShared))]
+            [System.Xml.Serialization.XmlElementAttribute("PinSwap", typeof(DesignCachePackageLibPartPhysicalPartPinSwap))]
+            public object[] Items
             {
-                get { return defnField; }
-                set { defnField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignCachePackageLibPartPhysicalPartPinNumber designCachePackageLibPartPhysicalPartPinNumberField;
-            [System.Xml.Serialization.XmlElementAttribute("PinNumber")]
-            public DesignCachePackageLibPartPhysicalPartPinNumber DesignCachePackageLibPartPhysicalPartPinNumber
-            {
-                get { return designCachePackageLibPartPhysicalPartPinNumberField; }
-                set { designCachePackageLibPartPhysicalPartPinNumberField = value; }
-            }
-
-            private DesignCachePackageLibPartPhysicalPartPinShared designCachePackageLibPartPhysicalPartPinSharedField;
-            [System.Xml.Serialization.XmlElementAttribute("PinShared")]
-            public DesignCachePackageLibPartPhysicalPartPinShared DesignCachePackageLibPartPhysicalPartPinShared
-            {
-                get { return designCachePackageLibPartPhysicalPartPinSharedField; }
-                set { designCachePackageLibPartPhysicalPartPinSharedField = value; }
-            }
-
-            private DesignCachePackageLibPartPhysicalPartPinSwap designCachePackageLibPartPhysicalPartPinSwapField;
-            [System.Xml.Serialization.XmlElementAttribute("PinSwap")]
-            public DesignCachePackageLibPartPhysicalPartPinSwap DesignCachePackageLibPartPhysicalPartPinSwap
-            {
-                get { return designCachePackageLibPartPhysicalPartPinSwapField; }
-                set { designCachePackageLibPartPhysicalPartPinSwapField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -38907,7 +37610,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("Key")]
             public string name
             {
                 get
@@ -38922,7 +37624,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("Value")]
             public string val
             {
                 get
@@ -38948,122 +37649,30 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePinShapeSymbolArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePinShapeSymbolBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePinShapeSymbolBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCachePinShapeSymbolDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCachePinShapeSymbolEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCachePinShapeSymbolLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCachePinShapeSymbolPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCachePinShapeSymbolPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCachePinShapeSymbolRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCachePinShapeSymbolSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCachePinShapeSymbolSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCachePinShapeSymbolSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCachePinShapeSymbolSymbolUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignCachePinShapeSymbolArc designCachePinShapeSymbolArcField;
-            [System.Xml.Serialization.XmlElementAttribute("Arc")]
-            public DesignCachePinShapeSymbolArc DesignCachePinShapeSymbolArc
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePinShapeSymbolArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePinShapeSymbolBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePinShapeSymbolBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCachePinShapeSymbolDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCachePinShapeSymbolEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCachePinShapeSymbolLine))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCachePinShapeSymbolPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCachePinShapeSymbolPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCachePinShapeSymbolRect))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCachePinShapeSymbolSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCachePinShapeSymbolSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCachePinShapeSymbolSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCachePinShapeSymbolSymbolUserProp))]
+            public object[] Items
             {
-                get { return designCachePinShapeSymbolArcField; }
-                set { designCachePinShapeSymbolArcField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignCachePinShapeSymbolBezier designCachePinShapeSymbolBezierField;
-            [System.Xml.Serialization.XmlElementAttribute("Bezier")]
-            public DesignCachePinShapeSymbolBezier DesignCachePinShapeSymbolBezier
-            {
-                get { return designCachePinShapeSymbolBezierField; }
-                set { designCachePinShapeSymbolBezierField = value; }
-            }
-            private DesignCachePinShapeSymbolBitmap designCachePinShapeSymbolBitmapField;
-            [System.Xml.Serialization.XmlElementAttribute("Btimap")]
-            public DesignCachePinShapeSymbolBitmap DesignCachePinShapeSymbolBitmap
-            {
-                get { return designCachePinShapeSymbolBitmapField; }
-                set { designCachePinShapeSymbolBitmapField = value; }
-            }
-            private DesignCachePinShapeSymbolDefn designCachePinShapeSymbolDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignCachePinShapeSymbolDefn DesignCachePinShapeSymbolDefn
-            {
-                get { return designCachePinShapeSymbolDefnField; }
-                set { designCachePinShapeSymbolDefnField = value; }
-            }
-            private DesignCachePinShapeSymbolEllipse designCachePinShapeSymbolEllipseField;
-            [System.Xml.Serialization.XmlElementAttribute("Ellipse")]
-            public DesignCachePinShapeSymbolEllipse DesignCachePinShapeSymbolEllipse
-            {
-                get { return designCachePinShapeSymbolEllipseField; }
-                set { designCachePinShapeSymbolEllipseField = value; }
-            }
-            private DesignCachePinShapeSymbolLine designCachePinShapeSymbolLineField;
-            [System.Xml.Serialization.XmlElementAttribute("Line")]
-            public DesignCachePinShapeSymbolLine DesignCachePinShapeSymbolLine
-            {
-                get { return designCachePinShapeSymbolLineField; }
-                set { designCachePinShapeSymbolLineField = value; }
-            }
-            private DesignCachePinShapeSymbolPolygon designCachePinShapeSymbolPolygonField;
-            [System.Xml.Serialization.XmlElementAttribute("Polygon")]
-            public DesignCachePinShapeSymbolPolygon DesignCachePinShapeSymbolPolygon
-            {
-                get { return designCachePinShapeSymbolPolygonField; }
-                set { designCachePinShapeSymbolPolygonField = value; }
-            }
-            private DesignCachePinShapeSymbolPolyline designCachePinShapeSymbolPolylineField;
-            [System.Xml.Serialization.XmlElementAttribute("Polyline")]
-            public DesignCachePinShapeSymbolPolyline DesignCachePinShapeSymbolPolyline
-            {
-                get { return designCachePinShapeSymbolPolylineField; }
-                set { designCachePinShapeSymbolPolylineField = value; }
-            }
-            private DesignCachePinShapeSymbolRect designCachePinShapeSymbolRectField;
-            [System.Xml.Serialization.XmlElementAttribute("Rect")]
-            public DesignCachePinShapeSymbolRect DesignCachePinShapeSymbolRect
-            {
-                get { return designCachePinShapeSymbolRectField; }
-                set { designCachePinShapeSymbolRectField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolBBox designCachePinShapeSymbolSymbolBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox")]
-            public DesignCachePinShapeSymbolSymbolBBox DesignCachePinShapeSymbolSymbolBBox
-            {
-                get { return designCachePinShapeSymbolSymbolBBoxField; }
-                set { designCachePinShapeSymbolSymbolBBoxField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolDisplayProp designCachePinShapeSymbolSymbolDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp")]
-            public DesignCachePinShapeSymbolSymbolDisplayProp DesignCachePinShapeSymbolSymbolDisplayProp
-            {
-                get { return designCachePinShapeSymbolSymbolDisplayPropField; }
-                set { designCachePinShapeSymbolSymbolDisplayPropField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalar designCachePinShapeSymbolSymbolPinScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScarlar")]
-            public DesignCachePinShapeSymbolSymbolPinScalar DesignCachePinShapeSymbolSymbolPinScalar
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarField; }
-                set { designCachePinShapeSymbolSymbolPinScalarField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolUserProp designCachePinShapeSymbolSymbolUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp")]
-            public DesignCachePinShapeSymbolSymbolUserProp DesignCachePinShapeSymbolSymbolUserProp
-            {
-                get { return designCachePinShapeSymbolSymbolUserPropField; }
-                set { designCachePinShapeSymbolSymbolUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -41084,106 +39693,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsNumberVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCachePinShapeSymbolSymbolPinScalarPinDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCachePinShapeSymbolSymbolPinScalarPinUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignCachePinShapeSymbolSymbolPinScalarIsClock designCachePinShapeSymbolSymbolPinScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsClock DesignCachePinShapeSymbolSymbolPinScalarIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsNumberVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCachePinShapeSymbolSymbolPinScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCachePinShapeSymbolSymbolPinScalarPinDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCachePinShapeSymbolSymbolPinScalarPinUserProp))]
+            public object[] Items
             {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsClockField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignCachePinShapeSymbolSymbolPinScalarIsDot designCachePinShapeSymbolSymbolPinScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsDot DesignCachePinShapeSymbolSymbolPinScalarIsDot
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsDotField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsDotField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarIsGlobal designCachePinShapeSymbolSymbolPinScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsGlobal DesignCachePinShapeSymbolSymbolPinScalarIsGlobal
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsGlobalField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsGlobalField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarIsLeftPointing designCachePinShapeSymbolSymbolPinScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsLeftPointing DesignCachePinShapeSymbolSymbolPinScalarIsLeftPointing
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsLeftPointingField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsLeftPointingField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarIsLong designCachePinShapeSymbolSymbolPinScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsLong DesignCachePinShapeSymbolSymbolPinScalarIsLong
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsLongField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsLongField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarIsNetStyle designCachePinShapeSymbolSymbolPinScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsNetStyle DesignCachePinShapeSymbolSymbolPinScalarIsNetStyle
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsNetStyleField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsNetStyleField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarIsNoConnect designCachePinShapeSymbolSymbolPinScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsNoConnect DesignCachePinShapeSymbolSymbolPinScalarIsNoConnect
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsNoConnectField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsNoConnectField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarIsNumberVisible designCachePinShapeSymbolSymbolPinScalarIsNumberVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsNumberVisible DesignCachePinShapeSymbolSymbolPinScalarIsNumberVisible
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsNumberVisibleField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsNumberVisibleField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarIsRightPointing designCachePinShapeSymbolSymbolPinScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPonting")]
-            public DesignCachePinShapeSymbolSymbolPinScalarIsRightPointing DesignCachePinShapeSymbolSymbolPinScalarIsRightPointing
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarIsRightPointingField; }
-                set { designCachePinShapeSymbolSymbolPinScalarIsRightPointingField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarPinDisplayProp designCachePinShapeSymbolSymbolPinScalarPinDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp")]
-            public DesignCachePinShapeSymbolSymbolPinScalarPinDisplayProp DesignCachePinShapeSymbolSymbolPinScalarPinDisplayProp
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarPinDisplayPropField; }
-                set { designCachePinShapeSymbolSymbolPinScalarPinDisplayPropField = value; }
-            }
-            private DesignCachePinShapeSymbolSymbolPinScalarPinUserProp designCachePinShapeSymbolSymbolPinScalarPinUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinUserProp")]
-            public DesignCachePinShapeSymbolSymbolPinScalarPinUserProp DesignCachePinShapeSymbolSymbolPinScalarPinUserProp
-            {
-                get { return designCachePinShapeSymbolSymbolPinScalarPinUserPropField; }
-                set { designCachePinShapeSymbolSymbolPinScalarPinUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -42418,139 +40949,32 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePortSymbolArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePortSymbolBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePortSymbolBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCachePortSymbolCommentText))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCachePortSymbolDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCachePortSymbolEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCachePortSymbolLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCachePortSymbolPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCachePortSymbolPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCachePortSymbolRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCachePortSymbolSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCachePortSymbolSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCachePortSymbolSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCachePortSymbolSymbolUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCachePortSymbolSymbolVector))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignCachePortSymbolArc designCachePortSymbolArcField;
-            [System.Xml.Serialization.XmlElementAttribute("Arc")]
-            public DesignCachePortSymbolArc DesignCachePortSymbolArc
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCachePortSymbolArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCachePortSymbolBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCachePortSymbolBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCachePortSymbolCommentText))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCachePortSymbolDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCachePortSymbolEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCachePortSymbolLine))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCachePortSymbolPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCachePortSymbolPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCachePortSymbolRect))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCachePortSymbolSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCachePortSymbolSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCachePortSymbolSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCachePortSymbolSymbolUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCachePortSymbolSymbolVector))]
+            public object[] Items
             {
-                get { return designCachePortSymbolArcField; }
-                set { designCachePortSymbolArcField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignCachePortSymbolBezier designCachePortSymbolBezierField;
-            [System.Xml.Serialization.XmlElementAttribute("Bezier")]
-            public DesignCachePortSymbolBezier DesignCachePortSymbolBezier
-            {
-                get { return designCachePortSymbolBezierField; }
-                set { designCachePortSymbolBezierField = value; }
-            }
-            private DesignCachePortSymbolBitmap designCachePortSymbolBitmapField;
-            [System.Xml.Serialization.XmlElementAttribute("Bitmap")]
-            public DesignCachePortSymbolBitmap DesignCachePortSymbolBitmap
-            {
-                get { return designCachePortSymbolBitmapField; }
-                set { designCachePortSymbolBitmapField = value; }
-            }
-            private DesignCachePortSymbolCommentText designCachePortSymbolCommentTextField;
-            [System.Xml.Serialization.XmlElementAttribute("CommentText")]
-            public DesignCachePortSymbolCommentText DesignCachePortSymbolCommentText
-            {
-                get { return designCachePortSymbolCommentTextField; }
-                set { designCachePortSymbolCommentTextField = value; }
-            }
-            private DesignCachePortSymbolDefn designCachePortSymbolDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignCachePortSymbolDefn DesignCachePortSymbolDefn
-            {
-                get { return designCachePortSymbolDefnField; }
-                set { designCachePortSymbolDefnField = value; }
-            }
-            private DesignCachePortSymbolEllipse designCachePortSymbolEllipseField;
-            [System.Xml.Serialization.XmlElementAttribute("Ellipse")]
-            public DesignCachePortSymbolEllipse DesignCachePortSymbolEllipse
-            {
-                get { return designCachePortSymbolEllipseField; }
-                set { designCachePortSymbolEllipseField = value; }
-            }
-            private DesignCachePortSymbolLine designCachePortSymbolLineField;
-            [System.Xml.Serialization.XmlElementAttribute("Line")]
-            public DesignCachePortSymbolLine DesignCachePortSymbolLine
-            {
-                get { return designCachePortSymbolLineField; }
-                set { designCachePortSymbolLineField = value; }
-            }
-            private DesignCachePortSymbolPolygon designCachePortSymbolPolygonField;
-            [System.Xml.Serialization.XmlElementAttribute("Polygon")]
-            public DesignCachePortSymbolPolygon DesignCachePortSymbolPolygon
-            {
-                get { return designCachePortSymbolPolygonField; }
-                set { designCachePortSymbolPolygonField = value; }
-            }
-            private DesignCachePortSymbolPolyline designCachePortSymbolPolylineField;
-            [System.Xml.Serialization.XmlElementAttribute("Polyline")]
-            public DesignCachePortSymbolPolyline DesignCachePortSymbolPolyline
-            {
-                get { return designCachePortSymbolPolylineField; }
-                set { designCachePortSymbolPolylineField = value; }
-            }
-            private DesignCachePortSymbolRect designCachePortSymbolRectField;
-            [System.Xml.Serialization.XmlElementAttribute("Rect")]
-            public DesignCachePortSymbolRect DesignCachePortSymbolRect
-            {
-                get { return designCachePortSymbolRectField; }
-                set { designCachePortSymbolRectField = value; }
-            }
-            private DesignCachePortSymbolSymbolBBox designCachePortSymbolSymbolBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox")]
-            public DesignCachePortSymbolSymbolBBox DesignCachePortSymbolSymbolBBox
-            {
-                get { return designCachePortSymbolSymbolBBoxField; }
-                set { designCachePortSymbolSymbolBBoxField = value; }
-            }
-            private DesignCachePortSymbolSymbolDisplayProp designCachePortSymbolSymbolDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp")]
-            public DesignCachePortSymbolSymbolDisplayProp DesignCachePortSymbolSymbolDisplayProp
-            {
-                get { return designCachePortSymbolSymbolDisplayPropField; }
-                set { designCachePortSymbolSymbolDisplayPropField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalar designCachePortSymbolSymbolPinScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScarlar")]
-            public DesignCachePortSymbolSymbolPinScalar DesignCachePortSymbolSymbolPinScalar
-            {
-                get { return designCachePortSymbolSymbolPinScalarField; }
-                set { designCachePortSymbolSymbolPinScalarField = value; }
-            }
-            private DesignCachePortSymbolSymbolUserProp designCachePortSymbolSymbolUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp")]
-            public DesignCachePortSymbolSymbolUserProp DesignCachePortSymbolSymbolUserProp
-            {
-                get { return designCachePortSymbolSymbolUserPropField; }
-                set { designCachePortSymbolSymbolUserPropField = value; }
-            }
-            private DesignCachePortSymbolSymbolVector designCachePortSymbolSymbolVectorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolVector")]
-            public DesignCachePortSymbolSymbolVector DesignCachePortSymbolSymbolVector
-            {
-                get { return designCachePortSymbolSymbolVectorField; }
-                set { designCachePortSymbolSymbolVectorField = value; }
-            }
-
-
         }
 
         /// <remarks/>
@@ -42665,7 +41089,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-
             public long startX
             {
                 get
@@ -43159,7 +41582,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("faceName")]
             public string name
             {
                 get
@@ -44946,106 +43368,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCachePortSymbolSymbolPinScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCachePortSymbolSymbolPinScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCachePortSymbolSymbolPinScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCachePortSymbolSymbolPinScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCachePortSymbolSymbolPinScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCachePortSymbolSymbolPinScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCachePortSymbolSymbolPinScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCachePortSymbolSymbolPinScalarIsNumberVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCachePortSymbolSymbolPinScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCachePortSymbolSymbolPinScalarPinDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCachePortSymbolSymbolPinScalarPinUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignCachePortSymbolSymbolPinScalarIsClock designCachePortSymbolSymbolPinScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignCachePortSymbolSymbolPinScalarIsClock DesignCachePortSymbolSymbolPinScalarIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCachePortSymbolSymbolPinScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCachePortSymbolSymbolPinScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCachePortSymbolSymbolPinScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCachePortSymbolSymbolPinScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCachePortSymbolSymbolPinScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCachePortSymbolSymbolPinScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCachePortSymbolSymbolPinScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCachePortSymbolSymbolPinScalarIsNumberVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCachePortSymbolSymbolPinScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCachePortSymbolSymbolPinScalarPinDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCachePortSymbolSymbolPinScalarPinUserProp))]
+            public object[] Items
             {
-                get { return designCachePortSymbolSymbolPinScalarIsClockField; }
-                set { designCachePortSymbolSymbolPinScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignCachePortSymbolSymbolPinScalarIsDot designCachePortSymbolSymbolPinScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignCachePortSymbolSymbolPinScalarIsDot DesignCachePortSymbolSymbolPinScalarIsDot
-            {
-                get { return designCachePortSymbolSymbolPinScalarIsDotField; }
-                set { designCachePortSymbolSymbolPinScalarIsDotField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarIsGlobal designCachePortSymbolSymbolPinScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignCachePortSymbolSymbolPinScalarIsGlobal DesignCachePortSymbolSymbolPinScalarIsGlobal
-            {
-                get { return designCachePortSymbolSymbolPinScalarIsGlobalField; }
-                set { designCachePortSymbolSymbolPinScalarIsGlobalField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarIsLeftPointing designCachePortSymbolSymbolPinScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignCachePortSymbolSymbolPinScalarIsLeftPointing DesignCachePortSymbolSymbolPinScalarIsLeftPointing
-            {
-                get { return designCachePortSymbolSymbolPinScalarIsLeftPointingField; }
-                set { designCachePortSymbolSymbolPinScalarIsLeftPointingField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarIsLong designCachePortSymbolSymbolPinScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignCachePortSymbolSymbolPinScalarIsLong DesignCachePortSymbolSymbolPinScalarIsLong
-            {
-                get { return designCachePortSymbolSymbolPinScalarIsLongField; }
-                set { designCachePortSymbolSymbolPinScalarIsLongField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarIsNetStyle designCachePortSymbolSymbolPinScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignCachePortSymbolSymbolPinScalarIsNetStyle DesignCachePortSymbolSymbolPinScalarIsNetStyle
-            {
-                get { return designCachePortSymbolSymbolPinScalarIsNetStyleField; }
-                set { designCachePortSymbolSymbolPinScalarIsNetStyleField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarIsNoConnect designCachePortSymbolSymbolPinScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignCachePortSymbolSymbolPinScalarIsNoConnect DesignCachePortSymbolSymbolPinScalarIsNoConnect
-            {
-                get { return designCachePortSymbolSymbolPinScalarIsNoConnectField; }
-                set { designCachePortSymbolSymbolPinScalarIsNoConnectField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarIsNumberVisible designCachePortSymbolSymbolPinScalarIsNumberVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible")]
-            public DesignCachePortSymbolSymbolPinScalarIsNumberVisible DesignCachePortSymbolSymbolPinScalarIsNumberVisible
-            {
-                get { return designCachePortSymbolSymbolPinScalarIsNumberVisibleField; }
-                set { designCachePortSymbolSymbolPinScalarIsNumberVisibleField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarIsRightPointing designCachePortSymbolSymbolPinScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignCachePortSymbolSymbolPinScalarIsRightPointing DesignCachePortSymbolSymbolPinScalarIsRightPointing
-            {
-                get { return designCachePortSymbolSymbolPinScalarIsRightPointingField; }
-                set { designCachePortSymbolSymbolPinScalarIsRightPointingField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarPinDisplayProp designCachePortSymbolSymbolPinScalarPinDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp")]
-            public DesignCachePortSymbolSymbolPinScalarPinDisplayProp DesignCachePortSymbolSymbolPinScalarPinDisplayProp
-            {
-                get { return designCachePortSymbolSymbolPinScalarPinDisplayPropField; }
-                set { designCachePortSymbolSymbolPinScalarPinDisplayPropField = value; }
-            }
-            private DesignCachePortSymbolSymbolPinScalarPinUserProp designCachePortSymbolSymbolPinScalarPinUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinUserProp")]
-            public DesignCachePortSymbolSymbolPinScalarPinUserProp DesignCachePortSymbolSymbolPinScalarPinUserProp
-            {
-                get { return designCachePortSymbolSymbolPinScalarPinUserPropField; }
-                set { designCachePortSymbolSymbolPinScalarPinUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -47998,139 +46342,32 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheTitleBlockSymbolArc))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheTitleBlockSymbolBezier))]
-            //[System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheTitleBlockSymbolBitmap))]
-            //[System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheTitleBlockSymbolCommentText))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheTitleBlockSymbolDefn))]
-            //[System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheTitleBlockSymbolEllipse))]
-            //[System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheTitleBlockSymbolLine))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheTitleBlockSymbolPolygon))]
-            //[System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheTitleBlockSymbolPolyline))]
-            //[System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheTitleBlockSymbolRect))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheTitleBlockSymbolSymbolBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheTitleBlockSymbolSymbolDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheTitleBlockSymbolSymbolPinScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheTitleBlockSymbolSymbolUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheTitleBlockSymbolSymbolVector))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignCacheTitleBlockSymbolArc designCacheTitleBlockSymbolArcField;
-            [System.Xml.Serialization.XmlElementAttribute("Arc")]
-            public DesignCacheTitleBlockSymbolArc DesignCacheTitleBlockSymbolArc
+            [System.Xml.Serialization.XmlElementAttribute("Arc", typeof(DesignCacheTitleBlockSymbolArc))]
+            [System.Xml.Serialization.XmlElementAttribute("Bezier", typeof(DesignCacheTitleBlockSymbolBezier))]
+            [System.Xml.Serialization.XmlElementAttribute("Bitmap", typeof(DesignCacheTitleBlockSymbolBitmap))]
+            [System.Xml.Serialization.XmlElementAttribute("CommentText", typeof(DesignCacheTitleBlockSymbolCommentText))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignCacheTitleBlockSymbolDefn))]
+            [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(DesignCacheTitleBlockSymbolEllipse))]
+            [System.Xml.Serialization.XmlElementAttribute("Line", typeof(DesignCacheTitleBlockSymbolLine))]
+            [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(DesignCacheTitleBlockSymbolPolygon))]
+            [System.Xml.Serialization.XmlElementAttribute("Polyline", typeof(DesignCacheTitleBlockSymbolPolyline))]
+            [System.Xml.Serialization.XmlElementAttribute("Rect", typeof(DesignCacheTitleBlockSymbolRect))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox", typeof(DesignCacheTitleBlockSymbolSymbolBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp", typeof(DesignCacheTitleBlockSymbolSymbolDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScalar", typeof(DesignCacheTitleBlockSymbolSymbolPinScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp", typeof(DesignCacheTitleBlockSymbolSymbolUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("SymbolVector", typeof(DesignCacheTitleBlockSymbolSymbolVector))]
+            public object[] Items
             {
-                get { return designCacheTitleBlockSymbolArcField; }
-                set { designCacheTitleBlockSymbolArcField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignCacheTitleBlockSymbolBezier designCacheTitleBlockSymbolBezierField;
-            [System.Xml.Serialization.XmlElementAttribute("Bezier")]
-            public DesignCacheTitleBlockSymbolBezier DesignCacheTitleBlockSymbolBezier
-            {
-                get { return designCacheTitleBlockSymbolBezierField; }
-                set { designCacheTitleBlockSymbolBezierField = value; }
-            }
-            private DesignCacheTitleBlockSymbolBitmap designCacheTitleBlockSymbolBitmapField;
-            [System.Xml.Serialization.XmlElementAttribute("Bitmap")]
-            public DesignCacheTitleBlockSymbolBitmap DesignCacheTitleBlockSymbolBitmap
-            {
-                get { return designCacheTitleBlockSymbolBitmapField; }
-                set { designCacheTitleBlockSymbolBitmapField = value; }
-            }
-            private DesignCacheTitleBlockSymbolCommentText designCacheTitleBlockSymbolCommentTextField;
-            [System.Xml.Serialization.XmlElementAttribute("CommentText")]
-            public DesignCacheTitleBlockSymbolCommentText DesignCacheTitleBlockSymbolCommentText
-            {
-                get { return designCacheTitleBlockSymbolCommentTextField; }
-                set { designCacheTitleBlockSymbolCommentTextField = value; }
-            }
-            private DesignCacheTitleBlockSymbolDefn designCacheTitleBlockSymbolDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignCacheTitleBlockSymbolDefn DesignCacheTitleBlockSymbolDefn
-            {
-                get { return designCacheTitleBlockSymbolDefnField; }
-                set { designCacheTitleBlockSymbolDefnField = value; }
-            }
-            private DesignCacheTitleBlockSymbolEllipse designCacheTitleBlockSymbolEllipseField;
-            [System.Xml.Serialization.XmlElementAttribute("Ellipse")]
-            public DesignCacheTitleBlockSymbolEllipse DesignCacheTitleBlockSymbolEllipse
-            {
-                get { return designCacheTitleBlockSymbolEllipseField; }
-                set { designCacheTitleBlockSymbolEllipseField = value; }
-            }
-            private DesignCacheTitleBlockSymbolLine designCacheTitleBlockSymbolLineField;
-            [System.Xml.Serialization.XmlElementAttribute("Line")]
-            public DesignCacheTitleBlockSymbolLine DesignCacheTitleBlockSymbolLine
-            {
-                get { return designCacheTitleBlockSymbolLineField; }
-                set { designCacheTitleBlockSymbolLineField = value; }
-            }
-            private DesignCacheTitleBlockSymbolPolygon designCacheTitleBlockSymbolPolygonField;
-            [System.Xml.Serialization.XmlElementAttribute("Polygon")]
-            public DesignCacheTitleBlockSymbolPolygon DesignCacheTitleBlockSymbolPolygon
-            {
-                get { return designCacheTitleBlockSymbolPolygonField; }
-                set { designCacheTitleBlockSymbolPolygonField = value; }
-            }
-            private DesignCacheTitleBlockSymbolPolyline designCacheTitleBlockSymbolPolylineField;
-            [System.Xml.Serialization.XmlElementAttribute("Polyline")]
-            public DesignCacheTitleBlockSymbolPolyline DesignCacheTitleBlockSymbolPolyline
-            {
-                get { return designCacheTitleBlockSymbolPolylineField; }
-                set { designCacheTitleBlockSymbolPolylineField = value; }
-            }
-
-            private DesignCacheTitleBlockSymbolRect designCacheTitleBlockSymbolRectField;
-            [System.Xml.Serialization.XmlElementAttribute("Rect")]
-            public DesignCacheTitleBlockSymbolRect DesignCacheTitleBlockSymbolRect
-            {
-                get { return designCacheTitleBlockSymbolRectField; }
-                set { designCacheTitleBlockSymbolRectField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolBBox designCacheTitleBlockSymbolSymbolBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolBBox")]
-            public DesignCacheTitleBlockSymbolSymbolBBox DesignCacheTitleBlockSymbolSymbolBBox
-            {
-                get { return designCacheTitleBlockSymbolSymbolBBoxField; }
-                set { designCacheTitleBlockSymbolSymbolBBoxField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolDisplayProp designCacheTitleBlockSymbolSymbolDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolDisplayProp")]
-            public DesignCacheTitleBlockSymbolSymbolDisplayProp DesignCacheTitleBlockSymbolSymbolDisplayProp
-            {
-                get { return designCacheTitleBlockSymbolSymbolDisplayPropField; }
-                set { designCacheTitleBlockSymbolSymbolDisplayPropField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalar designCacheTitleBlockSymbolSymbolPinScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolPinScarlar")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalar DesignCacheTitleBlockSymbolSymbolPinScalar
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolUserProp designCacheTitleBlockSymbolSymbolUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolUserProp")]
-            public DesignCacheTitleBlockSymbolSymbolUserProp DesignCacheTitleBlockSymbolSymbolUserProp
-            {
-                get { return designCacheTitleBlockSymbolSymbolUserPropField; }
-                set { designCacheTitleBlockSymbolSymbolUserPropField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolVector designCacheTitleBlockSymbolSymbolVectorField;
-            [System.Xml.Serialization.XmlElementAttribute("SymbolVector")]
-            public DesignCacheTitleBlockSymbolSymbolVector DesignCacheTitleBlockSymbolSymbolVector
-            {
-                get { return designCacheTitleBlockSymbolSymbolVectorField; }
-                set { designCacheTitleBlockSymbolSymbolVectorField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -50524,106 +48761,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsNumberVisible))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarPinDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarPinUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsClock designCacheTitleBlockSymbolSymbolPinScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsClock DesignCacheTitleBlockSymbolSymbolPinScalarIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsNumberVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarPinDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PinUserProp", typeof(DesignCacheTitleBlockSymbolSymbolPinScalarPinUserProp))]
+            public object[] Items
             {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsClockField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsDot designCacheTitleBlockSymbolSymbolPinScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsDot DesignCacheTitleBlockSymbolSymbolPinScalarIsDot
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsDotField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsDotField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsGlobal designCacheTitleBlockSymbolSymbolPinScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsGlobal DesignCacheTitleBlockSymbolSymbolPinScalarIsGlobal
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsGlobalField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsGlobalField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsLeftPointing designCacheTitleBlockSymbolSymbolPinScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsLeftPointing DesignCacheTitleBlockSymbolSymbolPinScalarIsLeftPointing
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsLeftPointingField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsLeftPointingField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsLong designCacheTitleBlockSymbolSymbolPinScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsLong DesignCacheTitleBlockSymbolSymbolPinScalarIsLong
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsLongField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsLongField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsNetStyle designCacheTitleBlockSymbolSymbolPinScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsNetStyle DesignCacheTitleBlockSymbolSymbolPinScalarIsNetStyle
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsNetStyleField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsNetStyleField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsNoConnect designCacheTitleBlockSymbolSymbolPinScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsNoConnect DesignCacheTitleBlockSymbolSymbolPinScalarIsNoConnect
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsNoConnectField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsNoConnectField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsNumberVisible designCacheTitleBlockSymbolSymbolPinScalarIsNumberVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNumberVisible")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsNumberVisible DesignCacheTitleBlockSymbolSymbolPinScalarIsNumberVisible
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsNumberVisibleField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsNumberVisibleField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarIsRightPointing designCacheTitleBlockSymbolSymbolPinScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarIsRightPointing DesignCacheTitleBlockSymbolSymbolPinScalarIsRightPointing
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarIsRightPointingField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarIsRightPointingField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarPinDisplayProp designCacheTitleBlockSymbolSymbolPinScalarPinDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinDisplayProp")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarPinDisplayProp DesignCacheTitleBlockSymbolSymbolPinScalarPinDisplayProp
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarPinDisplayPropField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarPinDisplayPropField = value; }
-            }
-            private DesignCacheTitleBlockSymbolSymbolPinScalarPinUserProp designCacheTitleBlockSymbolSymbolPinScalarPinUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PinUserProp")]
-            public DesignCacheTitleBlockSymbolSymbolPinScalarPinUserProp DesignCacheTitleBlockSymbolSymbolPinScalarPinUserProp
-            {
-                get { return designCacheTitleBlockSymbolSymbolPinScalarPinUserPropField; }
-                set { designCacheTitleBlockSymbolSymbolPinScalarPinUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -51819,7 +49978,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("Key")]
             public string name
             {
                 get
@@ -51834,7 +49992,6 @@ namespace Xsd2
 
             /// <remarks/>
             [System.Xml.Serialization.XmlAttributeAttribute()]
-            //[MatchParentAttribute("Value")]
             public string val
             {
                 get
@@ -53578,66 +51735,23 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DefaultDrawnInstIsPrimitive", typeof(DesignDefaultValuesDefaultDrawnInstIsPrimitive))]
-            //[System.Xml.Serialization.XmlElementAttribute("DefaultFont", typeof(DesignDefaultValuesDefaultFont))]
-            //[System.Xml.Serialization.XmlElementAttribute("DefaultPageRec", typeof(DesignDefaultValuesDefaultPageRec))]
-            //[System.Xml.Serialization.XmlElementAttribute("DefaultPartFieldMapping", typeof(DesignDefaultValuesDefaultPartFieldMapping))]
-            //[System.Xml.Serialization.XmlElementAttribute("DefaultPlacedInstIsPrimitive", typeof(DesignDefaultValuesDefaultPlacedInstIsPrimitive))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(object))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignDefaultValuesDefaultDrawnInstIsPrimitive designDefaultValuesDefaultDrawnInstIsPrimitiveField;
-            [System.Xml.Serialization.XmlElementAttribute("DefaultDrawnInstIsPrimitive")]
-            public DesignDefaultValuesDefaultDrawnInstIsPrimitive DesignDefaultValuesDefaultDrawnInstIsPrimitive
+            [System.Xml.Serialization.XmlElementAttribute("DefaultDrawnInstIsPrimitive", typeof(DesignDefaultValuesDefaultDrawnInstIsPrimitive))]
+            [System.Xml.Serialization.XmlElementAttribute("DefaultFont", typeof(DesignDefaultValuesDefaultFont))]
+            [System.Xml.Serialization.XmlElementAttribute("DefaultPageRec", typeof(DesignDefaultValuesDefaultPageRec))]
+            [System.Xml.Serialization.XmlElementAttribute("DefaultPartFieldMapping", typeof(DesignDefaultValuesDefaultPartFieldMapping))]
+            [System.Xml.Serialization.XmlElementAttribute("DefaultPlacedInstIsPrimitive", typeof(DesignDefaultValuesDefaultPlacedInstIsPrimitive))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(object))]
+            public object[] Items
             {
-                get { return designDefaultValuesDefaultDrawnInstIsPrimitiveField; }
-                set { designDefaultValuesDefaultDrawnInstIsPrimitiveField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignDefaultValuesDefaultFont designDefaultValuesDefaultFontField;
-            [System.Xml.Serialization.XmlElementAttribute("DefaultFont")]
-            public DesignDefaultValuesDefaultFont DesignDefaultValuesDefaultFont
-            {
-                get { return designDefaultValuesDefaultFontField; }
-                set { designDefaultValuesDefaultFontField = value; }
-            }
-            private DesignDefaultValuesDefaultPageRec designDefaultValuesDefaultPageRecField;
-            [System.Xml.Serialization.XmlElementAttribute("DefaultPageRec")]
-            public DesignDefaultValuesDefaultPageRec DesignDefaultValuesDefaultPageRec
-            {
-                get { return designDefaultValuesDefaultPageRecField; }
-                set { designDefaultValuesDefaultPageRecField = value; }
-            }
-            private DesignDefaultValuesDefaultPartFieldMapping designDefaultValuesDefaultPartFieldMappingField;
-            [System.Xml.Serialization.XmlElementAttribute("DefaultPartFieldMapping")]
-            public DesignDefaultValuesDefaultPartFieldMapping DesignDefaultValuesDefaultPartFieldMapping
-            {
-                get { return designDefaultValuesDefaultPartFieldMappingField; }
-                set { designDefaultValuesDefaultPartFieldMappingField = value; }
-            }
-            private DesignDefaultValuesDefaultPlacedInstIsPrimitive designDefaultValuesDefaultPlacedInstIsPrimitiveField;
-            [System.Xml.Serialization.XmlElementAttribute("DefaultPlacedInstIsPrimitive")]
-            public DesignDefaultValuesDefaultPlacedInstIsPrimitive DesignDefaultValuesDefaultPlacedInstIsPrimitive
-            {
-                get { return designDefaultValuesDefaultPlacedInstIsPrimitiveField; }
-                set { designDefaultValuesDefaultPlacedInstIsPrimitiveField = value; }
-            }
-            private object defnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public object Defn
-            {
-                get { return defnField; }
-                set { defnField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -54448,34 +52562,19 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Bundle", typeof(DesignNetgroupBundle))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(object))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignNetgroupBundle designNetgroupBundleField;
-            [System.Xml.Serialization.XmlElementAttribute("Bundle")]
-            public DesignNetgroupBundle DesignNetgroupBundle
+            [System.Xml.Serialization.XmlElementAttribute("Bundle", typeof(DesignNetgroupBundle))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(object))]
+            public object[] Items
             {
-                get { return designNetgroupBundleField; }
-                set { designNetgroupBundleField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private object defnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public object Defn
-            {
-                get { return defnField; }
-                set { defnField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -54490,34 +52589,19 @@ namespace Xsd2
             private object[] itemsField;
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("BundleMember", typeof(DesignNetgroupBundleBundleMember))]
-            //[System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignNetgroupBundleDefn))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            ////}
-            private DesignNetgroupBundleBundleMember designNetgroupBundleBundleMemberField;
-            [System.Xml.Serialization.XmlElementAttribute("BundleMember")]
-            public DesignNetgroupBundleBundleMember DesignNetgroupBundleBundleMember
+            [System.Xml.Serialization.XmlElementAttribute("BundleMember", typeof(DesignNetgroupBundleBundleMember))]
+            [System.Xml.Serialization.XmlElementAttribute("Defn", typeof(DesignNetgroupBundleDefn))]
+            public object[] Items
             {
-                get { return designNetgroupBundleBundleMemberField; }
-                set { designNetgroupBundleBundleMemberField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignNetgroupBundleDefn designNetgroupBundleDefnField;
-            [System.Xml.Serialization.XmlElementAttribute("Defn")]
-            public DesignNetgroupBundleDefn DesignNetgroupBundleDefn
-            {
-                get { return designNetgroupBundleDefnField; }
-                set { designNetgroupBundleDefnField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -56311,449 +54395,71 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            private DesignSchematicPageBorderDisplayed designSchematicPageBorderDisplayedField;
-            [System.Xml.Serialization.XmlElementAttribute("BorderDisplayed")]
-            public DesignSchematicPageBorderDisplayed DesignSchematicPageBorderDisplayed
+            [System.Xml.Serialization.XmlElementAttribute("BorderDisplayed", typeof(DesignSchematicPageBorderDisplayed))]
+            [System.Xml.Serialization.XmlElementAttribute("BusEntry", typeof(DesignSchematicPageBusEntry))]
+            [System.Xml.Serialization.XmlElementAttribute("Color", typeof(DesignSchematicPageColor))]
+            [System.Xml.Serialization.XmlElementAttribute("DrawnInst", typeof(DesignSchematicPageDrawnInst))]
+            [System.Xml.Serialization.XmlElementAttribute("ERC", typeof(DesignSchematicPageERC))]
+            [System.Xml.Serialization.XmlElementAttribute("Font", typeof(DesignSchematicPageFont))]
+            [System.Xml.Serialization.XmlElementAttribute("Global", typeof(DesignSchematicPageGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicArcInst", typeof(DesignSchematicPageGraphicArcInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicBezierInst", typeof(DesignSchematicPageGraphicBezierInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicBitMapInst", typeof(DesignSchematicPageGraphicBitMapInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicBoxInst", typeof(DesignSchematicPageGraphicBoxInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicCommentTextInst", typeof(DesignSchematicPageGraphicCommentTextInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicEllipseInst", typeof(DesignSchematicPageGraphicEllipseInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicLineInst", typeof(DesignSchematicPageGraphicLineInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicOleEmbedInst", typeof(DesignSchematicPageGraphicOleEmbedInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicPolygonInst", typeof(DesignSchematicPageGraphicPolygonInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicPolylineInst", typeof(DesignSchematicPageGraphicPolylineInst))]
+            [System.Xml.Serialization.XmlElementAttribute("GridRefDisplayed", typeof(DesignSchematicPageGridRefDisplayed))]
+            [System.Xml.Serialization.XmlElementAttribute("HorizontalAscending", typeof(DesignSchematicPageHorizontalAscending))]
+            [System.Xml.Serialization.XmlElementAttribute("HorizontalChar", typeof(DesignSchematicPageHorizontalChar))]
+            [System.Xml.Serialization.XmlElementAttribute("HorizontalCount", typeof(DesignSchematicPageHorizontalCount))]
+            [System.Xml.Serialization.XmlElementAttribute("HorizontalSeparatorWidth", typeof(DesignSchematicPageHorizontalSeparatorWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("HorizontalStyle", typeof(DesignSchematicPageHorizontalStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("HorizontalVisible", typeof(DesignSchematicPageHorizontalVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("HorizontalWidth", typeof(DesignSchematicPageHorizontalWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("InnerBorderMargin", typeof(DesignSchematicPageInnerBorderMargin))]
+            [System.Xml.Serialization.XmlElementAttribute("InnerLineStyle", typeof(DesignSchematicPageInnerLineStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("InnerLineVisible", typeof(DesignSchematicPageInnerLineVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("InnerLineWidth", typeof(DesignSchematicPageInnerLineWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("LabelColor", typeof(DesignSchematicPageLabelColor))]
+            [System.Xml.Serialization.XmlElementAttribute("NetBus", typeof(DesignSchematicPageNetBus))]
+            [System.Xml.Serialization.XmlElementAttribute("NetScalar", typeof(DesignSchematicPageNetScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("OffPageConnector", typeof(DesignSchematicPageOffPageConnector))]
+            [System.Xml.Serialization.XmlElementAttribute("OuterBorderIsVisible", typeof(DesignSchematicPageOuterBorderIsVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("OuterBorderMagin", typeof(DesignSchematicPageOuterBorderMagin))]
+            [System.Xml.Serialization.XmlElementAttribute("OuterLineStyle", typeof(DesignSchematicPageOuterLineStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("OuterLineWidth", typeof(DesignSchematicPageOuterLineWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("PageDateTime", typeof(DesignSchematicPagePageDateTime))]
+            [System.Xml.Serialization.XmlElementAttribute("PageLock", typeof(DesignSchematicPagePageLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PageSize", typeof(DesignSchematicPagePageSize))]
+            [System.Xml.Serialization.XmlElementAttribute("PageSizeInfo", typeof(DesignSchematicPagePageSizeInfo))]
+            [System.Xml.Serialization.XmlElementAttribute("PartInst", typeof(DesignSchematicPagePartInst))]
+            [System.Xml.Serialization.XmlElementAttribute("Port", typeof(DesignSchematicPagePort))]
+            [System.Xml.Serialization.XmlElementAttribute("TitleBlock", typeof(DesignSchematicPageTitleBlock))]
+            [System.Xml.Serialization.XmlElementAttribute("TitleblockDisplayed", typeof(DesignSchematicPageTitleblockDisplayed))]
+            [System.Xml.Serialization.XmlElementAttribute("VerticalAscending", typeof(DesignSchematicPageVerticalAscending))]
+            [System.Xml.Serialization.XmlElementAttribute("VerticalChar", typeof(DesignSchematicPageVerticalChar))]
+            [System.Xml.Serialization.XmlElementAttribute("VerticalCount", typeof(DesignSchematicPageVerticalCount))]
+            [System.Xml.Serialization.XmlElementAttribute("VerticalSeparatorWidth", typeof(DesignSchematicPageVerticalSeparatorWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("VerticalStyle", typeof(DesignSchematicPageVerticalStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("VerticalVisible", typeof(DesignSchematicPageVerticalVisible))]
+            [System.Xml.Serialization.XmlElementAttribute("VerticalWidth", typeof(DesignSchematicPageVerticalWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("WireBus", typeof(DesignSchematicPageWireBus))]
+            [System.Xml.Serialization.XmlElementAttribute("WireScalar", typeof(DesignSchematicPageWireScalar))]
+            public object[] Items
             {
-                get { return designSchematicPageBorderDisplayedField; }
-                set { designSchematicPageBorderDisplayedField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-
-            private DesignSchematicPageBusEntry designSchematicPageBusEntryField;
-            [System.Xml.Serialization.XmlElementAttribute("BusEntry")]
-            public DesignSchematicPageBusEntry DesignSchematicPageBusEntry
-            {
-                get { return designSchematicPageBusEntryField; }
-                set { designSchematicPageBusEntryField = value; }
-            }
-
-            private DesignSchematicPageColor designSchematicPageColorField;
-            [System.Xml.Serialization.XmlElementAttribute("Color")]
-            public DesignSchematicPageColor DesignSchematicPageColor
-            {
-                get { return designSchematicPageColorField; }
-                set { designSchematicPageColorField = value; }
-            }
-
-            private DesignSchematicPageDrawnInst designSchematicPageDrawnInstField;
-            [System.Xml.Serialization.XmlElementAttribute("DrawnInst")]
-            public DesignSchematicPageDrawnInst DesignSchematicPageDrawnInst
-            {
-                get { return designSchematicPageDrawnInstField; }
-                set { designSchematicPageDrawnInstField = value; }
-            }
-
-            private DesignSchematicPageERC designSchematicPageERCField;
-            [System.Xml.Serialization.XmlElementAttribute("ERC")]
-            public DesignSchematicPageERC DesignSchematicPageERC
-            {
-                get { return designSchematicPageERCField; }
-                set { designSchematicPageERCField = value; }
-            }
-
-            private DesignSchematicPageFont designSchematicPageFontField;
-            [System.Xml.Serialization.XmlElementAttribute("Font")]
-            public DesignSchematicPageFont DesignSchematicPageFont
-            {
-                get { return designSchematicPageFontField; }
-                set { designSchematicPageFontField = value; }
-            }
-
-            private DesignSchematicPageGlobal designSchematicPageGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("Global")]
-            public DesignSchematicPageGlobal DesignSchematicPageGlobal
-            {
-                get { return designSchematicPageGlobalField; }
-                set { designSchematicPageGlobalField = value; }
-            }
-
-            private DesignSchematicPageGraphicArcInst designSchematicPageGraphicArcInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicArcInst")]
-            public DesignSchematicPageGraphicArcInst DesignSchematicPageGraphicArcInst
-            {
-                get { return designSchematicPageGraphicArcInstField; }
-                set { designSchematicPageGraphicArcInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicBezierInst designSchematicPageGraphicBezierInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicBezierInst")]
-            public DesignSchematicPageGraphicBezierInst DesignSchematicPageGraphicBezierInst
-            {
-                get { return designSchematicPageGraphicBezierInstField; }
-                set { designSchematicPageGraphicBezierInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicBitMapInst designSchematicPageGraphicBitMapInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicBitMapInst")]
-            public DesignSchematicPageGraphicBitMapInst DesignSchematicPageGraphicBitMapInst
-            {
-                get { return designSchematicPageGraphicBitMapInstField; }
-                set { designSchematicPageGraphicBitMapInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicBoxInst designSchematicPageGraphicBoxInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicBoxInst")]
-            public DesignSchematicPageGraphicBoxInst DesignSchematicPageGraphicBoxInst
-            {
-                get { return designSchematicPageGraphicBoxInstField; }
-                set { designSchematicPageGraphicBoxInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicCommentTextInst designSchematicPageGraphicCommentTextInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicCommentTextInst")]
-            public DesignSchematicPageGraphicCommentTextInst DesignSchematicPageGraphicCommentTextInst
-            {
-                get { return designSchematicPageGraphicCommentTextInstField; }
-                set { designSchematicPageGraphicCommentTextInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicEllipseInst designSchematicPageGraphicEllipseInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicEllipseInst")]
-            public DesignSchematicPageGraphicEllipseInst DesignSchematicPageGraphicEllipseInst
-            {
-                get { return designSchematicPageGraphicEllipseInstField; }
-                set { designSchematicPageGraphicEllipseInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicLineInst designSchematicPageGraphicLineInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicLineInst")]
-            public DesignSchematicPageGraphicLineInst DesignSchematicPageGraphicLineInst
-            {
-                get { return designSchematicPageGraphicLineInstField; }
-                set { designSchematicPageGraphicLineInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicOleEmbedInst designSchematicPageGraphicOleEmbedInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicOleEmbedInst")]
-            public DesignSchematicPageGraphicOleEmbedInst DesignSchematicPageGraphicOleEmbedInst
-            {
-                get { return designSchematicPageGraphicOleEmbedInstField; }
-                set { designSchematicPageGraphicOleEmbedInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicPolygonInst designSchematicPageGraphicPolygonInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicPolygonInst")]
-            public DesignSchematicPageGraphicPolygonInst DesignSchematicPageGraphicPolygonInst
-            {
-                get { return designSchematicPageGraphicPolygonInstField; }
-                set { designSchematicPageGraphicPolygonInstField = value; }
-            }
-
-            private DesignSchematicPageGraphicPolylineInst designSchematicPageGraphicPolylineInstField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicPolylineInst")]
-            public DesignSchematicPageGraphicPolylineInst DesignSchematicPageGraphicPolylineInst
-            {
-                get { return designSchematicPageGraphicPolylineInstField; }
-                set { designSchematicPageGraphicPolylineInstField = value; }
-            }
-
-            private DesignSchematicPageGridRefDisplayed designSchematicPageGridRefDisplayedField;
-            [System.Xml.Serialization.XmlElementAttribute("GridRefDisplayed")]
-            public DesignSchematicPageGridRefDisplayed DesignSchematicPageGridRefDisplayed
-            {
-                get { return designSchematicPageGridRefDisplayedField; }
-                set { designSchematicPageGridRefDisplayedField = value; }
-            }
-
-            private DesignSchematicPageHorizontalAscending designSchematicPageHorizontalAscendingField;
-            [System.Xml.Serialization.XmlElementAttribute("HorizontalAscending")]
-            public DesignSchematicPageHorizontalAscending DesignSchematicPageHorizontalAscending
-            {
-                get { return designSchematicPageHorizontalAscendingField; }
-                set { designSchematicPageHorizontalAscendingField = value; }
-            }
-
-            private DesignSchematicPageHorizontalChar designSchematicPageHorizontalCharField;
-            [System.Xml.Serialization.XmlElementAttribute("HorizontalChar")]
-            public DesignSchematicPageHorizontalChar DesignSchematicPageHorizontalChar
-            {
-                get { return designSchematicPageHorizontalCharField; }
-                set { designSchematicPageHorizontalCharField = value; }
-            }
-
-            private DesignSchematicPageHorizontalCount designSchematicPageHorizontalCountField;
-            [System.Xml.Serialization.XmlElementAttribute("HorizontalCount")]
-            public DesignSchematicPageHorizontalCount DesignSchematicPageHorizontalCount
-            {
-                get { return designSchematicPageHorizontalCountField; }
-                set { designSchematicPageHorizontalCountField = value; }
-            }
-
-            private DesignSchematicPageHorizontalSeparatorWidth designSchematicPageHorizontalSeparatorWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("HorizontalSeparatorWidth")]
-            public DesignSchematicPageHorizontalSeparatorWidth DesignSchematicPageHorizontalSeparatorWidth
-            {
-                get { return designSchematicPageHorizontalSeparatorWidthField; }
-                set { designSchematicPageHorizontalSeparatorWidthField = value; }
-            }
-
-            private DesignSchematicPageHorizontalStyle designSchematicPageHorizontalStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("HorizontalStyle")]
-            public DesignSchematicPageHorizontalStyle DesignSchematicPageHorizontalStyle
-            {
-                get { return designSchematicPageHorizontalStyleField; }
-                set { designSchematicPageHorizontalStyleField = value; }
-            }
-
-            private DesignSchematicPageHorizontalVisible designSchematicPageHorizontalVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("HorizontalVisible")]
-            public DesignSchematicPageHorizontalVisible DesignSchematicPageHorizontalVisible
-            {
-                get { return designSchematicPageHorizontalVisibleField; }
-                set { designSchematicPageHorizontalVisibleField = value; }
-            }
-
-            private DesignSchematicPageHorizontalWidth designSchematicPageHorizontalWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("HorizontalWidth")]
-            public DesignSchematicPageHorizontalWidth DesignSchematicPageHorizontalWidth
-            {
-                get { return designSchematicPageHorizontalWidthField; }
-                set { designSchematicPageHorizontalWidthField = value; }
-            }
-
-            private DesignSchematicPageInnerBorderMargin designSchematicPageInnerBorderMarginField;
-            [System.Xml.Serialization.XmlElementAttribute("InnerBorderMargin")]
-            public DesignSchematicPageInnerBorderMargin DesignSchematicPageInnerBorderMargin
-            {
-                get { return designSchematicPageInnerBorderMarginField; }
-                set { designSchematicPageInnerBorderMarginField = value; }
-            }
-
-            private DesignSchematicPageInnerLineStyle designSchematicPageInnerLineStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("InnerLineStyle")]
-            public DesignSchematicPageInnerLineStyle DesignSchematicPageInnerLineStyle
-            {
-                get { return designSchematicPageInnerLineStyleField; }
-                set { designSchematicPageInnerLineStyleField = value; }
-            }
-
-            private DesignSchematicPageInnerLineVisible designSchematicPageInnerLineVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("InnerLineVisible")]
-            public DesignSchematicPageInnerLineVisible DesignSchematicPageInnerLineVisible
-            {
-                get { return designSchematicPageInnerLineVisibleField; }
-                set { designSchematicPageInnerLineVisibleField = value; }
-            }
-
-            private DesignSchematicPageInnerLineWidth designSchematicPageInnerLineWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("InnerLineWidth")]
-            public DesignSchematicPageInnerLineWidth DesignSchematicPageInnerLineWidth
-            {
-                get { return designSchematicPageInnerLineWidthField; }
-                set { designSchematicPageInnerLineWidthField = value; }
-            }
-
-            private DesignSchematicPageLabelColor designSchematicPageLabelColorFields;
-            [System.Xml.Serialization.XmlElementAttribute("LabelColor")]
-            public DesignSchematicPageLabelColor DesignSchematicPageLabelColor
-            {
-                get { return designSchematicPageLabelColorFields; }
-                set { designSchematicPageLabelColorFields = value; }
-            }
-
-            private DesignSchematicPageNetBus designSchematicPageNetBusField;
-            [System.Xml.Serialization.XmlElementAttribute("NetBus")]
-            public DesignSchematicPageNetBus DesignSchematicPageNetBus
-            {
-                get { return designSchematicPageNetBusField; }
-                set { designSchematicPageNetBusField = value; }
-            }
-
-            private DesignSchematicPageNetScalar designSchematicPageNetScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("NetScalar")]
-            public DesignSchematicPageNetScalar DesignSchematicPageNetScalar
-            {
-                get { return designSchematicPageNetScalarField; }
-                set { designSchematicPageNetScalarField = value; }
-            }
-
-            private DesignSchematicPageOffPageConnector designSchematicPageOffPageConnectorField;
-            [System.Xml.Serialization.XmlElementAttribute("OffPageConnector")]
-            public DesignSchematicPageOffPageConnector DesignSchematicPageOffPageConnector
-            {
-                get { return designSchematicPageOffPageConnectorField; }
-                set { designSchematicPageOffPageConnectorField = value; }
-            }
-
-            private DesignSchematicPageOuterBorderIsVisible designSchematicPageOuterBorderIsVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("OuterBorderIsVisible")]
-            public DesignSchematicPageOuterBorderIsVisible DesignSchematicPageOuterBorderIsVisible
-            {
-                get { return designSchematicPageOuterBorderIsVisibleField; }
-                set { designSchematicPageOuterBorderIsVisibleField = value; }
-            }
-
-            private DesignSchematicPageOuterBorderMagin designSchematicPageOuterBorderMaginField;
-            [System.Xml.Serialization.XmlElementAttribute("OuterBorderMagin")]
-            public DesignSchematicPageOuterBorderMagin DesignSchematicPageOuterBorderMagin
-            {
-                get { return designSchematicPageOuterBorderMaginField; }
-                set { designSchematicPageOuterBorderMaginField = value; }
-            }
-
-            private DesignSchematicPageOuterLineStyle designSchematicPageOuterLineStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("OuterLineStyle")]
-            public DesignSchematicPageOuterLineStyle DesignSchematicPageOuterLineStyle
-            {
-                get { return designSchematicPageOuterLineStyleField; }
-                set { designSchematicPageOuterLineStyleField = value; }
-            }
-
-            private DesignSchematicPageOuterLineWidth designSchematicPageOuterLineWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("OuterLineWidth")]
-            public DesignSchematicPageOuterLineWidth DesignSchematicPageOuterLineWidth
-            {
-                get { return designSchematicPageOuterLineWidthField; }
-                set { designSchematicPageOuterLineWidthField = value; }
-            }
-
-            private DesignSchematicPagePageDateTime designSchematicPagePageDateTimeField;
-            [System.Xml.Serialization.XmlElementAttribute("PageDateTime")]
-            public DesignSchematicPagePageDateTime DesignSchematicPagePageDateTime
-            {
-                get { return designSchematicPagePageDateTimeField; }
-                set { designSchematicPagePageDateTimeField = value; }
-            }
-
-            private DesignSchematicPagePageLock designSchematicPagePageLockField;
-            [System.Xml.Serialization.XmlElementAttribute("PageLock")]
-            public DesignSchematicPagePageLock DesignSchematicPagePageLock
-            {
-                get { return designSchematicPagePageLockField; }
-                set { designSchematicPagePageLockField = value; }
-            }
-
-            private DesignSchematicPagePageSize designSchematicPagePageSizeField;
-            [System.Xml.Serialization.XmlElementAttribute("PageSize")]
-            public DesignSchematicPagePageSize DesignSchematicPagePageSize
-            {
-                get { return designSchematicPagePageSizeField; }
-                set { designSchematicPagePageSizeField = value; }
-            }
-
-            private DesignSchematicPagePageSizeInfo designSchematicPagePageSizeInfoField;
-            [System.Xml.Serialization.XmlElementAttribute("PageSizeInfo")]
-            public DesignSchematicPagePageSizeInfo DesignSchematicPagePageSizeInfo
-            {
-                get { return designSchematicPagePageSizeInfoField; }
-                set { designSchematicPagePageSizeInfoField = value; }
-            }
-
-            private DesignSchematicPagePartInst designSchematicPagePartInstField;
-            [System.Xml.Serialization.XmlElementAttribute("PartInst")]
-            public DesignSchematicPagePartInst DesignSchematicPagePartInst
-            {
-                get { return designSchematicPagePartInstField; }
-                set { designSchematicPagePartInstField = value; }
-            }
-
-            private DesignSchematicPagePort designSchematicPagePortField;
-            [System.Xml.Serialization.XmlElementAttribute("Port")]
-            public DesignSchematicPagePort DesignSchematicPagePort
-            {
-                get { return designSchematicPagePortField; }
-                set { designSchematicPagePortField = value; }
-            }
-
-            private DesignSchematicPageTitleBlock designSchematicPageTitleBlockField;
-            [System.Xml.Serialization.XmlElementAttribute("TitleBlock")]
-            public DesignSchematicPageTitleBlock DesignSchematicPageTitleBlock
-            {
-                get { return designSchematicPageTitleBlockField; }
-                set { designSchematicPageTitleBlockField = value; }
-            }
-
-            private DesignSchematicPageTitleblockDisplayed designSchematicPageTitleblockDisplayedField;
-            [System.Xml.Serialization.XmlElementAttribute("TitleblockDisplayed")]
-            public DesignSchematicPageTitleblockDisplayed DesignSchematicPageTitleblockDisplayed
-            {
-                get { return designSchematicPageTitleblockDisplayedField; }
-                set { designSchematicPageTitleblockDisplayedField = value; }
-            }
-
-            private DesignSchematicPageVerticalAscending designSchematicPageVerticalAscendingField;
-            [System.Xml.Serialization.XmlElementAttribute("VerticalAscending")]
-            public DesignSchematicPageVerticalAscending DesignSchematicPageVerticalAscending
-            {
-                get { return designSchematicPageVerticalAscendingField; }
-                set { designSchematicPageVerticalAscendingField = value; }
-            }
-
-            private DesignSchematicPageVerticalChar designSchematicPageVerticalCharField;
-            [System.Xml.Serialization.XmlElementAttribute("VerticalChar")]
-            public DesignSchematicPageVerticalChar DesignSchematicPageVerticalChar
-            {
-                get { return designSchematicPageVerticalCharField; }
-                set { designSchematicPageVerticalCharField = value; }
-            }
-
-            private DesignSchematicPageVerticalCount designSchematicPageVerticalCountField;
-            [System.Xml.Serialization.XmlElementAttribute("VerticalCount")]
-            public DesignSchematicPageVerticalCount DesignSchematicPageVerticalCount
-            {
-                get { return designSchematicPageVerticalCountField; }
-                set { designSchematicPageVerticalCountField = value; }
-            }
-
-            private DesignSchematicPageVerticalSeparatorWidth designSchematicPageVerticalSeparatorWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("VerticalSeparatorWidth")]
-            public DesignSchematicPageVerticalSeparatorWidth DesignSchematicPageVerticalSeparatorWidth
-            {
-                get { return designSchematicPageVerticalSeparatorWidthField; }
-                set { designSchematicPageVerticalSeparatorWidthField = value; }
-            }
-
-            private DesignSchematicPageVerticalStyle designSchematicPageVerticalStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("VerticalStyle")]
-            public DesignSchematicPageVerticalStyle DesignSchematicPageVerticalStyle
-            {
-                get { return designSchematicPageVerticalStyleField; }
-                set { designSchematicPageVerticalStyleField = value; }
-            }
-
-            private DesignSchematicPageVerticalVisible designSchematicPageVerticalVisibleField;
-            [System.Xml.Serialization.XmlElementAttribute("VerticalVisible")]
-            public DesignSchematicPageVerticalVisible DesignSchematicPageVerticalVisible
-            {
-                get { return designSchematicPageVerticalVisibleField; }
-                set { designSchematicPageVerticalVisibleField = value; }
-            }
-
-            private DesignSchematicPageVerticalWidth designSchematicPageVerticalWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("VerticalWidth")]
-            public DesignSchematicPageVerticalWidth DesignSchematicPageVerticalWidth
-            {
-                get { return designSchematicPageVerticalWidthField; }
-                set { designSchematicPageVerticalWidthField = value; }
-            }
-
-            private DesignSchematicPageWireBus designSchematicPageWireBusField;
-            [System.Xml.Serialization.XmlElementAttribute("WireBus")]
-            public DesignSchematicPageWireBus DesignSchematicPageWireBus
-            {
-                get { return designSchematicPageWireBusField; }
-                set { designSchematicPageWireBusField = value; }
-            }
-
-            private DesignSchematicPageWireScalar designSchematicPageWireScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("WireScalar")]
-            public DesignSchematicPageWireScalar DesignSchematicPageWireScalar
-            {
-                get { return designSchematicPageWireScalarField; }
-                set { designSchematicPageWireScalarField = value; }
-            }
-
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
         }
 
         /// <remarks/>
@@ -56860,42 +54566,20 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("BusEntryDisplayProp", typeof(DesignSchematicPageBusEntryBusEntryDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("BusEntryLock", typeof(DesignSchematicPageBusEntryBusEntryLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("BusEntryUserProp", typeof(DesignSchematicPageBusEntryBusEntryUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageBusEntryBusEntryDisplayProp designSchematicPageBusEntryBusEntryDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("BusEntryDisplayProp")]
-            public DesignSchematicPageBusEntryBusEntryDisplayProp DesignSchematicPageBusEntryBusEntryDisplayProp
+            [System.Xml.Serialization.XmlElementAttribute("BusEntryDisplayProp", typeof(DesignSchematicPageBusEntryBusEntryDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("BusEntryLock", typeof(DesignSchematicPageBusEntryBusEntryLock))]
+            [System.Xml.Serialization.XmlElementAttribute("BusEntryUserProp", typeof(DesignSchematicPageBusEntryBusEntryUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageBusEntryBusEntryDisplayPropField; }
-                set { designSchematicPageBusEntryBusEntryDisplayPropField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageBusEntryBusEntryLock designSchematicPageBusEntryBusEntryLockField;
-            [System.Xml.Serialization.XmlElementAttribute("BusentryLock")]
-            public DesignSchematicPageBusEntryBusEntryLock DesignSchematicPageBusEntryBusEntryLock
-            {
-                get { return designSchematicPageBusEntryBusEntryLockField; }
-                set { designSchematicPageBusEntryBusEntryLockField = value; }
-            }
-            private DesignSchematicPageBusEntryBusEntryUserProp designSchematicPageBusEntryBusEntryUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("BusEntryUserProp")]
-            public DesignSchematicPageBusEntryBusEntryUserProp DesignSchematicPageBusEntryBusEntryUserProp
-            {
-                get { return designSchematicPageBusEntryBusEntryUserPropField; }
-                set { designSchematicPageBusEntryBusEntryUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -56999,50 +54683,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageBusEntryBusEntryDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageBusEntryBusEntryDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageBusEntryBusEntryDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageBusEntryBusEntryDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageBusEntryBusEntryDisplayPropDispPropLock designSchematicPageBusEntryBusEntryDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageBusEntryBusEntryDisplayPropDispPropLock DesignSchematicPageBusEntryBusEntryDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageBusEntryBusEntryDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageBusEntryBusEntryDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageBusEntryBusEntryDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageBusEntryBusEntryDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageBusEntryBusEntryDisplayPropDispPropLockField; }
-                set { designSchematicPageBusEntryBusEntryDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageBusEntryBusEntryDisplayPropPropColor designSchematicPageBusEntryBusEntryDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageBusEntryBusEntryDisplayPropPropColor DesignSchematicPageBusEntryBusEntryDisplayPropPropColor
-            {
-                get { return designSchematicPageBusEntryBusEntryDisplayPropPropColorField; }
-                set { designSchematicPageBusEntryBusEntryDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageBusEntryBusEntryDisplayPropPropDispType designSchematicPageBusEntryBusEntryDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageBusEntryBusEntryDisplayPropPropDispType DesignSchematicPageBusEntryBusEntryDisplayPropPropDispType
-            {
-                get { return designSchematicPageBusEntryBusEntryDisplayPropPropDispTypeField; }
-                set { designSchematicPageBusEntryBusEntryDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageBusEntryBusEntryDisplayPropPropFont designSchematicPageBusEntryBusEntryDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageBusEntryBusEntryDisplayPropPropFont DesignSchematicPageBusEntryBusEntryDisplayPropPropFont
-            {
-                get { return designSchematicPageBusEntryBusEntryDisplayPropPropFontField; }
-                set { designSchematicPageBusEntryBusEntryDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -57743,107 +55398,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsLibName", typeof(DesignSchematicPageDrawnInstContentsLibName))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsViewName", typeof(DesignSchematicPageDrawnInstContentsViewName))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsViewType", typeof(DesignSchematicPageDrawnInstContentsViewType))]
-            //[System.Xml.Serialization.XmlElementAttribute("DrawnInstDisplayProp", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("DrawnInstLock", typeof(DesignSchematicPageDrawnInstDrawnInstLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("DrawnInstUserProp", typeof(DesignSchematicPageDrawnInstDrawnInstUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsPrimitiveProp", typeof(DesignSchematicPageDrawnInstIsPrimitiveProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PartValue", typeof(DesignSchematicPageDrawnInstPartValue))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstBus", typeof(DesignSchematicPageDrawnInstPortInstBus))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstScalar", typeof(DesignSchematicPageDrawnInstPortInstScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("Reference", typeof(DesignSchematicPageDrawnInstReference))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageDrawnInstContentsLibName designSchematicPageDrawnInstContentsLibNameField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsLibName")]
-            public DesignSchematicPageDrawnInstContentsLibName DesignSchematicPageDrawnInstContentsLibName
+            [System.Xml.Serialization.XmlElementAttribute("ContentsLibName", typeof(DesignSchematicPageDrawnInstContentsLibName))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsViewName", typeof(DesignSchematicPageDrawnInstContentsViewName))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsViewType", typeof(DesignSchematicPageDrawnInstContentsViewType))]
+            [System.Xml.Serialization.XmlElementAttribute("DrawnInstDisplayProp", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("DrawnInstLock", typeof(DesignSchematicPageDrawnInstDrawnInstLock))]
+            [System.Xml.Serialization.XmlElementAttribute("DrawnInstUserProp", typeof(DesignSchematicPageDrawnInstDrawnInstUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("IsPrimitiveProp", typeof(DesignSchematicPageDrawnInstIsPrimitiveProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PartValue", typeof(DesignSchematicPageDrawnInstPartValue))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstBus", typeof(DesignSchematicPageDrawnInstPortInstBus))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstScalar", typeof(DesignSchematicPageDrawnInstPortInstScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("Reference", typeof(DesignSchematicPageDrawnInstReference))]
+            public object[] Items
             {
-                get { return designSchematicPageDrawnInstContentsLibNameField; }
-                set { designSchematicPageDrawnInstContentsLibNameField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageDrawnInstContentsViewName designSchematicPageDrawnInstContentsViewNameField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsViewName")]
-            public DesignSchematicPageDrawnInstContentsViewName DesignSchematicPageDrawnInstContentsViewName
-            {
-                get { return designSchematicPageDrawnInstContentsViewNameField; }
-                set { designSchematicPageDrawnInstContentsViewNameField = value; }
-            }
-            private DesignSchematicPageDrawnInstContentsViewType designSchematicPageDrawnInstContentsViewTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsViewType")]
-            public DesignSchematicPageDrawnInstContentsViewType DesignSchematicPageDrawnInstContentsViewType
-            {
-                get { return designSchematicPageDrawnInstContentsViewTypeField; }
-                set { designSchematicPageDrawnInstContentsViewTypeField = value; }
-            }
-            private DesignSchematicPageDrawnInstDrawnInstDisplayProp designSchematicPageDrawnInstDrawnInstDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("DrawnInstDisplayProp")]
-            public DesignSchematicPageDrawnInstDrawnInstDisplayProp DesignSchematicPageDrawnInstDrawnInstDisplayProp
-            {
-                get { return designSchematicPageDrawnInstDrawnInstDisplayPropField; }
-                set { designSchematicPageDrawnInstDrawnInstDisplayPropField = value; }
-            }
-
-            private DesignSchematicPageDrawnInstDrawnInstLock designSchematicPageDrawnInstDrawnInstLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DrawnInstLock")]
-            public DesignSchematicPageDrawnInstDrawnInstLock DesignSchematicPageDrawnInstDrawnInstLock
-            {
-                get { return designSchematicPageDrawnInstDrawnInstLockField; }
-                set { designSchematicPageDrawnInstDrawnInstLockField = value; }
-            }
-            private DesignSchematicPageDrawnInstDrawnInstUserProp designSchematicPageDrawnInstDrawnInstUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("DrawnInstUserProp")]
-            public DesignSchematicPageDrawnInstDrawnInstUserProp DesignSchematicPageDrawnInstDrawnInstUserProp
-            {
-                get { return designSchematicPageDrawnInstDrawnInstUserPropField; }
-                set { designSchematicPageDrawnInstDrawnInstUserPropField = value; }
-            }
-            private DesignSchematicPageDrawnInstIsPrimitiveProp designSchematicPageDrawnInstIsPrimitivePropField;
-            [System.Xml.Serialization.XmlElementAttribute("IsPrimitiveProp")]
-            public DesignSchematicPageDrawnInstIsPrimitiveProp DesignSchematicPageDrawnInstIsPrimitiveProp
-            {
-                get { return designSchematicPageDrawnInstIsPrimitivePropField; }
-                set { designSchematicPageDrawnInstIsPrimitivePropField = value; }
-            }
-            private DesignSchematicPageDrawnInstPartValue designSchematicPageDrawnInstPartValueField;
-            [System.Xml.Serialization.XmlElementAttribute("PartValue")]
-            public DesignSchematicPageDrawnInstPartValue DesignSchematicPageDrawnInstPartValue
-            {
-                get { return designSchematicPageDrawnInstPartValueField; }
-                set { designSchematicPageDrawnInstPartValueField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBus designSchematicPageDrawnInstPortInstBusField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstBus")]
-            public DesignSchematicPageDrawnInstPortInstBus DesignSchematicPageDrawnInstPortInstBus
-            {
-                get { return designSchematicPageDrawnInstPortInstBusField; }
-                set { designSchematicPageDrawnInstPortInstBusField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalar designSchematicPageDrawnInstPortInstScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstScarlar")]
-            public DesignSchematicPageDrawnInstPortInstScalar DesignSchematicPageDrawnInstPortInstScalar
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarField; }
-                set { designSchematicPageDrawnInstPortInstScalarField = value; }
-            }
-            private DesignSchematicPageDrawnInstReference designSchematicPageDrawnInstReferenceField;
-            [System.Xml.Serialization.XmlElementAttribute("Reference")]
-            public DesignSchematicPageDrawnInstReference DesignSchematicPageDrawnInstReference
-            {
-                get { return designSchematicPageDrawnInstReferenceField; }
-                set { designSchematicPageDrawnInstReferenceField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -58324,50 +55900,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageDrawnInstDrawnInstDisplayPropDispPropLock designSchematicPageDrawnInstDrawnInstDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageDrawnInstDrawnInstDisplayPropDispPropLock DesignSchematicPageDrawnInstDrawnInstDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageDrawnInstDrawnInstDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageDrawnInstDrawnInstDisplayPropDispPropLockField; }
-                set { designSchematicPageDrawnInstDrawnInstDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageDrawnInstDrawnInstDisplayPropPropColor designSchematicPageDrawnInstDrawnInstDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageDrawnInstDrawnInstDisplayPropPropColor DesignSchematicPageDrawnInstDrawnInstDisplayPropPropColor
-            {
-                get { return designSchematicPageDrawnInstDrawnInstDisplayPropPropColorField; }
-                set { designSchematicPageDrawnInstDrawnInstDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageDrawnInstDrawnInstDisplayPropPropDispType designSchematicPageDrawnInstDrawnInstDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageDrawnInstDrawnInstDisplayPropPropDispType DesignSchematicPageDrawnInstDrawnInstDisplayPropPropDispType
-            {
-                get { return designSchematicPageDrawnInstDrawnInstDisplayPropPropDispTypeField; }
-                set { designSchematicPageDrawnInstDrawnInstDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageDrawnInstDrawnInstDisplayPropPropFont designSchematicPageDrawnInstDrawnInstDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageDrawnInstDrawnInstDisplayPropPropFont DesignSchematicPageDrawnInstDrawnInstDisplayPropPropFont
-            {
-                get { return designSchematicPageDrawnInstDrawnInstDisplayPropPropFontField; }
-                set { designSchematicPageDrawnInstDrawnInstDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -59119,106 +56666,28 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignSchematicPageDrawnInstPortInstBusIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignSchematicPageDrawnInstPortInstBusIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignSchematicPageDrawnInstPortInstBusIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignSchematicPageDrawnInstPortInstBusIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignSchematicPageDrawnInstPortInstBusIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignSchematicPageDrawnInstPortInstBusIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignSchematicPageDrawnInstPortInstBusIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignSchematicPageDrawnInstPortInstBusIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstLock", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstUserProp", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageDrawnInstPortInstBusIsClock designSchematicPageDrawnInstPortInstBusIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignSchematicPageDrawnInstPortInstBusIsClock DesignSchematicPageDrawnInstPortInstBusIsClock
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignSchematicPageDrawnInstPortInstBusIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignSchematicPageDrawnInstPortInstBusIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignSchematicPageDrawnInstPortInstBusIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignSchematicPageDrawnInstPortInstBusIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignSchematicPageDrawnInstPortInstBusIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignSchematicPageDrawnInstPortInstBusIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignSchematicPageDrawnInstPortInstBusIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignSchematicPageDrawnInstPortInstBusIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstLock", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstUserProp", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageDrawnInstPortInstBusIsClockField; }
-                set { designSchematicPageDrawnInstPortInstBusIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageDrawnInstPortInstBusIsDot designSchematicPageDrawnInstPortInstBusIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignSchematicPageDrawnInstPortInstBusIsDot DesignSchematicPageDrawnInstPortInstBusIsDot
-            {
-                get { return designSchematicPageDrawnInstPortInstBusIsDotField; }
-                set { designSchematicPageDrawnInstPortInstBusIsDotField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusIsGlobal designSchematicPageDrawnInstPortInstBusIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignSchematicPageDrawnInstPortInstBusIsGlobal DesignSchematicPageDrawnInstPortInstBusIsGlobal
-            {
-                get { return designSchematicPageDrawnInstPortInstBusIsGlobalField; }
-                set { designSchematicPageDrawnInstPortInstBusIsGlobalField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusIsLeftPointing designSchematicPageDrawnInstPortInstBusIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignSchematicPageDrawnInstPortInstBusIsLeftPointing DesignSchematicPageDrawnInstPortInstBusIsLeftPointing
-            {
-                get { return designSchematicPageDrawnInstPortInstBusIsLeftPointingField; }
-                set { designSchematicPageDrawnInstPortInstBusIsLeftPointingField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusIsLong designSchematicPageDrawnInstPortInstBusIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignSchematicPageDrawnInstPortInstBusIsLong DesignSchematicPageDrawnInstPortInstBusIsLong
-            {
-                get { return designSchematicPageDrawnInstPortInstBusIsLongField; }
-                set { designSchematicPageDrawnInstPortInstBusIsLongField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusIsNetStyle designSchematicPageDrawnInstPortInstBusIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignSchematicPageDrawnInstPortInstBusIsNetStyle DesignSchematicPageDrawnInstPortInstBusIsNetStyle
-            {
-                get { return designSchematicPageDrawnInstPortInstBusIsNetStyleField; }
-                set { designSchematicPageDrawnInstPortInstBusIsNetStyleField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusIsNoConnect designSchematicPageDrawnInstPortInstBusIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignSchematicPageDrawnInstPortInstBusIsNoConnect DesignSchematicPageDrawnInstPortInstBusIsNoConnect
-            {
-                get { return designSchematicPageDrawnInstPortInstBusIsNoConnectField; }
-                set { designSchematicPageDrawnInstPortInstBusIsNoConnectField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusIsRightPointing designSchematicPageDrawnInstPortInstBusIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignSchematicPageDrawnInstPortInstBusIsRightPointing DesignSchematicPageDrawnInstPortInstBusIsRightPointing
-            {
-                get { return designSchematicPageDrawnInstPortInstBusIsRightPointingField; }
-                set { designSchematicPageDrawnInstPortInstBusIsRightPointingField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusPortInstDisplayProp designSchematicPageDrawnInstPortInstBusPortInstDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp")]
-            public DesignSchematicPageDrawnInstPortInstBusPortInstDisplayProp DesignSchematicPageDrawnInstPortInstBusPortInstDisplayProp
-            {
-                get { return designSchematicPageDrawnInstPortInstBusPortInstDisplayPropField; }
-                set { designSchematicPageDrawnInstPortInstBusPortInstDisplayPropField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusPortInstLock designSchematicPageDrawnInstPortInstBusPortInstLockFiel;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstLock")]
-            public DesignSchematicPageDrawnInstPortInstBusPortInstLock DesignSchematicPageDrawnInstPortInstBusPortInstLock
-            {
-                get { return designSchematicPageDrawnInstPortInstBusPortInstLockFiel; }
-                set { designSchematicPageDrawnInstPortInstBusPortInstLockFiel = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusPortInstUserProp designSchematicPageDrawnInstPortInstBusPortInstUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("ProtInstUserProp")]
-            public DesignSchematicPageDrawnInstPortInstBusPortInstUserProp DesignSchematicPageDrawnInstPortInstBusPortInstUserProp
-            {
-                get { return designSchematicPageDrawnInstPortInstBusPortInstUserPropField; }
-                set { designSchematicPageDrawnInstPortInstBusPortInstUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -59810,50 +57279,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropDispPropLock designSchematicPageDrawnInstPortInstBusPortInstDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropDispPropLock DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageDrawnInstPortInstBusPortInstDisplayPropDispPropLockField; }
-                set { designSchematicPageDrawnInstPortInstBusPortInstDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropColor designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropColor DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropColor
-            {
-                get { return designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropColorField; }
-                set { designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropDispType designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropDispType DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropDispType
-            {
-                get { return designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropDispTypeField; }
-                set { designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropFont designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropFont DesignSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropFont
-            {
-                get { return designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropFontField; }
-                set { designSchematicPageDrawnInstPortInstBusPortInstDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -60502,107 +57942,29 @@ namespace Xsd2
                 }
             }
 
-            ///// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignSchematicPageDrawnInstPortInstScalarIsClock))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignSchematicPageDrawnInstPortInstScalarIsDot))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignSchematicPageDrawnInstPortInstScalarIsGlobal))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignSchematicPageDrawnInstPortInstScalarIsLeftPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignSchematicPageDrawnInstPortInstScalarIsLong))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignSchematicPageDrawnInstPortInstScalarIsNetStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignSchematicPageDrawnInstPortInstScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignSchematicPageDrawnInstPortInstScalarIsRightPointing))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstLock", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstUserProp", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageDrawnInstPortInstScalarIsClock designSchematicPageDrawnInstPortInstScalarIsClockField;
-            [System.Xml.Serialization.XmlElementAttribute("IsClock")]
-            public DesignSchematicPageDrawnInstPortInstScalarIsClock DesignSchematicPageDrawnInstPortInstScalarIsClock
+            /// <remarks/>
+            [System.Xml.Serialization.XmlElementAttribute("IsClock", typeof(DesignSchematicPageDrawnInstPortInstScalarIsClock))]
+            [System.Xml.Serialization.XmlElementAttribute("IsDot", typeof(DesignSchematicPageDrawnInstPortInstScalarIsDot))]
+            [System.Xml.Serialization.XmlElementAttribute("IsGlobal", typeof(DesignSchematicPageDrawnInstPortInstScalarIsGlobal))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing", typeof(DesignSchematicPageDrawnInstPortInstScalarIsLeftPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("IsLong", typeof(DesignSchematicPageDrawnInstPortInstScalarIsLong))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle", typeof(DesignSchematicPageDrawnInstPortInstScalarIsNetStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignSchematicPageDrawnInstPortInstScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing", typeof(DesignSchematicPageDrawnInstPortInstScalarIsRightPointing))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstLock", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstUserProp", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageDrawnInstPortInstScalarIsClockField; }
-                set { designSchematicPageDrawnInstPortInstScalarIsClockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageDrawnInstPortInstScalarIsDot designSchematicPageDrawnInstPortInstScalarIsDotField;
-            [System.Xml.Serialization.XmlElementAttribute("IsDot")]
-            public DesignSchematicPageDrawnInstPortInstScalarIsDot DesignSchematicPageDrawnInstPortInstScalarIsDot
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarIsDotField; }
-                set { designSchematicPageDrawnInstPortInstScalarIsDotField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarIsGlobal designSchematicPageDrawnInstPortInstScalarIsGlobalField;
-            [System.Xml.Serialization.XmlElementAttribute("IsGlobal")]
-            public DesignSchematicPageDrawnInstPortInstScalarIsGlobal DesignSchematicPageDrawnInstPortInstScalarIsGlobal
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarIsGlobalField; }
-                set { designSchematicPageDrawnInstPortInstScalarIsGlobalField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarIsLeftPointing designSchematicPageDrawnInstPortInstScalarIsLeftPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLeftPointing")]
-            public DesignSchematicPageDrawnInstPortInstScalarIsLeftPointing DesignSchematicPageDrawnInstPortInstScalarIsLeftPointing
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarIsLeftPointingField; }
-                set { designSchematicPageDrawnInstPortInstScalarIsLeftPointingField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarIsLong designSchematicPageDrawnInstPortInstScalarIsLongField;
-            [System.Xml.Serialization.XmlElementAttribute("IsLong")]
-            public DesignSchematicPageDrawnInstPortInstScalarIsLong DesignSchematicPageDrawnInstPortInstScalarIsLong
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarIsLongField; }
-                set { designSchematicPageDrawnInstPortInstScalarIsLongField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarIsNetStyle designSchematicPageDrawnInstPortInstScalarIsNetStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNetStyle")]
-            public DesignSchematicPageDrawnInstPortInstScalarIsNetStyle DesignSchematicPageDrawnInstPortInstScalarIsNetStyle
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarIsNetStyleField; }
-                set { designSchematicPageDrawnInstPortInstScalarIsNetStyleField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarIsNoConnect designSchematicPageDrawnInstPortInstScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignSchematicPageDrawnInstPortInstScalarIsNoConnect DesignSchematicPageDrawnInstPortInstScalarIsNoConnect
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarIsNoConnectField; }
-                set { designSchematicPageDrawnInstPortInstScalarIsNoConnectField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarIsRightPointing designSchematicPageDrawnInstPortInstScalarIsRightPointingField;
-            [System.Xml.Serialization.XmlElementAttribute("IsRightPointing")]
-            public DesignSchematicPageDrawnInstPortInstScalarIsRightPointing DesignSchematicPageDrawnInstPortInstScalarIsRightPointing
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarIsRightPointingField; }
-                set { designSchematicPageDrawnInstPortInstScalarIsRightPointingField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayProp designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp")]
-            public DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayProp DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayProp
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropField; }
-                set { designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarPortInstLock designSchematicPageDrawnInstPortInstScalarPortInstLockField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstLock")]
-            public DesignSchematicPageDrawnInstPortInstScalarPortInstLock DesignSchematicPageDrawnInstPortInstScalarPortInstLock
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarPortInstLockField; }
-                set { designSchematicPageDrawnInstPortInstScalarPortInstLockField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarPortInstUserProp designSchematicPageDrawnInstPortInstScalarPortInstUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstUserProp")]
-            public DesignSchematicPageDrawnInstPortInstScalarPortInstUserProp DesignSchematicPageDrawnInstPortInstScalarPortInstUserProp
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarPortInstUserPropField; }
-                set { designSchematicPageDrawnInstPortInstScalarPortInstUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -61194,50 +58556,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropDispPropLock designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropDispPropLock DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropDispPropLockField; }
-                set { designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropColor designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropColor DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropColor
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropColorField; }
-                set { designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropDispType designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropDispType DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropDispType
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropDispTypeField; }
-                set { designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropFont designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropFont DesignSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropFont
-            {
-                get { return designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropFontField; }
-                set { designSchematicPageDrawnInstPortInstScalarPortInstDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -62508,42 +59841,20 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("GLobalLock", typeof(DesignSchematicPageGlobalGLobalLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("GlobalDisplayProp", typeof(DesignSchematicPageGlobalGlobalDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("GlobalUserProp", typeof(DesignSchematicPageGlobalGlobalUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageGlobalGLobalLock designSchematicPageGlobalGLobalLockField;
-            [System.Xml.Serialization.XmlElementAttribute("GLobalLock")]
-            public DesignSchematicPageGlobalGLobalLock DesignSchematicPageGlobalGLobalLock
+            [System.Xml.Serialization.XmlElementAttribute("GLobalLock", typeof(DesignSchematicPageGlobalGLobalLock))]
+            [System.Xml.Serialization.XmlElementAttribute("GlobalDisplayProp", typeof(DesignSchematicPageGlobalGlobalDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("GlobalUserProp", typeof(DesignSchematicPageGlobalGlobalUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageGlobalGLobalLockField; }
-                set { designSchematicPageGlobalGLobalLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageGlobalGlobalDisplayProp designSchematicPageGlobalGlobalDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("GlobalLock")]
-            public DesignSchematicPageGlobalGlobalDisplayProp DesignSchematicPageGlobalGlobalDisplayProp
-            {
-                get { return designSchematicPageGlobalGlobalDisplayPropField; }
-                set { designSchematicPageGlobalGlobalDisplayPropField = value; }
-            }
-            private DesignSchematicPageGlobalGlobalUserProp designSchematicPageGlobalGlobalUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("GlobalUserProp")]
-            public DesignSchematicPageGlobalGlobalUserProp DesignSchematicPageGlobalGlobalUserProp
-            {
-                get { return designSchematicPageGlobalGlobalUserPropField; }
-                set { designSchematicPageGlobalGlobalUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -62810,50 +60121,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageGlobalGlobalDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageGlobalGlobalDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageGlobalGlobalDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageGlobalGlobalDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageGlobalGlobalDisplayPropDispPropLock designSchematicPageGlobalGlobalDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageGlobalGlobalDisplayPropDispPropLock DesignSchematicPageGlobalGlobalDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageGlobalGlobalDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageGlobalGlobalDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageGlobalGlobalDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageGlobalGlobalDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageGlobalGlobalDisplayPropDispPropLockField; }
-                set { designSchematicPageGlobalGlobalDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageGlobalGlobalDisplayPropPropColor designSchematicPageGlobalGlobalDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageGlobalGlobalDisplayPropPropColor DesignSchematicPageGlobalGlobalDisplayPropPropColor
-            {
-                get { return designSchematicPageGlobalGlobalDisplayPropPropColorField; }
-                set { designSchematicPageGlobalGlobalDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageGlobalGlobalDisplayPropPropDispType designSchematicPageGlobalGlobalDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageGlobalGlobalDisplayPropPropDispType DesignSchematicPageGlobalGlobalDisplayPropPropDispType
-            {
-                get { return designSchematicPageGlobalGlobalDisplayPropPropDispTypeField; }
-                set { designSchematicPageGlobalGlobalDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageGlobalGlobalDisplayPropPropFont designSchematicPageGlobalGlobalDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageGlobalGlobalDisplayPropPropFont DesignSchematicPageGlobalGlobalDisplayPropPropFont
-            {
-                get { return designSchematicPageGlobalGlobalDisplayPropPropFontField; }
-                set { designSchematicPageGlobalGlobalDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -67747,90 +65029,26 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageNetBusWireBusAlias))]
-            //[System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageNetBusWireBusJunction))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageNetBusWireBusWireBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageNetBusWireBusWireColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageNetBusWireBusWireDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageNetBusWireBusWireLineStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageNetBusWireBusWireLineWidth))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageNetBusWireBusWireLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageNetBusWireBusWireUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetBusWireBusAlias designSchematicPageNetBusWireBusAliasField;
-            [System.Xml.Serialization.XmlElementAttribute("Alias")]
-            public DesignSchematicPageNetBusWireBusAlias DesignSchematicPageNetBusWireBusAlias
+            [System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageNetBusWireBusAlias))]
+            [System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageNetBusWireBusJunction))]
+            [System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageNetBusWireBusWireBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageNetBusWireBusWireColor))]
+            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageNetBusWireBusWireDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageNetBusWireBusWireLineStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageNetBusWireBusWireLineWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageNetBusWireBusWireLock))]
+            [System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageNetBusWireBusWireUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageNetBusWireBusAliasField; }
-                set { designSchematicPageNetBusWireBusAliasField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetBusWireBusJunction designSchematicPageNetBusWireBusJunctionField;
-            [System.Xml.Serialization.XmlElementAttribute("Junction")]
-            public DesignSchematicPageNetBusWireBusJunction DesignSchematicPageNetBusWireBusJunction
-            {
-                get { return designSchematicPageNetBusWireBusJunctionField; }
-                set { designSchematicPageNetBusWireBusJunctionField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireBBox designSchematicPageNetBusWireBusWireBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("WireBBox")]
-            public DesignSchematicPageNetBusWireBusWireBBox DesignSchematicPageNetBusWireBusWireBBox
-            {
-                get { return designSchematicPageNetBusWireBusWireBBoxField; }
-                set { designSchematicPageNetBusWireBusWireBBoxField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireColor designSchematicPageNetBusWireBusWireColorField;
-            [System.Xml.Serialization.XmlElementAttribute("WireColor")]
-            public DesignSchematicPageNetBusWireBusWireColor DesignSchematicPageNetBusWireBusWireColor
-            {
-                get { return designSchematicPageNetBusWireBusWireColorField; }
-                set { designSchematicPageNetBusWireBusWireColorField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireDisplayProp designSchematicPageNetBusWireBusWireDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp")]
-            public DesignSchematicPageNetBusWireBusWireDisplayProp DesignSchematicPageNetBusWireBusWireDisplayProp
-            {
-                get { return designSchematicPageNetBusWireBusWireDisplayPropField; }
-                set { designSchematicPageNetBusWireBusWireDisplayPropField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireLineStyle designSchematicPageNetBusWireBusWireLineStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle")]
-            public DesignSchematicPageNetBusWireBusWireLineStyle DesignSchematicPageNetBusWireBusWireLineStyle
-            {
-                get { return designSchematicPageNetBusWireBusWireLineStyleField; }
-                set { designSchematicPageNetBusWireBusWireLineStyleField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireLineWidth designSchematicPageNetBusWireBusWireLineWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth")]
-            public DesignSchematicPageNetBusWireBusWireLineWidth DesignSchematicPageNetBusWireBusWireLineWidth
-            {
-                get { return designSchematicPageNetBusWireBusWireLineWidthField; }
-                set { designSchematicPageNetBusWireBusWireLineWidthField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireLock designSchematicPageNetBusWireBusWireLockField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLock")]
-            public DesignSchematicPageNetBusWireBusWireLock DesignSchematicPageNetBusWireBusWireLock
-            {
-                get { return designSchematicPageNetBusWireBusWireLockField; }
-                set { designSchematicPageNetBusWireBusWireLockField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireUserProp designSchematicPageNetBusWireBusWireUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireUserProp")]
-            public DesignSchematicPageNetBusWireBusWireUserProp DesignSchematicPageNetBusWireBusWireUserProp
-            {
-                get { return designSchematicPageNetBusWireBusWireUserPropField; }
-                set { designSchematicPageNetBusWireBusWireUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -67982,50 +65200,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageNetBusWireBusAliasAliasBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageNetBusWireBusAliasAliasFont))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageNetBusWireBusAliasAliasLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("BundleOwner", typeof(DesignSchematicPageNetBusWireBusAliasBundleOwner))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetBusWireBusAliasAliasBBox designSchematicPageNetBusWireBusAliasAliasBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasBBox")]
-            public DesignSchematicPageNetBusWireBusAliasAliasBBox DesignSchematicPageNetBusWireBusAliasAliasBBox
+            [System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageNetBusWireBusAliasAliasBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageNetBusWireBusAliasAliasFont))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageNetBusWireBusAliasAliasLock))]
+            [System.Xml.Serialization.XmlElementAttribute("BundleOwner", typeof(DesignSchematicPageNetBusWireBusAliasBundleOwner))]
+            public object[] Items
             {
-                get { return designSchematicPageNetBusWireBusAliasAliasBBoxField; }
-                set { designSchematicPageNetBusWireBusAliasAliasBBoxField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetBusWireBusAliasAliasFont designSchematicPageNetBusWireBusAliasAliasFontField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasFont")]
-            public DesignSchematicPageNetBusWireBusAliasAliasFont DesignSchematicPageNetBusWireBusAliasAliasFont
-            {
-                get { return designSchematicPageNetBusWireBusAliasAliasFontField; }
-                set { designSchematicPageNetBusWireBusAliasAliasFontField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusAliasAliasLock designSchematicPageNetBusWireBusAliasAliasLockField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasLock")]
-            public DesignSchematicPageNetBusWireBusAliasAliasLock DesignSchematicPageNetBusWireBusAliasAliasLock
-            {
-                get { return designSchematicPageNetBusWireBusAliasAliasLockField; }
-                set { designSchematicPageNetBusWireBusAliasAliasLockField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusAliasBundleOwner designSchematicPageNetBusWireBusAliasBundleOwnerField;
-            [System.Xml.Serialization.XmlElementAttribute("BudnleOwner")]
-            public DesignSchematicPageNetBusWireBusAliasBundleOwner DesignSchematicPageNetBusWireBusAliasBundleOwner
-            {
-                get { return designSchematicPageNetBusWireBusAliasBundleOwnerField; }
-                set { designSchematicPageNetBusWireBusAliasBundleOwnerField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -68774,50 +65963,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageNetBusWireBusWireDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageNetBusWireBusWireDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageNetBusWireBusWireDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageNetBusWireBusWireDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetBusWireBusWireDisplayPropDispPropLock designSchematicPageNetBusWireBusWireDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageNetBusWireBusWireDisplayPropDispPropLock DesignSchematicPageNetBusWireBusWireDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageNetBusWireBusWireDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageNetBusWireBusWireDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageNetBusWireBusWireDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageNetBusWireBusWireDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageNetBusWireBusWireDisplayPropDispPropLockField; }
-                set { designSchematicPageNetBusWireBusWireDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetBusWireBusWireDisplayPropPropColor designSchematicPageNetBusWireBusWireDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageNetBusWireBusWireDisplayPropPropColor DesignSchematicPageNetBusWireBusWireDisplayPropPropColor
-            {
-                get { return designSchematicPageNetBusWireBusWireDisplayPropPropColorField; }
-                set { designSchematicPageNetBusWireBusWireDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireDisplayPropPropDispType designSchematicPageNetBusWireBusWireDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageNetBusWireBusWireDisplayPropPropDispType DesignSchematicPageNetBusWireBusWireDisplayPropPropDispType
-            {
-                get { return designSchematicPageNetBusWireBusWireDisplayPropPropDispTypeField; }
-                set { designSchematicPageNetBusWireBusWireDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageNetBusWireBusWireDisplayPropPropFont designSchematicPageNetBusWireBusWireDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageNetBusWireBusWireDisplayPropPropFont DesignSchematicPageNetBusWireBusWireDisplayPropPropFont
-            {
-                get { return designSchematicPageNetBusWireBusWireDisplayPropPropFontField; }
-                set { designSchematicPageNetBusWireBusWireDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -69636,90 +66796,26 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageNetBusNetScalarWireScalarAlias))]
-            //[System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageNetBusNetScalarWireScalarJunction))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireLineStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireLineWidth))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetBusNetScalarWireScalarAlias designSchematicPageNetBusNetScalarWireScalarAliasField;
-            [System.Xml.Serialization.XmlElementAttribute("Alias")]
-            public DesignSchematicPageNetBusNetScalarWireScalarAlias DesignSchematicPageNetBusNetScalarWireScalarAlias
+            [System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageNetBusNetScalarWireScalarAlias))]
+            [System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageNetBusNetScalarWireScalarJunction))]
+            [System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireColor))]
+            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireLineStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireLineWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireLock))]
+            [System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageNetBusNetScalarWireScalarAliasField; }
-                set { designSchematicPageNetBusNetScalarWireScalarAliasField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetBusNetScalarWireScalarJunction designSchematicPageNetBusNetScalarWireScalarJunctionField;
-            [System.Xml.Serialization.XmlElementAttribute("Junction")]
-            public DesignSchematicPageNetBusNetScalarWireScalarJunction DesignSchematicPageNetBusNetScalarWireScalarJunction
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarJunctionField; }
-                set { designSchematicPageNetBusNetScalarWireScalarJunctionField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireBBox designSchematicPageNetBusNetScalarWireScalarWireBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("WireBBox")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireBBox DesignSchematicPageNetBusNetScalarWireScalarWireBBox
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireBBoxField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireBBoxField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireColor designSchematicPageNetBusNetScalarWireScalarWireColorField;
-            [System.Xml.Serialization.XmlElementAttribute("WireColor")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireColor DesignSchematicPageNetBusNetScalarWireScalarWireColor
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireColorField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireColorField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireDisplayProp designSchematicPageNetBusNetScalarWireScalarWireDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireDisplayProp DesignSchematicPageNetBusNetScalarWireScalarWireDisplayProp
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireDisplayPropField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireDisplayPropField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireLineStyle designSchematicPageNetBusNetScalarWireScalarWireLineStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireLineStyle DesignSchematicPageNetBusNetScalarWireScalarWireLineStyle
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireLineStyleField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireLineStyleField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireLineWidth designSchematicPageNetBusNetScalarWireScalarWireLineWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireLineWidth DesignSchematicPageNetBusNetScalarWireScalarWireLineWidth
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireLineWidthField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireLineWidthField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireLock designSchematicPageNetBusNetScalarWireScalarWireLockField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLock")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireLock DesignSchematicPageNetBusNetScalarWireScalarWireLock
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireLockField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireLockField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireUserProp designSchematicPageNetBusNetScalarWireScalarWireUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireUserProp")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireUserProp DesignSchematicPageNetBusNetScalarWireScalarWireUserProp
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireUserPropField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -69871,50 +66967,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageNetBusNetScalarWireScalarAliasAliasBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageNetBusNetScalarWireScalarAliasAliasFont))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageNetBusNetScalarWireScalarAliasAliasLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("BundleOwner", typeof(DesignSchematicPageNetBusNetScalarWireScalarAliasBundleOwner))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetBusNetScalarWireScalarAliasAliasBBox designSchematicPageNetBusNetScalarWireScalarAliasAliasBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasBBox")]
-            public DesignSchematicPageNetBusNetScalarWireScalarAliasAliasBBox DesignSchematicPageNetBusNetScalarWireScalarAliasAliasBBox
+            [System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageNetBusNetScalarWireScalarAliasAliasBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageNetBusNetScalarWireScalarAliasAliasFont))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageNetBusNetScalarWireScalarAliasAliasLock))]
+            [System.Xml.Serialization.XmlElementAttribute("BundleOwner", typeof(DesignSchematicPageNetBusNetScalarWireScalarAliasBundleOwner))]
+            public object[] Items
             {
-                get { return designSchematicPageNetBusNetScalarWireScalarAliasAliasBBoxField; }
-                set { designSchematicPageNetBusNetScalarWireScalarAliasAliasBBoxField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetBusNetScalarWireScalarAliasAliasFont designSchematicPageNetBusNetScalarWireScalarAliasAliasFontField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasFont")]
-            public DesignSchematicPageNetBusNetScalarWireScalarAliasAliasFont DesignSchematicPageNetBusNetScalarWireScalarAliasAliasFont
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarAliasAliasFontField; }
-                set { designSchematicPageNetBusNetScalarWireScalarAliasAliasFontField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarAliasAliasLock designSchematicPageNetBusNetScalarWireScalarAliasAliasLockField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasLock")]
-            public DesignSchematicPageNetBusNetScalarWireScalarAliasAliasLock DesignSchematicPageNetBusNetScalarWireScalarAliasAliasLock
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarAliasAliasLockField; }
-                set { designSchematicPageNetBusNetScalarWireScalarAliasAliasLockField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarAliasBundleOwner designSchematicPageNetBusNetScalarWireScalarAliasBundleOwnerField;
-            [System.Xml.Serialization.XmlElementAttribute("BundleOwner")]
-            public DesignSchematicPageNetBusNetScalarWireScalarAliasBundleOwner DesignSchematicPageNetBusNetScalarWireScalarAliasBundleOwner
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarAliasBundleOwnerField; }
-                set { designSchematicPageNetBusNetScalarWireScalarAliasBundleOwnerField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -70663,50 +67730,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropDispPropLock designSchematicPageNetBusNetScalarWireScalarWireDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropDispPropLock DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireDisplayPropDispPropLockField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropColor designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropColor DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropColor
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropColorField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropDispType designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropDispType DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropDispType 
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropDispTypeField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropFont designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropFont DesignSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropFont
-            {
-                get { return designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropFontField; }
-                set { designSchematicPageNetBusNetScalarWireScalarWireDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -71525,90 +68563,26 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageNetScalarWireScalarAlias))]
-            //[System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageNetScalarWireScalarJunction))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageNetScalarWireScalarWireBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageNetScalarWireScalarWireColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageNetScalarWireScalarWireLineStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageNetScalarWireScalarWireLineWidth))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageNetScalarWireScalarWireLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageNetScalarWireScalarWireUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetScalarWireScalarAlias designSchematicPageNetScalarWireScalarAliasField;
-            [System.Xml.Serialization.XmlElementAttribute("Alias")]
-            public DesignSchematicPageNetScalarWireScalarAlias DesignSchematicPageNetScalarWireScalarAlias
+            [System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageNetScalarWireScalarAlias))]
+            [System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageNetScalarWireScalarJunction))]
+            [System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageNetScalarWireScalarWireBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageNetScalarWireScalarWireColor))]
+            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageNetScalarWireScalarWireLineStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageNetScalarWireScalarWireLineWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageNetScalarWireScalarWireLock))]
+            [System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageNetScalarWireScalarWireUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageNetScalarWireScalarAliasField; }
-                set { designSchematicPageNetScalarWireScalarAliasField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetScalarWireScalarJunction designSchematicPageNetScalarWireScalarJunctionField;
-            [System.Xml.Serialization.XmlElementAttribute("Junction")]
-            public DesignSchematicPageNetScalarWireScalarJunction DesignSchematicPageNetScalarWireScalarJunction
-            {
-                get { return designSchematicPageNetScalarWireScalarJunctionField; }
-                set { designSchematicPageNetScalarWireScalarJunctionField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireBBox designSchematicPageNetScalarWireScalarWireBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("WireBBox")]
-            public DesignSchematicPageNetScalarWireScalarWireBBox DesignSchematicPageNetScalarWireScalarWireBBox
-            {
-                get { return designSchematicPageNetScalarWireScalarWireBBoxField; }
-                set { designSchematicPageNetScalarWireScalarWireBBoxField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireColor designSchematicPageNetScalarWireScalarWireColorField;
-            [System.Xml.Serialization.XmlElementAttribute("WireColor")]
-            public DesignSchematicPageNetScalarWireScalarWireColor DesignSchematicPageNetScalarWireScalarWireColor
-            {
-                get { return designSchematicPageNetScalarWireScalarWireColorField; }
-                set { designSchematicPageNetScalarWireScalarWireColorField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireDisplayProp designSchematicPageNetScalarWireScalarWireDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp")]
-            public DesignSchematicPageNetScalarWireScalarWireDisplayProp DesignSchematicPageNetScalarWireScalarWireDisplayProp
-            {
-                get { return designSchematicPageNetScalarWireScalarWireDisplayPropField; }
-                set { designSchematicPageNetScalarWireScalarWireDisplayPropField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireLineStyle designSchematicPageNetScalarWireScalarWireLineStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLinestyle")]
-            public DesignSchematicPageNetScalarWireScalarWireLineStyle DesignSchematicPageNetScalarWireScalarWireLineStyle
-            {
-                get { return designSchematicPageNetScalarWireScalarWireLineStyleField; }
-                set { designSchematicPageNetScalarWireScalarWireLineStyleField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireLineWidth designSchematicPageNetScalarWireScalarWireLineWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth")]
-            public DesignSchematicPageNetScalarWireScalarWireLineWidth DesignSchematicPageNetScalarWireScalarWireLineWidth
-            {
-                get { return designSchematicPageNetScalarWireScalarWireLineWidthField; }
-                set { designSchematicPageNetScalarWireScalarWireLineWidthField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireLock designSchematicPageNetScalarWireScalarWireLockField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLock")]
-            public DesignSchematicPageNetScalarWireScalarWireLock DesignSchematicPageNetScalarWireScalarWireLock
-            {
-                get { return designSchematicPageNetScalarWireScalarWireLockField; }
-                set { designSchematicPageNetScalarWireScalarWireLockField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireUserProp designSchematicPageNetScalarWireScalarWireUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireUserProp")]
-            public DesignSchematicPageNetScalarWireScalarWireUserProp DesignSchematicPageNetScalarWireScalarWireUserProp
-            {
-                get { return designSchematicPageNetScalarWireScalarWireUserPropField; }
-                set { designSchematicPageNetScalarWireScalarWireUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -71760,42 +68734,20 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageNetScalarWireScalarAliasAliasBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageNetScalarWireScalarAliasAliasFont))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageNetScalarWireScalarAliasAliasLock))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetScalarWireScalarAliasAliasBBox designSchematicPageNetScalarWireScalarAliasAliasBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasBBox")]
-            public DesignSchematicPageNetScalarWireScalarAliasAliasBBox DesignSchematicPageNetScalarWireScalarAliasAliasBBox
+            [System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageNetScalarWireScalarAliasAliasBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageNetScalarWireScalarAliasAliasFont))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageNetScalarWireScalarAliasAliasLock))]
+            public object[] Items
             {
-                get { return designSchematicPageNetScalarWireScalarAliasAliasBBoxField; }
-                set { designSchematicPageNetScalarWireScalarAliasAliasBBoxField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetScalarWireScalarAliasAliasFont designSchematicPageNetScalarWireScalarAliasAliasFontField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasFont")]
-            public DesignSchematicPageNetScalarWireScalarAliasAliasFont DesignSchematicPageNetScalarWireScalarAliasAliasFont
-            {
-                get { return designSchematicPageNetScalarWireScalarAliasAliasFontField; }
-                set { designSchematicPageNetScalarWireScalarAliasAliasFontField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarAliasAliasLock designSchematicPageNetScalarWireScalarAliasAliasLockField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasLock")]
-            public DesignSchematicPageNetScalarWireScalarAliasAliasLock DesignSchematicPageNetScalarWireScalarAliasAliasLock
-            {
-                get { return designSchematicPageNetScalarWireScalarAliasAliasLockField; }
-                set { designSchematicPageNetScalarWireScalarAliasAliasLockField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -72493,50 +69445,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageNetScalarWireScalarWireDisplayPropDispPropLock designSchematicPageNetScalarWireScalarWireDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageNetScalarWireScalarWireDisplayPropDispPropLock DesignSchematicPageNetScalarWireScalarWireDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageNetScalarWireScalarWireDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageNetScalarWireScalarWireDisplayPropDispPropLockField; }
-                set { designSchematicPageNetScalarWireScalarWireDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageNetScalarWireScalarWireDisplayPropPropColor designSchematicPageNetScalarWireScalarWireDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageNetScalarWireScalarWireDisplayPropPropColor DesignSchematicPageNetScalarWireScalarWireDisplayPropPropColor
-            {
-                get { return designSchematicPageNetScalarWireScalarWireDisplayPropPropColorField; }
-                set { designSchematicPageNetScalarWireScalarWireDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireDisplayPropPropDispType designSchematicPageNetScalarWireScalarWireDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageNetScalarWireScalarWireDisplayPropPropDispType DesignSchematicPageNetScalarWireScalarWireDisplayPropPropDispType
-            {
-                get { return designSchematicPageNetScalarWireScalarWireDisplayPropPropDispTypeField; }
-                set { designSchematicPageNetScalarWireScalarWireDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageNetScalarWireScalarWireDisplayPropPropFont designSchematicPageNetScalarWireScalarWireDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageNetScalarWireScalarWireDisplayPropPropFont DesignSchematicPageNetScalarWireScalarWireDisplayPropPropFont
-            {
-                get { return designSchematicPageNetScalarWireScalarWireDisplayPropPropFontField; }
-                set { designSchematicPageNetScalarWireScalarWireDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -73288,42 +70211,20 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("OffPageConnectorDisplayProp", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("OffPageConnectorUserProp", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("OffPageLock", typeof(DesignSchematicPageOffPageConnectorOffPageLock))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageOffPageConnectorOffPageConnectorDisplayProp designSchematicPageOffPageConnectorOffPageConnectorDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("OffPageConnectorDisplayProp")]
-            public DesignSchematicPageOffPageConnectorOffPageConnectorDisplayProp DesignSchematicPageOffPageConnectorOffPageConnectorDisplayProp
+            [System.Xml.Serialization.XmlElementAttribute("OffPageConnectorDisplayProp", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("OffPageConnectorUserProp", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("OffPageLock", typeof(DesignSchematicPageOffPageConnectorOffPageLock))]
+            public object[] Items
             {
-                get { return designSchematicPageOffPageConnectorOffPageConnectorDisplayPropField; }
-                set { designSchematicPageOffPageConnectorOffPageConnectorDisplayPropField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageOffPageConnectorOffPageConnectorUserProp designSchematicPageOffPageConnectorOffPageConnectorUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("OffPageConnectorUserProp")]
-            public DesignSchematicPageOffPageConnectorOffPageConnectorUserProp DesignSchematicPageOffPageConnectorOffPageConnectorUserProp
-            {
-                get { return designSchematicPageOffPageConnectorOffPageConnectorUserPropField; }
-                set { designSchematicPageOffPageConnectorOffPageConnectorUserPropField = value; }
-            }
-            private DesignSchematicPageOffPageConnectorOffPageLock designSchematicPageOffPageConnectorOffPageLockField;
-            [System.Xml.Serialization.XmlElementAttribute("OffPageLock")]
-            public DesignSchematicPageOffPageConnectorOffPageLock DesignSchematicPageOffPageConnectorOffPageLock
-            {
-                get { return designSchematicPageOffPageConnectorOffPageLockField; }
-                set { designSchematicPageOffPageConnectorOffPageLockField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -73539,50 +70440,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropDispPropLock designSchematicPageOffPageConnectorOffPageConnectorDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropDispPropLock DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageOffPageConnectorOffPageConnectorDisplayPropDispPropLockField; }
-                set { designSchematicPageOffPageConnectorOffPageConnectorDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropColor designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropColor DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropColor
-            {
-                get { return designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropColorField; }
-                set { designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropDispType designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropDispType DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropDispType
-            {
-                get { return designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropDispTypeField; }
-                set { designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropFont designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropFont DesignSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropFont
-            {
-                get { return designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropFontField; }
-                set { designSchematicPageOffPageConnectorOffPageConnectorDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -74752,122 +71624,30 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsLibName", typeof(DesignSchematicPagePartInstContentsLibName))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsViewName", typeof(DesignSchematicPagePartInstContentsViewName))]
-            //[System.Xml.Serialization.XmlElementAttribute("ContentsViewType", typeof(DesignSchematicPagePartInstContentsViewType))]
-            //[System.Xml.Serialization.XmlElementAttribute("GraphicName", typeof(DesignSchematicPagePartInstGraphicName))]
-            //[System.Xml.Serialization.XmlElementAttribute("IsPrimitiveProp", typeof(DesignSchematicPagePartInstIsPrimitiveProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PCBLib", typeof(DesignSchematicPagePartInstPCBLib))]
-            //[System.Xml.Serialization.XmlElementAttribute("PartInstDisplayProp", typeof(DesignSchematicPagePartInstPartInstDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PartInstLock", typeof(DesignSchematicPagePartInstPartInstLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PartInstUserProp", typeof(DesignSchematicPagePartInstPartInstUserProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PartValue", typeof(DesignSchematicPagePartInstPartValue))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstBus", typeof(DesignSchematicPagePartInstPortInstBus))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstScalar", typeof(DesignSchematicPagePartInstPortInstScalar))]
-            //[System.Xml.Serialization.XmlElementAttribute("Reference", typeof(DesignSchematicPagePartInstReference))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPagePartInstContentsLibName designSchematicPagePartInstContentsLibNameField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsLibName")]
-            public DesignSchematicPagePartInstContentsLibName DesignSchematicPagePartInstContentsLibName
+            [System.Xml.Serialization.XmlElementAttribute("ContentsLibName", typeof(DesignSchematicPagePartInstContentsLibName))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsViewName", typeof(DesignSchematicPagePartInstContentsViewName))]
+            [System.Xml.Serialization.XmlElementAttribute("ContentsViewType", typeof(DesignSchematicPagePartInstContentsViewType))]
+            [System.Xml.Serialization.XmlElementAttribute("GraphicName", typeof(DesignSchematicPagePartInstGraphicName))]
+            [System.Xml.Serialization.XmlElementAttribute("IsPrimitiveProp", typeof(DesignSchematicPagePartInstIsPrimitiveProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PCBLib", typeof(DesignSchematicPagePartInstPCBLib))]
+            [System.Xml.Serialization.XmlElementAttribute("PartInstDisplayProp", typeof(DesignSchematicPagePartInstPartInstDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PartInstLock", typeof(DesignSchematicPagePartInstPartInstLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PartInstUserProp", typeof(DesignSchematicPagePartInstPartInstUserProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PartValue", typeof(DesignSchematicPagePartInstPartValue))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstBus", typeof(DesignSchematicPagePartInstPortInstBus))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstScalar", typeof(DesignSchematicPagePartInstPortInstScalar))]
+            [System.Xml.Serialization.XmlElementAttribute("Reference", typeof(DesignSchematicPagePartInstReference))]
+            public object[] Items
             {
-                get { return designSchematicPagePartInstContentsLibNameField; }
-                set { designSchematicPagePartInstContentsLibNameField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPagePartInstContentsViewName designSchematicPagePartInstContentsViewNameField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsViewName")]
-            public DesignSchematicPagePartInstContentsViewName DesignSchematicPagePartInstContentsViewName
-            {
-                get { return designSchematicPagePartInstContentsViewNameField; }
-                set { designSchematicPagePartInstContentsViewNameField = value; }
-            }
-            private DesignSchematicPagePartInstContentsViewType designSchematicPagePartInstContentsViewTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("ContentsviewType")]
-            public DesignSchematicPagePartInstContentsViewType DesignSchematicPagePartInstContentsViewType
-            {
-                get { return designSchematicPagePartInstContentsViewTypeField; }
-                set { designSchematicPagePartInstContentsViewTypeField = value; }
-            }
-            private DesignSchematicPagePartInstGraphicName designSchematicPagePartInstGraphicNameField;
-            [System.Xml.Serialization.XmlElementAttribute("GraphicName")]
-            public DesignSchematicPagePartInstGraphicName DesignSchematicPagePartInstGraphicName
-            {
-                get { return designSchematicPagePartInstGraphicNameField; }
-                set { designSchematicPagePartInstGraphicNameField = value; }
-            }
-            private DesignSchematicPagePartInstIsPrimitiveProp designSchematicPagePartInstIsPrimitivePropField;
-            [System.Xml.Serialization.XmlElementAttribute("IsPrimitiveProp")]
-            public DesignSchematicPagePartInstIsPrimitiveProp DesignSchematicPagePartInstIsPrimitiveProp
-            {
-                get { return designSchematicPagePartInstIsPrimitivePropField; }
-                set { designSchematicPagePartInstIsPrimitivePropField = value; }
-            }
-            private DesignSchematicPagePartInstPCBLib designSchematicPagePartInstPCBLibField;
-            [System.Xml.Serialization.XmlElementAttribute("PCBLib")]
-            public DesignSchematicPagePartInstPCBLib DesignSchematicPagePartInstPCBLib
-            {
-                get { return designSchematicPagePartInstPCBLibField; }
-                set { designSchematicPagePartInstPCBLibField = value; }
-            }
-            private DesignSchematicPagePartInstPartInstDisplayProp designSchematicPagePartInstPartInstDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PartInstDisplayProp")]
-            public DesignSchematicPagePartInstPartInstDisplayProp DesignSchematicPagePartInstPartInstDisplayProp
-            {
-                get { return designSchematicPagePartInstPartInstDisplayPropField; }
-                set { designSchematicPagePartInstPartInstDisplayPropField = value; }
-            }
-            private DesignSchematicPagePartInstPartInstLock designSchematicPagePartInstPartInstLockField;
-            [System.Xml.Serialization.XmlElementAttribute("PartInstLock")]
-            public DesignSchematicPagePartInstPartInstLock DesignSchematicPagePartInstPartInstLock
-            {
-                get { return designSchematicPagePartInstPartInstLockField; }
-                set { designSchematicPagePartInstPartInstLockField = value; }
-            }
-            private DesignSchematicPagePartInstPartInstUserProp designSchematicPagePartInstPartInstUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PartInstUserProp")]
-            public DesignSchematicPagePartInstPartInstUserProp DesignSchematicPagePartInstPartInstUserProp
-            {
-                get { return designSchematicPagePartInstPartInstUserPropField; }
-                set { designSchematicPagePartInstPartInstUserPropField = value; }
-            }
-            private DesignSchematicPagePartInstPartValue designSchematicPagePartInstPartValueField;
-            [System.Xml.Serialization.XmlElementAttribute("PartValue")]
-            public DesignSchematicPagePartInstPartValue DesignSchematicPagePartInstPartValue
-            {
-                get { return designSchematicPagePartInstPartValueField; }
-                set { designSchematicPagePartInstPartValueField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstBus designSchematicPagePartInstPortInstBusField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstBus")]
-            public DesignSchematicPagePartInstPortInstBus DesignSchematicPagePartInstPortInstBus
-            {
-                get { return designSchematicPagePartInstPortInstBusField; }
-                set { designSchematicPagePartInstPortInstBusField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstScalar designSchematicPagePartInstPortInstScalarField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstScarlar")]
-            public DesignSchematicPagePartInstPortInstScalar DesignSchematicPagePartInstPortInstScalar
-            {
-                get { return designSchematicPagePartInstPortInstScalarField; }
-                set { designSchematicPagePartInstPortInstScalarField = value; }
-            }
-            private DesignSchematicPagePartInstReference designSchematicPagePartInstReferenceField;
-            [System.Xml.Serialization.XmlElementAttribute("Reference")]
-            public DesignSchematicPagePartInstReference DesignSchematicPagePartInstReference
-            {
-                get { return designSchematicPagePartInstReferenceField; }
-                set { designSchematicPagePartInstReferenceField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -75453,50 +72233,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPagePartInstPartInstDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPagePartInstPartInstDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPagePartInstPartInstDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPagePartInstPartInstDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPagePartInstPartInstDisplayPropDispPropLock designSchematicPagePartInstPartInstDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPagePartInstPartInstDisplayPropDispPropLock DesignSchematicPagePartInstPartInstDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPagePartInstPartInstDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPagePartInstPartInstDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPagePartInstPartInstDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPagePartInstPartInstDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPagePartInstPartInstDisplayPropDispPropLockField; }
-                set { designSchematicPagePartInstPartInstDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPagePartInstPartInstDisplayPropPropColor designSchematicPagePartInstPartInstDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPagePartInstPartInstDisplayPropPropColor DesignSchematicPagePartInstPartInstDisplayPropPropColor
-            {
-                get { return designSchematicPagePartInstPartInstDisplayPropPropColorField; }
-                set { designSchematicPagePartInstPartInstDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPagePartInstPartInstDisplayPropPropDispType designSchematicPagePartInstPartInstDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPagePartInstPartInstDisplayPropPropDispType DesignSchematicPagePartInstPartInstDisplayPropPropDispType
-            {
-                get { return designSchematicPagePartInstPartInstDisplayPropPropDispTypeField; }
-                set { designSchematicPagePartInstPartInstDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPagePartInstPartInstDisplayPropPropFont designSchematicPagePartInstPartInstDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPagePartInstPartInstDisplayPropPropFont DesignSchematicPagePartInstPartInstDisplayPropPropFont
-            {
-                get { return designSchematicPagePartInstPartInstDisplayPropPropFontField; }
-                set { designSchematicPagePartInstPartInstDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -76197,50 +72948,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignSchematicPagePartInstPortInstBusIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstLock", typeof(DesignSchematicPagePartInstPortInstBusPortInstLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstUserProp", typeof(DesignSchematicPagePartInstPortInstBusPortInstUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPagePartInstPortInstBusIsNoConnect designSchematicPagePartInstPortInstBusIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignSchematicPagePartInstPortInstBusIsNoConnect DesignSchematicPagePartInstPortInstBusIsNoConnect
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignSchematicPagePartInstPortInstBusIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstLock", typeof(DesignSchematicPagePartInstPortInstBusPortInstLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstUserProp", typeof(DesignSchematicPagePartInstPortInstBusPortInstUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPagePartInstPortInstBusIsNoConnectField; }
-                set { designSchematicPagePartInstPortInstBusIsNoConnectField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPagePartInstPortInstBusPortInstDisplayProp designSchematicPagePartInstPortInstBusPortInstDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp")]
-            public DesignSchematicPagePartInstPortInstBusPortInstDisplayProp DesignSchematicPagePartInstPortInstBusPortInstDisplayProp
-            {
-                get { return designSchematicPagePartInstPortInstBusPortInstDisplayPropField; }
-                set { designSchematicPagePartInstPortInstBusPortInstDisplayPropField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstBusPortInstLock designSchematicPagePartInstPortInstBusPortInstLockField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstLock")]
-            public DesignSchematicPagePartInstPortInstBusPortInstLock DesignSchematicPagePartInstPortInstBusPortInstLock
-            {
-                get { return designSchematicPagePartInstPortInstBusPortInstLockField; }
-                set { designSchematicPagePartInstPortInstBusPortInstLockField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstBusPortInstUserProp designSchematicPagePartInstPortInstBusPortInstUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstUserProp")]
-            public DesignSchematicPagePartInstPortInstBusPortInstUserProp DesignSchematicPagePartInstPortInstBusPortInstUserProp
-            {
-                get { return designSchematicPagePartInstPortInstBusPortInstUserPropField; }
-                set { designSchematicPagePartInstPortInstBusPortInstUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -76539,50 +73261,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPagePartInstPortInstBusPortInstDisplayPropDispPropLock designSchematicPagePartInstPortInstBusPortInstDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPagePartInstPortInstBusPortInstDisplayPropDispPropLock DesignSchematicPagePartInstPortInstBusPortInstDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPagePartInstPortInstBusPortInstDisplayPropDispPropLockField; }
-                set { designSchematicPagePartInstPortInstBusPortInstDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropColor designSchematicPagePartInstPortInstBusPortInstDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropColor DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropColor
-            {
-                get { return designSchematicPagePartInstPortInstBusPortInstDisplayPropPropColorField; }
-                set { designSchematicPagePartInstPortInstBusPortInstDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropDispType designSchematicPagePartInstPortInstBusPortInstDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropDispType DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropDispType
-            {
-                get { return designSchematicPagePartInstPortInstBusPortInstDisplayPropPropDispTypeField; }
-                set { designSchematicPagePartInstPortInstBusPortInstDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropFont designSchematicPagePartInstPortInstBusPortInstDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropFont DesignSchematicPagePartInstPortInstBusPortInstDisplayPropPropFont
-            {
-                get { return designSchematicPagePartInstPortInstBusPortInstDisplayPropPropFontField; }
-                set { designSchematicPagePartInstPortInstBusPortInstDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -77232,50 +73925,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignSchematicPagePartInstPortInstScalarIsNoConnect))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstLock", typeof(DesignSchematicPagePartInstPortInstScalarPortInstLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortInstUserProp", typeof(DesignSchematicPagePartInstPortInstScalarPortInstUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPagePartInstPortInstScalarIsNoConnect designSchematicPagePartInstPortInstScalarIsNoConnectField;
-            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect")]
-            public DesignSchematicPagePartInstPortInstScalarIsNoConnect DesignSchematicPagePartInstPortInstScalarIsNoConnect
+            [System.Xml.Serialization.XmlElementAttribute("IsNoConnect", typeof(DesignSchematicPagePartInstPortInstScalarIsNoConnect))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstLock", typeof(DesignSchematicPagePartInstPortInstScalarPortInstLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PortInstUserProp", typeof(DesignSchematicPagePartInstPortInstScalarPortInstUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPagePartInstPortInstScalarIsNoConnectField; }
-                set { designSchematicPagePartInstPortInstScalarIsNoConnectField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPagePartInstPortInstScalarPortInstDisplayProp designSchematicPagePartInstPortInstScalarPortInstDisplayPropFied;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstDisplayProp")]
-            public DesignSchematicPagePartInstPortInstScalarPortInstDisplayProp DesignSchematicPagePartInstPortInstScalarPortInstDisplayProp
-            {
-                get { return designSchematicPagePartInstPortInstScalarPortInstDisplayPropFied; }
-                set { designSchematicPagePartInstPortInstScalarPortInstDisplayPropFied = value; }
-            }
-            private DesignSchematicPagePartInstPortInstScalarPortInstLock designSchematicPagePartInstPortInstScalarPortInstLockField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstLock")]
-            public DesignSchematicPagePartInstPortInstScalarPortInstLock DesignSchematicPagePartInstPortInstScalarPortInstLock
-            {
-                get { return designSchematicPagePartInstPortInstScalarPortInstLockField; }
-                set { designSchematicPagePartInstPortInstScalarPortInstLockField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstScalarPortInstUserProp designSchematicPagePartInstPortInstScalarPortInstUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PortInstUserProp")]
-            public DesignSchematicPagePartInstPortInstScalarPortInstUserProp DesignSchematicPagePartInstPortInstScalarPortInstUserProp
-            {
-                get { return designSchematicPagePartInstPortInstScalarPortInstUserPropField; }
-                set { designSchematicPagePartInstPortInstScalarPortInstUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -77574,51 +74238,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropDispPropLock designSchematicPagePartInstPortInstScalarPortInstDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropDispPropLock DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPagePartInstPortInstScalarPortInstDisplayPropDispPropLockField; }
-                set { designSchematicPagePartInstPortInstScalarPortInstDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropColor designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropColor DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropColor
-            {
-                get { return designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropColorField; }
-                set { designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropDispType designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropDispType DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropDispType
-            {
-                get { return designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropDispTypeField; }
-                set { designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropFont designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropFont DesignSchematicPagePartInstPortInstScalarPortInstDisplayPropPropFont
-            {
-                get { return designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropFontField; }
-                set { designSchematicPagePartInstPortInstScalarPortInstDisplayPropPropFontField = value; }
-            }
-
-
         }
 
         /// <remarks/>
@@ -78319,43 +74953,20 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("PortDisplayProp", typeof(DesignSchematicPagePortPortDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortLock", typeof(DesignSchematicPagePortPortLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PortUserProp", typeof(DesignSchematicPagePortPortUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPagePortPortDisplayProp designSchematicPagePortPortDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PortDisplayProp")]
-            public DesignSchematicPagePortPortDisplayProp DesignSchematicPagePortPortDisplayProp
+            [System.Xml.Serialization.XmlElementAttribute("PortDisplayProp", typeof(DesignSchematicPagePortPortDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("PortLock", typeof(DesignSchematicPagePortPortLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PortUserProp", typeof(DesignSchematicPagePortPortUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPagePortPortDisplayPropField; }
-                set { designSchematicPagePortPortDisplayPropField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPagePortPortLock designSchematicPagePortPortLockField;
-            [System.Xml.Serialization.XmlElementAttribute("PortLock")]
-            public DesignSchematicPagePortPortLock DesignSchematicPagePortPortLock
-            {
-                get { return designSchematicPagePortPortLockField; }
-                set { designSchematicPagePortPortLockField = value; }
-            }
-            private DesignSchematicPagePortPortUserProp designSchematicPagePortPortUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("PortUserProp")]
-            public DesignSchematicPagePortPortUserProp DesignSchematicPagePortPortUserProp
-            {
-                get { return designSchematicPagePortPortUserPropField; }
-                set { designSchematicPagePortPortUserPropField = value; }
-            }
-
-
         }
 
         /// <remarks/>
@@ -78603,50 +75214,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPagePortPortDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPagePortPortDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPagePortPortDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPagePortPortDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPagePortPortDisplayPropDispPropLock designSchematicPagePortPortDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPagePortPortDisplayPropDispPropLock DesignSchematicPagePortPortDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPagePortPortDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPagePortPortDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPagePortPortDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPagePortPortDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPagePortPortDisplayPropDispPropLockField; }
-                set { designSchematicPagePortPortDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPagePortPortDisplayPropPropColor designSchematicPagePortPortDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPagePortPortDisplayPropPropColor DesignSchematicPagePortPortDisplayPropPropColor
-            {
-                get { return designSchematicPagePortPortDisplayPropPropColorField; }
-                set { designSchematicPagePortPortDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPagePortPortDisplayPropPropDispType designSchematicPagePortPortDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPagePortPortDisplayPropPropDispType DesignSchematicPagePortPortDisplayPropPropDispType
-            {
-                get { return designSchematicPagePortPortDisplayPropPropDispTypeField; }
-                set { designSchematicPagePortPortDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPagePortPortDisplayPropPropFont designSchematicPagePortPortDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPagePortPortDisplayPropPropFont DesignSchematicPagePortPortDisplayPropPropFont
-            {
-                get { return designSchematicPagePortPortDisplayPropPropFontField; }
-                set { designSchematicPagePortPortDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -79296,66 +75878,23 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("KeepInLowerRightCorner", typeof(DesignSchematicPageTitleBlockKeepInLowerRightCorner))]
-            //[System.Xml.Serialization.XmlElementAttribute("PageCount", typeof(DesignSchematicPageTitleBlockPageCount))]
-            //[System.Xml.Serialization.XmlElementAttribute("PageNumber", typeof(DesignSchematicPageTitleBlockPageNumber))]
-            //[System.Xml.Serialization.XmlElementAttribute("TitleBlockDisplayProp", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("TitleBlockLock", typeof(DesignSchematicPageTitleBlockTitleBlockLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("TitleBlockUserProp", typeof(DesignSchematicPageTitleBlockTitleBlockUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageTitleBlockKeepInLowerRightCorner designSchematicPageTitleBlockKeepInLowerRightCornerField;
-            [System.Xml.Serialization.XmlElementAttribute("KeepInLowerRightCorner")]
-            public DesignSchematicPageTitleBlockKeepInLowerRightCorner DesignSchematicPageTitleBlockKeepInLowerRightCorner
+            [System.Xml.Serialization.XmlElementAttribute("KeepInLowerRightCorner", typeof(DesignSchematicPageTitleBlockKeepInLowerRightCorner))]
+            [System.Xml.Serialization.XmlElementAttribute("PageCount", typeof(DesignSchematicPageTitleBlockPageCount))]
+            [System.Xml.Serialization.XmlElementAttribute("PageNumber", typeof(DesignSchematicPageTitleBlockPageNumber))]
+            [System.Xml.Serialization.XmlElementAttribute("TitleBlockDisplayProp", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("TitleBlockLock", typeof(DesignSchematicPageTitleBlockTitleBlockLock))]
+            [System.Xml.Serialization.XmlElementAttribute("TitleBlockUserProp", typeof(DesignSchematicPageTitleBlockTitleBlockUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageTitleBlockKeepInLowerRightCornerField; }
-                set { designSchematicPageTitleBlockKeepInLowerRightCornerField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageTitleBlockPageCount designSchematicPageTitleBlockPageCountField;
-            [System.Xml.Serialization.XmlElementAttribute("PageCount")]
-            public DesignSchematicPageTitleBlockPageCount DesignSchematicPageTitleBlockPageCount
-            {
-                get { return designSchematicPageTitleBlockPageCountField; }
-                set { designSchematicPageTitleBlockPageCountField = value; }
-            }
-            private DesignSchematicPageTitleBlockPageNumber designSchematicPageTitleBlockPageNumberField;
-            [System.Xml.Serialization.XmlElementAttribute("PageNumber")]
-            public DesignSchematicPageTitleBlockPageNumber DesignSchematicPageTitleBlockPageNumber
-            {
-                get { return designSchematicPageTitleBlockPageNumberField; }
-                set { designSchematicPageTitleBlockPageNumberField = value; }
-            }
-            private DesignSchematicPageTitleBlockTitleBlockDisplayProp designSchematicPageTitleBlockTitleBlockDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("TitleBlockDisplayProp")]
-            public DesignSchematicPageTitleBlockTitleBlockDisplayProp DesignSchematicPageTitleBlockTitleBlockDisplayProp
-            {
-                get { return designSchematicPageTitleBlockTitleBlockDisplayPropField; }
-                set { designSchematicPageTitleBlockTitleBlockDisplayPropField = value; }
-            }
-            private DesignSchematicPageTitleBlockTitleBlockLock designSchematicPageTitleBlockTitleBlockLockField;
-            [System.Xml.Serialization.XmlElementAttribute("TitleBlockLock")]
-            public DesignSchematicPageTitleBlockTitleBlockLock DesignSchematicPageTitleBlockTitleBlockLock
-            {
-                get { return designSchematicPageTitleBlockTitleBlockLockField; }
-                set { designSchematicPageTitleBlockTitleBlockLockField = value; }
-            }
-            private DesignSchematicPageTitleBlockTitleBlockUserProp designSchematicPageTitleBlockTitleBlockUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("TitleBockUserProp")]
-            public DesignSchematicPageTitleBlockTitleBlockUserProp DesignSchematicPageTitleBlockTitleBlockUserProp
-            {
-                get { return designSchematicPageTitleBlockTitleBlockUserPropField; }
-                set { designSchematicPageTitleBlockTitleBlockUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -79708,50 +76247,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageTitleBlockTitleBlockDisplayPropDispPropLock designSchematicPageTitleBlockTitleBlockDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageTitleBlockTitleBlockDisplayPropDispPropLock DesignSchematicPageTitleBlockTitleBlockDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageTitleBlockTitleBlockDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageTitleBlockTitleBlockDisplayPropDispPropLockField; }
-                set { designSchematicPageTitleBlockTitleBlockDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageTitleBlockTitleBlockDisplayPropPropColor designSchematicPageTitleBlockTitleBlockDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageTitleBlockTitleBlockDisplayPropPropColor DesignSchematicPageTitleBlockTitleBlockDisplayPropPropColor
-            {
-                get { return designSchematicPageTitleBlockTitleBlockDisplayPropPropColorField; }
-                set { designSchematicPageTitleBlockTitleBlockDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageTitleBlockTitleBlockDisplayPropPropDispType designSchematicPageTitleBlockTitleBlockDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageTitleBlockTitleBlockDisplayPropPropDispType DesignSchematicPageTitleBlockTitleBlockDisplayPropPropDispType
-            {
-                get { return designSchematicPageTitleBlockTitleBlockDisplayPropPropDispTypeField; }
-                set { designSchematicPageTitleBlockTitleBlockDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageTitleBlockTitleBlockDisplayPropPropFont designSchematicPageTitleBlockTitleBlockDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageTitleBlockTitleBlockDisplayPropPropFont DesignSchematicPageTitleBlockTitleBlockDisplayPropPropFont
-            {
-                get { return designSchematicPageTitleBlockTitleBlockDisplayPropPropFontField; }
-                set { designSchematicPageTitleBlockTitleBlockDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -80809,90 +77319,26 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageWireBusAlias))]
-            //[System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageWireBusJunction))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageWireBusWireBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageWireBusWireColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageWireBusWireDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageWireBusWireLineStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageWireBusWireLineWidth))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageWireBusWireLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageWireBusWireUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageWireBusAlias designSchematicPageWireBusAliasField;
-            [System.Xml.Serialization.XmlElementAttribute("Alias")]
-            public DesignSchematicPageWireBusAlias DesignSchematicPageWireBusAlias
+            [System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageWireBusAlias))]
+            [System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageWireBusJunction))]
+            [System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageWireBusWireBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageWireBusWireColor))]
+            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageWireBusWireDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageWireBusWireLineStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageWireBusWireLineWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageWireBusWireLock))]
+            [System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageWireBusWireUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageWireBusAliasField; }
-                set { designSchematicPageWireBusAliasField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageWireBusJunction designSchematicPageWireBusJunctionField;
-            [System.Xml.Serialization.XmlElementAttribute("Junction")]
-            public DesignSchematicPageWireBusJunction DesignSchematicPageWireBusJunction
-            {
-                get { return designSchematicPageWireBusJunctionField; }
-                set { designSchematicPageWireBusJunctionField = value; }
-            }
-            private DesignSchematicPageWireBusWireBBox designSchematicPageWireBusWireBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("WireBBox")]
-            public DesignSchematicPageWireBusWireBBox DesignSchematicPageWireBusWireBBox
-            {
-                get { return designSchematicPageWireBusWireBBoxField; }
-                set { designSchematicPageWireBusWireBBoxField = value; }
-            }
-            private DesignSchematicPageWireBusWireColor designSchematicPageWireBusWireColorField;
-            [System.Xml.Serialization.XmlElementAttribute("WireColor")]
-            public DesignSchematicPageWireBusWireColor DesignSchematicPageWireBusWireColor
-            {
-                get { return designSchematicPageWireBusWireColorField; }
-                set { designSchematicPageWireBusWireColorField = value; }
-            }
-            private DesignSchematicPageWireBusWireDisplayProp designSchematicPageWireBusWireDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp")]
-            public DesignSchematicPageWireBusWireDisplayProp DesignSchematicPageWireBusWireDisplayProp
-            {
-                get { return designSchematicPageWireBusWireDisplayPropField; }
-                set { designSchematicPageWireBusWireDisplayPropField = value; }
-            }
-            private DesignSchematicPageWireBusWireLineStyle designSchematicPageWireBusWireLineStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle")]
-            public DesignSchematicPageWireBusWireLineStyle DesignSchematicPageWireBusWireLineStyle
-            {
-                get { return designSchematicPageWireBusWireLineStyleField; }
-                set { designSchematicPageWireBusWireLineStyleField = value; }
-            }
-            private DesignSchematicPageWireBusWireLineWidth designSchematicPageWireBusWireLineWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth")]
-            public DesignSchematicPageWireBusWireLineWidth DesignSchematicPageWireBusWireLineWidth
-            {
-                get { return designSchematicPageWireBusWireLineWidthField; }
-                set { designSchematicPageWireBusWireLineWidthField = value; }
-            }
-            private DesignSchematicPageWireBusWireLock designSchematicPageWireBusWireLockField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLock")]
-            public DesignSchematicPageWireBusWireLock DesignSchematicPageWireBusWireLock
-            {
-                get { return designSchematicPageWireBusWireLockField; }
-                set { designSchematicPageWireBusWireLockField = value; }
-            }
-            private DesignSchematicPageWireBusWireUserProp designSchematicPageWireBusWireUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireUserProp")]
-            public DesignSchematicPageWireBusWireUserProp DesignSchematicPageWireBusWireUserProp
-            {
-                get { return designSchematicPageWireBusWireUserPropField; }
-                set { designSchematicPageWireBusWireUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -81044,42 +77490,20 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageWireBusAliasAliasBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageWireBusAliasAliasFont))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageWireBusAliasAliasLock))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageWireBusAliasAliasBBox designSchematicPageWireBusAliasAliasBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasBBox")]
-            public DesignSchematicPageWireBusAliasAliasBBox DesignSchematicPageWireBusAliasAliasBBox
+            [System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageWireBusAliasAliasBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageWireBusAliasAliasFont))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageWireBusAliasAliasLock))]
+            public object[] Items
             {
-                get { return designSchematicPageWireBusAliasAliasBBoxField; }
-                set { designSchematicPageWireBusAliasAliasBBoxField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageWireBusAliasAliasFont designSchematicPageWireBusAliasAliasFontField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasFont")]
-            public DesignSchematicPageWireBusAliasAliasFont DesignSchematicPageWireBusAliasAliasFont
-            {
-                get { return designSchematicPageWireBusAliasAliasFontField; }
-                set { designSchematicPageWireBusAliasAliasFontField = value; }
-            }
-            private DesignSchematicPageWireBusAliasAliasLock designSchematicPageWireBusAliasAliasLockField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasLock")]
-            public DesignSchematicPageWireBusAliasAliasLock DesignSchematicPageWireBusAliasAliasLock
-            {
-                get { return designSchematicPageWireBusAliasAliasLockField; }
-                set { designSchematicPageWireBusAliasAliasLockField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -81777,50 +78201,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageWireBusWireDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageWireBusWireDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageWireBusWireDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageWireBusWireDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageWireBusWireDisplayPropDispPropLock designSchematicPageWireBusWireDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageWireBusWireDisplayPropDispPropLock DesignSchematicPageWireBusWireDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageWireBusWireDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageWireBusWireDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageWireBusWireDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageWireBusWireDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageWireBusWireDisplayPropDispPropLockField; }
-                set { designSchematicPageWireBusWireDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageWireBusWireDisplayPropPropColor designSchematicPageWireBusWireDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageWireBusWireDisplayPropPropColor DesignSchematicPageWireBusWireDisplayPropPropColor
-            {
-                get { return designSchematicPageWireBusWireDisplayPropPropColorField; }
-                set { designSchematicPageWireBusWireDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageWireBusWireDisplayPropPropDispType designSchematicPageWireBusWireDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageWireBusWireDisplayPropPropDispType DesignSchematicPageWireBusWireDisplayPropPropDispType
-            {
-                get { return designSchematicPageWireBusWireDisplayPropPropDispTypeField; }
-                set { designSchematicPageWireBusWireDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageWireBusWireDisplayPropPropFont designSchematicPageWireBusWireDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageWireBusWireDisplayPropPropFont DesignSchematicPageWireBusWireDisplayPropPropFont
-            {
-                get { return designSchematicPageWireBusWireDisplayPropPropFontField; }
-                set { designSchematicPageWireBusWireDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -82572,90 +78967,26 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageWireScalarAlias))]
-            //[System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageWireScalarJunction))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageWireScalarWireBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageWireScalarWireColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageWireScalarWireDisplayProp))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageWireScalarWireLineStyle))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageWireScalarWireLineWidth))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageWireScalarWireLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageWireScalarWireUserProp))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageWireScalarAlias designSchematicPageWireScalarAliasField;
-            [System.Xml.Serialization.XmlElementAttribute("Alias")]
-            public DesignSchematicPageWireScalarAlias DesignSchematicPageWireScalarAlias
+            [System.Xml.Serialization.XmlElementAttribute("Alias", typeof(DesignSchematicPageWireScalarAlias))]
+            [System.Xml.Serialization.XmlElementAttribute("Junction", typeof(DesignSchematicPageWireScalarJunction))]
+            [System.Xml.Serialization.XmlElementAttribute("WireBBox", typeof(DesignSchematicPageWireScalarWireBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("WireColor", typeof(DesignSchematicPageWireScalarWireColor))]
+            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp", typeof(DesignSchematicPageWireScalarWireDisplayProp))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle", typeof(DesignSchematicPageWireScalarWireLineStyle))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth", typeof(DesignSchematicPageWireScalarWireLineWidth))]
+            [System.Xml.Serialization.XmlElementAttribute("WireLock", typeof(DesignSchematicPageWireScalarWireLock))]
+            [System.Xml.Serialization.XmlElementAttribute("WireUserProp", typeof(DesignSchematicPageWireScalarWireUserProp))]
+            public object[] Items
             {
-                get { return designSchematicPageWireScalarAliasField; }
-                set { designSchematicPageWireScalarAliasField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageWireScalarJunction designSchematicPageWireScalarJunctionField;
-            [System.Xml.Serialization.XmlElementAttribute("Junction")]
-            public DesignSchematicPageWireScalarJunction DesignSchematicPageWireScalarJunction
-            {
-                get { return designSchematicPageWireScalarJunctionField; }
-                set { designSchematicPageWireScalarJunctionField = value; }
-            }
-            private DesignSchematicPageWireScalarWireBBox designSchematicPageWireScalarWireBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("WireBBox")]
-            public DesignSchematicPageWireScalarWireBBox DesignSchematicPageWireScalarWireBBox
-            {
-                get { return designSchematicPageWireScalarWireBBoxField; }
-                set { designSchematicPageWireScalarWireBBoxField = value; }
-            }
-            private DesignSchematicPageWireScalarWireColor designSchematicPageWireScalarWireColorField;
-            [System.Xml.Serialization.XmlElementAttribute("WireColor")]
-            public DesignSchematicPageWireScalarWireColor DesignSchematicPageWireScalarWireColor
-            {
-                get { return designSchematicPageWireScalarWireColorField; }
-                set { designSchematicPageWireScalarWireColorField = value; }
-            }
-            private DesignSchematicPageWireScalarWireDisplayProp designSchematicPageWireScalarWireDisplayPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireDisplayProp")]
-            public DesignSchematicPageWireScalarWireDisplayProp DesignSchematicPageWireScalarWireDisplayProp
-            {
-                get { return designSchematicPageWireScalarWireDisplayPropField; }
-                set { designSchematicPageWireScalarWireDisplayPropField = value; }
-            }
-            private DesignSchematicPageWireScalarWireLineStyle designSchematicPageWireScalarWireLineStyleField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineStyle")]
-            public DesignSchematicPageWireScalarWireLineStyle DesignSchematicPageWireScalarWireLineStyle
-            {
-                get { return designSchematicPageWireScalarWireLineStyleField; }
-                set { designSchematicPageWireScalarWireLineStyleField = value; }
-            }
-            private DesignSchematicPageWireScalarWireLineWidth designSchematicPageWireScalarWireLineWidthField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLineWidth")]
-            public DesignSchematicPageWireScalarWireLineWidth DesignSchematicPageWireScalarWireLineWidth
-            {
-                get { return designSchematicPageWireScalarWireLineWidthField; }
-                set { designSchematicPageWireScalarWireLineWidthField = value; }
-            }
-            private DesignSchematicPageWireScalarWireLock designSchematicPageWireScalarWireLockField;
-            [System.Xml.Serialization.XmlElementAttribute("WireLock")]
-            public DesignSchematicPageWireScalarWireLock DesignSchematicPageWireScalarWireLock
-            {
-                get { return designSchematicPageWireScalarWireLockField; }
-                set { designSchematicPageWireScalarWireLockField = value; }
-            }
-            private DesignSchematicPageWireScalarWireUserProp designSchematicPageWireScalarWireUserPropField;
-            [System.Xml.Serialization.XmlElementAttribute("WireUserProp")]
-            public DesignSchematicPageWireScalarWireUserProp DesignSchematicPageWireScalarWireUserProp
-            {
-                get { return designSchematicPageWireScalarWireUserPropField; }
-                set { designSchematicPageWireScalarWireUserPropField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -82807,42 +79138,20 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageWireScalarAliasAliasBBox))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageWireScalarAliasAliasFont))]
-            //[System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageWireScalarAliasAliasLock))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageWireScalarAliasAliasBBox designSchematicPageWireScalarAliasAliasBBoxField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasBBox")]
-            public DesignSchematicPageWireScalarAliasAliasBBox DesignSchematicPageWireScalarAliasAliasBBox
+            [System.Xml.Serialization.XmlElementAttribute("AliasBBox", typeof(DesignSchematicPageWireScalarAliasAliasBBox))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasFont", typeof(DesignSchematicPageWireScalarAliasAliasFont))]
+            [System.Xml.Serialization.XmlElementAttribute("AliasLock", typeof(DesignSchematicPageWireScalarAliasAliasLock))]
+            public object[] Items
             {
-                get { return designSchematicPageWireScalarAliasAliasBBoxField; }
-                set { designSchematicPageWireScalarAliasAliasBBoxField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageWireScalarAliasAliasFont designSchematicPageWireScalarAliasAliasFontField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasFont")]
-            public DesignSchematicPageWireScalarAliasAliasFont DesignSchematicPageWireScalarAliasAliasFont
-            {
-                get { return designSchematicPageWireScalarAliasAliasFontField; }
-                set { designSchematicPageWireScalarAliasAliasFontField = value; }
-            }
-            private DesignSchematicPageWireScalarAliasAliasLock designSchematicPageWireScalarAliasAliasLockField;
-            [System.Xml.Serialization.XmlElementAttribute("AliasLock")]
-            public DesignSchematicPageWireScalarAliasAliasLock DesignSchematicPageWireScalarAliasAliasLock
-            {
-                get { return designSchematicPageWireScalarAliasAliasLockField; }
-                set { designSchematicPageWireScalarAliasAliasLockField = value; }
-            }
-
         }
 
         /// <remarks/>
@@ -83540,50 +79849,21 @@ namespace Xsd2
             }
 
             /// <remarks/>
-            //[System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageWireScalarWireDisplayPropDispPropLock))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageWireScalarWireDisplayPropPropColor))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageWireScalarWireDisplayPropPropDispType))]
-            //[System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageWireScalarWireDisplayPropPropFont))]
-            //public object[] Items
-            //{
-            //    get
-            //    {
-            //        return this.itemsField;
-            //    }
-            //    set
-            //    {
-            //        this.itemsField = value;
-            //    }
-            //}
-            private DesignSchematicPageWireScalarWireDisplayPropDispPropLock designSchematicPageWireScalarWireDisplayPropDispPropLockField;
-            [System.Xml.Serialization.XmlElementAttribute("DispPropLock")]
-            public DesignSchematicPageWireScalarWireDisplayPropDispPropLock DesignSchematicPageWireScalarWireDisplayPropDispPropLock
+            [System.Xml.Serialization.XmlElementAttribute("DispPropLock", typeof(DesignSchematicPageWireScalarWireDisplayPropDispPropLock))]
+            [System.Xml.Serialization.XmlElementAttribute("PropColor", typeof(DesignSchematicPageWireScalarWireDisplayPropPropColor))]
+            [System.Xml.Serialization.XmlElementAttribute("PropDispType", typeof(DesignSchematicPageWireScalarWireDisplayPropPropDispType))]
+            [System.Xml.Serialization.XmlElementAttribute("PropFont", typeof(DesignSchematicPageWireScalarWireDisplayPropPropFont))]
+            public object[] Items
             {
-                get { return designSchematicPageWireScalarWireDisplayPropDispPropLockField; }
-                set { designSchematicPageWireScalarWireDisplayPropDispPropLockField = value; }
+                get
+                {
+                    return this.itemsField;
+                }
+                set
+                {
+                    this.itemsField = value;
+                }
             }
-            private DesignSchematicPageWireScalarWireDisplayPropPropColor designSchematicPageWireScalarWireDisplayPropPropColorField;
-            [System.Xml.Serialization.XmlElementAttribute("PropColor")]
-            public DesignSchematicPageWireScalarWireDisplayPropPropColor DesignSchematicPageWireScalarWireDisplayPropPropColor
-            {
-                get { return designSchematicPageWireScalarWireDisplayPropPropColorField; }
-                set { designSchematicPageWireScalarWireDisplayPropPropColorField = value; }
-            }
-            private DesignSchematicPageWireScalarWireDisplayPropPropDispType designSchematicPageWireScalarWireDisplayPropPropDispTypeField;
-            [System.Xml.Serialization.XmlElementAttribute("PropDispType")]
-            public DesignSchematicPageWireScalarWireDisplayPropPropDispType DesignSchematicPageWireScalarWireDisplayPropPropDispType
-            {
-                get { return designSchematicPageWireScalarWireDisplayPropPropDispTypeField; }
-                set { designSchematicPageWireScalarWireDisplayPropPropDispTypeField = value; }
-            }
-            private DesignSchematicPageWireScalarWireDisplayPropPropFont designSchematicPageWireScalarWireDisplayPropPropFontField;
-            [System.Xml.Serialization.XmlElementAttribute("PropFont")]
-            public DesignSchematicPageWireScalarWireDisplayPropPropFont DesignSchematicPageWireScalarWireDisplayPropPropFont
-            {
-                get { return designSchematicPageWireScalarWireDisplayPropPropFontField; }
-                set { designSchematicPageWireScalarWireDisplayPropPropFontField = value; }
-            }
-
         }
 
         /// <remarks/>

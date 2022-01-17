@@ -83,7 +83,6 @@
     <Compile Include="CADintSch\KeypadfiSch.cs" />
     <Compile Include="CADintSch\TutcpuaSch.cs" />
     <Compile Include="dsn.cs" />
-    <Compile Include="dsn2.cs" />
     <Compile Include="Extensions\MatchParentAttribute.cs" />
     <Compile Include="Extensions\ObjectExtensionMethods.cs" />
     <Compile Include="Program.cs" />

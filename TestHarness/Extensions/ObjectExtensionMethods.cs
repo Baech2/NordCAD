@@ -78,20 +78,29 @@ namespace TestHarness.Extensions
                         //Gamle cases er at finde i codesnippets.
                         //Denne case bliver brugt til at komme ind i strukturen af parent for så at matchpropertiesfrom childpropertyInstance som er en instance af childproperty
                         case "schDesignSymbolBody":
+                            //Find tilsvarende element i parent træet.
                             childProperty.TBA2(parentProperties, parent, self, currentAttribute);
                             break;
                         case "schDesignSymbolBodyRect":
+                            //Find tilsvarende element i parent træet.
                             childProperty.TBA2(parentProperties, parent, self, currentAttribute);
                             break;
                         case "schDesignSymbolBodyArc":
+                            //Find tilsvarende element i parent træet.
                             childProperty.TBA2(parentProperties, parent, self, currentAttribute);
                             break;
                         case "schDesignSymbolBodyLine":
-                            TBA(parentProperties, parent, childProperty, self, currentAttribute);
+                            //Find tilsvarende element i parent træet.
+                            childProperty.TBA2(parentProperties, parent, self, currentAttribute);
                             break;
                         case "pp":
+                            //Convert fra string til Long array(eftersom der er 2 koordinater. x & y)
                             var longValueArrayPP = ConvertToLong(parent, parentProperties, currentAttribute, 2);
+                            //Tilføj array[0] til parentPropertyValue.
                             parentPropertyValue = longValueArrayPP[0];
+                            //SetValue på self med parentPropertyValue.
+                            childProperty.SetValue(self, parentPropertyValue);
+                            //Lav foreach over de resterende elemeter i childproperties for at finde den ved navn y1. Og gemme den til self ved hjælp af parentProperty2
                             foreach (var childPropertyY in childProperties)
                             {
                                 if (childPropertyY.Name == "y1")
@@ -103,8 +112,13 @@ namespace TestHarness.Extensions
                             }
                             break;
                         case "dxy":
+                            //Convert fra string til Long array(eftersom der er 2 koordinater. x & y)
                             var longValueArrayDXY = ConvertToLong(parent, parentProperties, currentAttribute, 2);
+                            //Tilføj array[0] til parentPropertyValue.
                             parentPropertyValue = longValueArrayDXY[0];
+                            //SetValue på self med parentPropertyValue.
+                            childProperty.SetValue(self, parentPropertyValue);
+                            //Lav foreach over de resterende elemeter i childproperties for at finde den ved navn y2. Og gemme den til self ved hjælp af parentProperty2
                             foreach (var childPropertyY in childProperties)
                             {
                                 if (childPropertyY.Name == "y2")
@@ -150,8 +164,11 @@ namespace TestHarness.Extensions
                     //Tilføj value af parentPropertyValue til self.
                     try
                     {
-                        childProperty.SetValue(self, parentPropertyValue);
-                        //parentPropertyValue2 bliver gems i casen.
+                        if (parentPropertyValue != null)
+                        {
+                            childProperty.SetValue(self, parentPropertyValue);
+                        }
+
                     }
                     catch (Exception ex)
                     {
@@ -171,27 +188,58 @@ namespace TestHarness.Extensions
                             //Hivs det er en liste.
                             if (IsList(childProperty.PropertyType))
                             {
-                                //Lav array instance of childproperty, som udgangspunkt er der 7 pladser i arrayet.
-                                object childPropertyInstance = Array.CreateInstance(childProperty.PropertyType.GetElementType(), 7);
+                                
                                 //Gem det array på self/child objectet.
                                 if(childProperty.PropertyType == typeof(object[]))
                                 {
-                                    
                                     var Items = self.GetType().GetProperty("Items");
-                                    XmlElementAttribute[] attribs = (XmlElementAttribute[])Attribute.GetCustomAttributes(Items, typeof(XmlElementAttribute));
-                                     
+                                    if (Items != null)
+                                    {
+                                        XmlElementAttribute[] attribs = (XmlElementAttribute[])Attribute.GetCustomAttributes(Items, typeof(XmlElementAttribute));
+                                        if (attribs != null)
+                                        {
+                                            //lav til liste som i sidste ende kan convert til array.
+                                            object[] childPropertyArray = new object[0];
+                                            IList list = new IList();
+                                            foreach (var attribsItem in attribs)
+                                            {
+                                                object attribsItemInstance = Activator.CreateInstance(Type.GetType(attribsItem.Type.FullName));
+                                                attribsItemInstance.MatchPropertiesFrom(parent);
+                                                list.Add(attribsItemInstance);
+                                                childProperty.SetValue(self, list);
+                                            }
+                                        }
+                                    }
+                                    
                                 }
-                                childProperty.SetValue(self, childPropertyInstance);
+                                else
+                                {
+                                    if (childProperty.GetType().IsAbstract != true)
+                                    {
+                                        //Lav array instance of childproperty, som udgangspunkt er der 7 pladser i arrayet.
+                                        object childPropertyInstance = Array.CreateInstance(childProperty.PropertyType.GetElementType(), 7);
+                                        childProperty.SetValue(self, childPropertyInstance);
+                                    }
+                                    
+                                }
+                                
                             }
                             //Hvis det er en complex type. (Class)
                             else
                             {
-                                //Lav object instance af childproperty baseret på det fulde navn af propertyType.
-                                object childInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
-                                //Gem dette object på self/child objectet.
-                                childProperty.SetValue(self, childInstance);
-                                //MatchPropertiesFrom parent til childInstance i et forsøg på at få så mange values med som muligt.
-                                childInstance.MatchPropertiesFrom(parent);
+                                if (childProperty.GetType().IsAbstract)
+                                {
+                                    if (!IsSimple(childProperty.PropertyType))
+                                    {
+                                        //Lav object instance af childproperty baseret på det fulde navn af propertyType.
+                                        object childInstance = Activator.CreateInstance(Type.GetType(childProperty.PropertyType.FullName));
+                                        //Gem dette object på self/child objectet.
+                                        childProperty.SetValue(self, childInstance);
+                                        //MatchPropertiesFrom parent til childInstance i et forsøg på at få så mange values med som muligt.
+                                        childProperty.MatchPropertiesFrom(parent);
+                                    }
+                                    
+                                }
                             }
                         }
                         //Hvis der forekommer nogen errors i forsøget på at opbygge strukturen af objectet bliver den error udskrevet i console, så koden kan tilpasses som der er brug for.
@@ -236,7 +284,8 @@ namespace TestHarness.Extensions
                 if (it.IsGenericType && typeof(IEnumerable<>) == it.GetGenericTypeDefinition())
                     return true;
             return false;
-        }
+        } 
+        //TBA version2 som reskrusivt dykker ned i strukturen af parent for at finde frem til et element som matcher med currentAttritbute.ParentPropertyName. Denne er i brug.
         public static void TBA2(this PropertyInfo childPropertyself, PropertyInfo[] parentProperties, object parent, object captureSelf, MatchParentAttribute currentAttribute)
         {
             //Foreach af parentProperties som er sendt med fra MatchProprtiesFrom. Navnet er uændret.
@@ -245,73 +294,200 @@ namespace TestHarness.Extensions
                 //Hvis det ikke er null, fortsæt.
                 if (parentProperty != null)
                 {
-                    //Finder value af parentProperty.
-                    object valueOfParentProperty = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
-                    //hvis det ikke er null, fortsæt.
-                    if (valueOfParentProperty != null)
+                    if (!IsSimple(parentProperty.PropertyType))
                     {
-                        //Hvis valueOfParentProperty er en liste, fortsæt.
-                        if (IsList(valueOfParentProperty.GetType()))
+                        //Finder value af parentProperty.
+                        object valueOfParentProperty = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                        //hvis det ikke er null, fortsæt.
+                        if (valueOfParentProperty != null)
                         {
-                            //Foreach over hvert element i valueOfParentProperty. Eftersom jeg ved at det er en liste kan det castes som værende IEnumerabble.
-                            foreach (var propertyOfvalue in (IEnumerable)valueOfParentProperty)
+                            //Hvis valueOfParentProperty er en liste, fortsæt.
+                            if (IsList(valueOfParentProperty.GetType()))
                             {
-                                //Hvis det er en complex type, fortsæt.
-                                if (!IsSimple(propertyOfvalue.GetType()))
+                                //Foreach over hvert element i valueOfParentProperty. Eftersom jeg ved at det er en liste kan det castes som værende IEnumerabble.
+                                foreach (var propertyOfvalue in (IEnumerable)valueOfParentProperty)
                                 {
-                                    //hvis navnet på propertyOfValue er ens med currentAttribute.ParentPropertyName, fortsæt.
-                                    if (currentAttribute.ParentPropertyName == propertyOfvalue.GetType().Name)
+                                    //Hvis det er en complex type, fortsæt.
+                                    if (!IsSimple(propertyOfvalue.GetType()))
                                     {
-                                        //Hjælp: dette skal bruges til at kunne gemme childinstance til items listen. Men de er forskellige types og kan ikke ikke se hvordan det skal ændres så det virker
-                                        var Items = captureSelf.GetType().GetProperty("Items");
-                                        XmlElementAttribute[] attribs = (XmlElementAttribute[])Attribute.GetCustomAttributes(Items, typeof(XmlElementAttribute));
-
-                                        //Opret en instance af childpropertySelf, for at gemme den til captureself/self(fra MatchPropertiesFrom).
-                                        object childInstance = Activator.CreateInstance(Type.GetType(childPropertyself.PropertyType.FullName));
-                                        //SetValue.
-                                        childPropertyself.SetValue(captureSelf, childInstance);
-                                        //MatchPropertiesFrom propertyOfValue til childinstance. For hvis navnet er korrekt har det os nogle simple types på sig som skal matches til sin modstykke i CADint.
-                                        childInstance.MatchPropertiesFrom(propertyOfvalue);
-                                    
+                                        //hvis navnet på propertyOfValue er ens med currentAttribute.ParentPropertyName, fortsæt.
+                                        if (currentAttribute.ParentPropertyName == propertyOfvalue.GetType().Name)
+                                        {
+                                            var Items = captureSelf.GetType().GetProperty("Items");
+                                            if (Items != null)
+                                            {
+                                                object[] childPropertySelfArray = new object[0];
+                                                XmlElementAttribute[] attribs = (XmlElementAttribute[])Attribute.GetCustomAttributes(Items, typeof(XmlElementAttribute));
+                                                if (attribs != null)
+                                                {
+                                                    foreach (var attribsItem in attribs)
+                                                    {
+                                                        object attribsItemInstance = Activator.CreateInstance(Type.GetType(attribsItem.Type.FullName));
+                                                        Array.Resize(ref childPropertySelfArray, childPropertySelfArray.Length + 1);
+                                                        childPropertySelfArray[childPropertySelfArray.Length - 1] = attribsItemInstance;
+                                                        childPropertyself.SetValue(captureSelf, childPropertySelfArray);
+                                                        attribsItemInstance.MatchPropertiesFrom(parent);
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                //Opret en instance af childpropertySelf, for at gemme den til captureself/self(fra MatchPropertiesFrom).
+                                                object childInstance = Activator.CreateInstance(Type.GetType(childPropertyself.PropertyType.FullName));
+                                                //MatchPropertiesFrom propertyOfValue til childinstance. For hvis navnet er korrekt har det os nogle simple types på sig som skal matches til sin modstykke i CADint.
+                                                childInstance.MatchPropertiesFrom(propertyOfvalue);
+                                                childPropertyself.SetValue(captureSelf, childInstance);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            //Hvis propertyOfValue's navn ikke er ens med ParentPropertyName skal der laves en liste af dens properties som bruges i ChildPropertySelf.TBA2().
+                                            PropertyInfo[] propertiesOfPropertyOfList = propertyOfvalue.GetType().GetProperties();
+                                            childPropertyself.TBA2(propertiesOfPropertyOfList, propertyOfvalue, captureSelf, currentAttribute);
+                                        }
                                     }
-                                //Hvis propertyOfValue's navn ikke er ens med ParentPropertyName skal der laves en liste af dens properties som bruges i ChildPropertySelf.TBA2().
-                                PropertyInfo[] propertiesOfPropertyOfList = propertyOfvalue.GetType().GetProperties();
-                                childPropertyself.TBA2(propertiesOfPropertyOfList, propertyOfvalue, captureSelf, currentAttribute);
+                                }
+                            
+                            }
+                            //Hvis valueOfParentProperty ikke er en liste og hvis det er en complex type, fortsæt.
+                            else if (!IsSimple(valueOfParentProperty.GetType()))
+                            {
+                                //Hvis valueOfParentProperty's navn er ens med ParentPropertyName fra currentAttribute, fortsæt.
+                                if (currentAttribute.ParentPropertyName == valueOfParentProperty.GetType().Name)
+                                {
+                                    if (childPropertyself.GetType().IsAbstract != true)
+                                    {
+                                        //Opret en instance af childpropertyself som skal bruges til setvalue og MatchPropertiesFrom. Ligesom det er blevet gjort ovenover.
+                                        object childInstance = Activator.CreateInstance(Type.GetType(childPropertyself.PropertyType.FullName));
+                                        childPropertyself.SetValue(captureSelf, childInstance);
+                                        childInstance.MatchPropertiesFrom(parent);
+                                    }
                                 
                                 }
-                            }
-                            
-                        }
-                        //Hvis valueOfParentProperty ikke er en liste og hvis det er en complex type, fortsæt.
-                        else if (!IsSimple(valueOfParentProperty.GetType()))
-                        {
-                            //Hvis valueOfParentProperty's navn er ens med ParentPropertyName fra currentAttribute, fortsæt.
-                            if (currentAttribute.ParentPropertyName == valueOfParentProperty.GetType().Name)
-                            {
-                                //Opret en instance af childpropertyself som skal bruges til setvalue og MatchPropertiesFrom. Ligesom det er blevet gjort ovenover.
-                                object childInstance = Activator.CreateInstance(Type.GetType(childPropertyself.PropertyType.FullName));
-                                childPropertyself.SetValue(captureSelf, childInstance);
-                                childInstance.MatchPropertiesFrom(parent);
-                            }
-                            PropertyInfo[] propertiesOfValueOfParentProperty = valueOfParentProperty.GetType().GetProperties();
-                            foreach (var propertyVar in propertiesOfValueOfParentProperty)
-                            {
-                                if (IsList(propertyVar.PropertyType))
+                                PropertyInfo[] propertiesOfValueOfParentProperty = valueOfParentProperty.GetType().GetProperties();
+                                foreach (var propertyVar in propertiesOfValueOfParentProperty)
                                 {
-                                    childPropertyself.TBA2(propertiesOfValueOfParentProperty, valueOfParentProperty, captureSelf, currentAttribute);
+                                    if (IsList(propertyVar.PropertyType))
+                                    {
+                                        childPropertyself.TBA2(propertiesOfValueOfParentProperty, valueOfParentProperty, captureSelf, currentAttribute);
+                                    }
                                 }
-                            }
                             
-                        }
-                        if (IsSimple(valueOfParentProperty.GetType()))
-                        {
-                            childPropertyself.MatchPropertiesFrom(valueOfParentProperty);
+                            }
+                            //Hvis valueOfParentProperty, ikke er en liste og ikke en complex type og hvis den er en simple type, fortsæt.
+                            else if (IsSimple(valueOfParentProperty.GetType()))
+                            {
+                                childPropertyself.MatchPropertiesFrom(valueOfParentProperty);
+                            }
                         }
                     }
+
                 }
 
             }
         }
+        public static void TBA3(this PropertyInfo childPropertyself, PropertyInfo[] parentProperties, object parent, object captureSelf, MatchParentAttribute currentAttribute, object[] saveToList)
+        {
+            //Foreach af parentProperties som er sendt med fra MatchProprtiesFrom. Navnet er uændret.
+            foreach (PropertyInfo parentProperty in  (IEnumerable)parentProperties)
+            {
+                //Hvis det ikke er null, fortsæt.
+                if (parentProperty != null)
+                {
+                    if (!IsSimple(parentProperty.PropertyType))
+                    {
+                        //Finder value af parentProperty.
+                        object valueOfParentProperty = parent.GetType().GetProperty(parentProperty.Name).GetValue(parent, null);
+                        //hvis det ikke er null, fortsæt.
+                        if (valueOfParentProperty != null)
+                        {
+                            //Hvis valueOfParentProperty er en liste, fortsæt.
+                            if (IsList(valueOfParentProperty.GetType()))
+                            {
+                                //Foreach over hvert element i valueOfParentProperty. Eftersom jeg ved at det er en liste kan det castes som værende IEnumerabble.
+                                foreach (var propertyOfvalue in (IEnumerable)valueOfParentProperty)
+                                {
+                                    //Hvis det er en complex type, fortsæt.
+                                    if (!IsSimple(propertyOfvalue.GetType()))
+                                    {
+                                        //hvis navnet på propertyOfValue er ens med currentAttribute.ParentPropertyName, fortsæt.
+                                        if (currentAttribute.ParentPropertyName == propertyOfvalue.GetType().Name)
+                                        {
+                                            var Items = captureSelf.GetType().GetProperty("Items");
+                                            if (Items != null)
+                                            {
+                                                object[] childPropertySelfArray = new object[0];
+                                                XmlElementAttribute[] attribs = (XmlElementAttribute[])Attribute.GetCustomAttributes(Items, typeof(XmlElementAttribute));
+                                                if (attribs != null)
+                                                {
+                                                    foreach (var attribsItem in attribs)
+                                                    {
+                                                        object attribsItemInstance = Activator.CreateInstance(Type.GetType(attribsItem.Type.FullName));
+                                                        Array.Resize(ref childPropertySelfArray, childPropertySelfArray.Length + 1);
+                                                        childPropertySelfArray[childPropertySelfArray.Length - 1] = attribsItemInstance;
+                                                        childPropertyself.SetValue(captureSelf, childPropertySelfArray);
+                                                        attribsItemInstance.MatchPropertiesFrom(parent);
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                //Opret en instance af childpropertySelf, for at gemme den til captureself/self(fra MatchPropertiesFrom).
+                                                object childInstance = Activator.CreateInstance(Type.GetType(childPropertyself.PropertyType.FullName));
+                                                //SetValue.
+                                                childPropertyself.SetValue(captureSelf, childInstance);
+                                                //MatchPropertiesFrom propertyOfValue til childinstance. For hvis navnet er korrekt har det os nogle simple types på sig som skal matches til sin modstykke i CADint.
+                                                childInstance.MatchPropertiesFrom(propertyOfvalue);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            //Hvis propertyOfValue's navn ikke er ens med ParentPropertyName skal der laves en liste af dens properties som bruges i ChildPropertySelf.TBA2().
+                                            PropertyInfo[] propertiesOfPropertyOfList = propertyOfvalue.GetType().GetProperties();
+                                            childPropertyself.TBA2(propertiesOfPropertyOfList, propertyOfvalue, captureSelf, currentAttribute);
+                                        }
+                                    }
+                                }
+                            
+                            }
+                            //Hvis valueOfParentProperty ikke er en liste og hvis det er en complex type, fortsæt.
+                            else if (!IsSimple(valueOfParentProperty.GetType()))
+                            {
+                                //Hvis valueOfParentProperty's navn er ens med ParentPropertyName fra currentAttribute, fortsæt.
+                                if (currentAttribute.ParentPropertyName == valueOfParentProperty.GetType().Name)
+                                {
+                                    if (childPropertyself.GetType().IsAbstract != true)
+                                    {
+                                        //Opret en instance af childpropertyself som skal bruges til setvalue og MatchPropertiesFrom. Ligesom det er blevet gjort ovenover.
+                                        object childInstance = Activator.CreateInstance(Type.GetType(childPropertyself.PropertyType.FullName));
+                                        childPropertyself.SetValue(captureSelf, childInstance);
+                                        childInstance.MatchPropertiesFrom(parent);
+                                    }
+                                
+                                }
+                                PropertyInfo[] propertiesOfValueOfParentProperty = valueOfParentProperty.GetType().GetProperties();
+                                foreach (var propertyVar in propertiesOfValueOfParentProperty)
+                                {
+                                    if (IsList(propertyVar.PropertyType))
+                                    {
+                                        childPropertyself.TBA2(propertiesOfValueOfParentProperty, valueOfParentProperty, captureSelf, currentAttribute);
+                                    }
+                                }
+                            
+                            }
+                            //Hvis valueOfParentProperty, ikke er en liste og ikke en complex type og hvis den er en simple type, fortsæt.
+                            else if (IsSimple(valueOfParentProperty.GetType()))
+                            {
+                                childPropertyself.MatchPropertiesFrom(valueOfParentProperty);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
         //Metode til at håndtere at gå ind i strukturen af parent(CADint).
         public static void TBA(PropertyInfo[] parentProperties, object parent, PropertyInfo childProperty, object self, MatchParentAttribute currentAttribute)
         {
@@ -367,7 +543,7 @@ namespace TestHarness.Extensions
                 }
             }
         }
-        //Version1
+        //Convert string to long. (Version1)
         public static long ConvertToLongY(object parent, PropertyInfo[] parentProperties, MatchParentAttribute currentAttribute)
         {
             foreach (PropertyInfo parentProperty in (IEnumerable)parentProperties)
@@ -404,7 +580,7 @@ namespace TestHarness.Extensions
             }
             return 0;
         }
-        //Version2
+        //Convert string to long. (Version2) Denne er i brug.
         public static long[] ConvertToLong(object parent, PropertyInfo[] parentProperties, MatchParentAttribute currentAttribute, int X0orY1orBoth2)
         {
             long[] longarray = new long[2];
